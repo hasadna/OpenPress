@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1255" standalone="no"?>
+<XMD-entity REPOSITORY_FORMAT="1.0" PRXML_VER="2.2" ENTITY_TYPE="Ad" DOC_UID="HZT_03/01/1908" DOC_VER="1" FIRST_TOC_ENTRY_ID="6" DEPTH_LEVEL="1" INDEX_IN_DOC="6" PAGE_NO="1" ID="Ad00106" BOX="81 577 610 657" LANGUAGE="Hebrew" SNP="Ad00106S.png" SNP_WIDTH="350" SNP_HEIGHT="53">
+	<Meta NAME="Untitled Ad" DESCRIPTION="" SUBTYPE="" BASE_HREF="HZT/1908/01/03" SOURCE_TYPE="TIFF" PUBLICATION="HZT" SECTION="Front page" ISSUE_DATE="03/01/1908" WORDCNT="37" RELEASE_NO="021-HZT-1908-01-03-001" PAGE_ID="" PAGE_TYPE="Single" PAGE_WIDTH="505" PAGE_HEIGHT="651" DEFAULT_IMG_EXT="png" PDF_DESTINATION_MAPPED="OLV0_Entity_0001_0007" IMAGES_RESOLUTION="122" XMD_VER="2.6.241.4" PAGE_LABEL="1" TOTAL_CHARS_COUNT="0" SUSPICIOUS_CHARS_COUNT="0"/>
+	<Link SOURCE="021-HZT-1908-01-03-001.pdf" FIRST_ID="Ar00100" LAST_ID="Ad00106" NEXT_ID="" PREV_ID="Ad00105" TOC_ID="W:/Repository/HZT/1908/01/03/TOC.xml"/>
+	<DataFiles>
+		<Files TYPE="DOC_PDF" PRESENT="1"/>
+		<Files TYPE="PAGE_PDF" PRESENT="0"/>
+		<Files TYPE="DOC_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_VIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PAGE_PREVIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PRIMITIVE_IMG" PRESENT="1"/>
+		<Files TYPE="SNIPPET_IMG" PRESENT="1"/>
+		<Files TYPE="SEGMENTATION" PRESENT="0"/>
+	</DataFiles>
+	<Content>
+		<Primitive BOX="82 577 610 657" ID="Ad0010600" E="N" SEQ_NO="1" TOC_ENTRY_ID="6" DEPTH_LEVEL="1">
+			<L BOX="129 582 604 615"/>
+			<L BOX="91 604 601 637"/>
+			<L BOX="95 626 554 657"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="95 628 115 657" STYLE_REF="2" DIR="ltr">re</W>
+			<W BOX="120 627 168 656" STYLE_REF="2" DIR="ltr" M="5 * 6 * ">_crains</W>
+			<W BOX="174 627 207 656" STYLE_REF="2" DIR="ltr">rien</W>
+			<W BOX="442 627 452 656" STYLE_REF="2" NS="y">(</W>
+			<W BOX="450 627 486 656" STYLE_REF="2" DIR="ltr" M="2 * ">_Isaie</W>
+			<W BOX="494 626 521 654" STYLE_REF="2" DIR="ltr">XL</W>
+			<W BOX="528 626 542 654" STYLE_REF="2" NS="y" DIR="ltr">9</W>
+			<W BOX="534 626 548 654" STYLE_REF="2" NS="y">.</W>
+			<W BOX="540 626 554 654" STYLE_REF="2">)</W>
+			<W BOX="91 606 102 635" STYLE_REF="2" NS="y" M="1 * ">_£</W>
+			<W BOX="100 606 137 635" STYLE_REF="2" DIR="ltr">leve</W>
+			<W BOX="144 606 162 635" STYLE_REF="2" DIR="ltr">ta</W>
+			<W BOX="168 606 202 635" STYLE_REF="2" DIR="ltr" M="3 * ">_voix</W>
+			<W BOX="210 606 246 635" STYLE_REF="2" DIR="ltr">avec</W>
+			<W BOX="252 606 295 635" STYLE_REF="2" NS="y" DIR="ltr">force</W>
+			<W BOX="292 608 305 637" STYLE_REF="2">,</W>
+			<W BOX="310 606 374 635" STYLE_REF="2" DIR="ltr">envoyee</W>
+			<W BOX="381 606 399 635" STYLE_REF="2" DIR="ltr">de</W>
+			<W BOX="408 605 487 634" STYLE_REF="2" DIR="ltr">Jerusalem</W>
+			<W BOX="493 605 499 634" STYLE_REF="2" DIR="ltr">1</W>
+			<W BOX="506 604 553 633" STYLE_REF="2" DIR="ltr">Eleve</W>
+			<W BOX="560 604 578 632" STYLE_REF="2" DIR="ltr">la</W>
+			<W BOX="585 604 601 632" STYLE_REF="2" DIR="ltr">et</W>
+			<W BOX="129 585 179 614" STYLE_REF="2" DIR="ltr">Monte</W>
+			<W BOX="187 585 213 614" STYLE_REF="2" DIR="ltr" M="1 * ">_sur</W>
+			<W BOX="220 585 236 614" STYLE_REF="2" DIR="ltr">la</W>
+			<W BOX="240 585 275 614" STYLE_REF="2" DIR="ltr">pins</W>
+			<W BOX="289 585 333 614" STYLE_REF="2" DIR="ltr">haute</W>
+			<W BOX="344 585 419 614" STYLE_REF="2" NS="y" DIR="ltr" M="3 * ">_montagne</W>
+			<W BOX="418 587 429 615" STYLE_REF="2" M="1 * ">_,</W>
+			<W BOX="437 584 456 613" STYLE_REF="2" NS="y" DIR="ltr">me</W>
+			<W BOX="455 584 475 613" STYLE_REF="2" NS="y" DIR="ltr">88</W>
+			<W BOX="473 584 493 613" STYLE_REF="2" NS="y" DIR="ltr">ag</W>
+			<W BOX="494 584 504 613" STYLE_REF="2" NS="y" DIR="ltr">6</W>
+			<W BOX="502 584 520 613" STYLE_REF="2" DIR="ltr">re</W>
+			<W BOX="533 582 551 611" STYLE_REF="2" DIR="ltr">de</W>
+			<W BOX="561 582 596 611" STYLE_REF="2" NS="y" DIR="ltr">Sion</W>
+			<W BOX="594 582 604 611" STYLE_REF="2">.</W>
+			<S S_TYPE="PDF"/>
+		</Primitive>
+	</Content>
+	<AdFrame>
+		<Img BOX="82 577 610 657" ID="Ad0010601" HREF="/1/Img/Ad0010601.png" I_RES="130" TOC_ENTRY_ID="6" SEQ_NO="0"/>
+	</AdFrame>
+</XMD-entity>

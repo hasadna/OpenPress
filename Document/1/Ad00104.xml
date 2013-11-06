@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="windows-1255" standalone="no"?>
+<XMD-entity REPOSITORY_FORMAT="1.0" PRXML_VER="2.2" ENTITY_TYPE="Ad" DOC_UID="HZT_03/01/1908" DOC_VER="1" FIRST_TOC_ENTRY_ID="1" DEPTH_LEVEL="1" INDEX_IN_DOC="1" PAGE_NO="1" ID="Ad00104" BOX="892 28 1170 290" LANGUAGE="Hebrew" SNP="Ad00104S.png" SNP_WIDTH="128" SNP_HEIGHT="120">
+	<Meta NAME="Untitled Ad" DESCRIPTION="" SUBTYPE="" BASE_HREF="HZT/1908/01/03" SOURCE_TYPE="TIFF" PUBLICATION="HZT" SECTION="Front page" ISSUE_DATE="03/01/1908" WORDCNT="93" RELEASE_NO="021-HZT-1908-01-03-001" PAGE_ID="" PAGE_TYPE="Single" PAGE_WIDTH="505" PAGE_HEIGHT="651" DEFAULT_IMG_EXT="png" PDF_DESTINATION_MAPPED="OLV0_Entity_0001_0005" IMAGES_RESOLUTION="122" XMD_VER="2.6.241.4" PAGE_LABEL="1" TOTAL_CHARS_COUNT="0" SUSPICIOUS_CHARS_COUNT="0"/>
+	<Link SOURCE="021-HZT-1908-01-03-001.pdf" FIRST_ID="Ar00100" LAST_ID="Ad00106" NEXT_ID="Ad00105" PREV_ID="Ar00103" TOC_ID="W:/Repository/HZT/1908/01/03/TOC.xml"/>
+	<DataFiles>
+		<Files TYPE="DOC_PDF" PRESENT="1"/>
+		<Files TYPE="PAGE_PDF" PRESENT="0"/>
+		<Files TYPE="DOC_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_VIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PAGE_PREVIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PRIMITIVE_IMG" PRESENT="1"/>
+		<Files TYPE="SNIPPET_IMG" PRESENT="1"/>
+		<Files TYPE="SEGMENTATION" PRESENT="0"/>
+	</DataFiles>
+	<Content>
+		<Primitive BOX="892 28 1170 290" ID="Ad0010400" E="N" SEQ_NO="1" TOC_ENTRY_ID="1" DEPTH_LEVEL="1">
+			<L BOX="893 57 1183 88"/>
+			<W BOX="1158 57 1183 86" STYLE_REF="2" NS="y">*</W>
+			<Q BOX="1105 57 1163 86" STYLE_REF="2" QID="1">םנת</Q>
+			<q BOX="986 58 1064 87" STYLE_REF="2" QID="1">השלשים</q>
+			<QW QID="1">םנתהשלשים</QW>
+			<W BOX="893 59 983 88" STYLE_REF="2">ושמנה</W>
+			<L BOX="892 97 1167 130" P="S"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="892 101 902 130" STYLE_REF="2" NS="y" DIR="ltr" M="1 * ">_g</W>
+			<W BOX="900 101 911 130" STYLE_REF="2" M="1 * ">_*</W>
+			<W BOX="909 97 920 126" STYLE_REF="2" NS="y">&lt;</W>
+			<W BOX="917 97 927 126" STYLE_REF="2" NS="y" M="1 * ">_$</W>
+			<Q BOX="923 97 933 126" STYLE_REF="2" QID="2">&gt;</Q>
+			<q BOX="930 97 940 126" STYLE_REF="2" NS="y" QID="2">&lt;</q>
+			<QW QID="2">&gt;&lt;</QW>
+			<W BOX="937 97 947 126" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="946 97 956 126" STYLE_REF="2" QID="3">.</Q>
+			<Q BOX="952 97 963 126" STYLE_REF="2" QID="3">.</Q>
+			<q BOX="958 97 968 126" STYLE_REF="2" NS="y" QID="3">,</q>
+			<QW QID="3">..,</QW>
+			<Q BOX="964 97 974 126" STYLE_REF="2" QID="4" M="1 * ">^</Q>
+			<q BOX="970 97 980 126" STYLE_REF="2" NS="y" QID="4">»</q>
+			<QW QID="4">_^»</QW>
+			<W BOX="978 98 987 127" STYLE_REF="2" NS="y">.</W>
+			<W BOX="985 98 995 127" STYLE_REF="2" NS="y">«</W>
+			<W BOX="990 98 1000 127" STYLE_REF="2" NS="y">$</W>
+			<W BOX="997 98 1007 127" STYLE_REF="2" NS="y">»</W>
+			<W BOX="1005 98 1014 127" STYLE_REF="2" LH="y" NS="y">-</W>
+			<W BOX="1012 98 1022 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1019 98 1028 127" STYLE_REF="2" QID="5">&gt;</Q>
+			<q BOX="1026 98 1036 127" STYLE_REF="2" NS="y" QID="5">&lt;</q>
+			<QW QID="5">&gt;&lt;</QW>
+			<W BOX="1034 98 1043 127" STYLE_REF="2" NS="y" DIR="ltr">3</W>
+			<Q BOX="1041 98 1050 127" STYLE_REF="2" QID="6">&gt;</Q>
+			<q BOX="1048 98 1058 127" STYLE_REF="2" NS="y" QID="6">&lt;</q>
+			<QW QID="6">&gt;&lt;</QW>
+			<W BOX="1056 98 1065 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1063 98 1072 127" STYLE_REF="2" QID="7">&gt;</Q>
+			<q BOX="1070 98 1079 127" STYLE_REF="2" NS="y" QID="7">&lt;</q>
+			<QW QID="7">&gt;&lt;</QW>
+			<W BOX="1078 98 1087 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1085 98 1094 127" STYLE_REF="2" QID="8">&gt;</Q>
+			<q BOX="1092 98 1101 127" STYLE_REF="2" NS="y" QID="8">&lt;</q>
+			<QW QID="8">&gt;&lt;</QW>
+			<W BOX="1099 98 1109 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1106 98 1116 127" STYLE_REF="2" QID="9">&gt;</Q>
+			<q BOX="1114 98 1123 127" STYLE_REF="2" NS="y" QID="9">&lt;</q>
+			<QW QID="9">&gt;&lt;</QW>
+			<W BOX="1121 98 1131 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1128 98 1138 127" STYLE_REF="2" QID="10">&gt;</Q>
+			<q BOX="1136 98 1145 127" STYLE_REF="2" NS="y" QID="10">&lt;</q>
+			<QW QID="10">&gt;&lt;</QW>
+			<W BOX="1143 98 1152 127" STYLE_REF="2" NS="y">$</W>
+			<Q BOX="1150 98 1159 127" STYLE_REF="2" QID="11">&gt;</Q>
+			<q BOX="1158 98 1167 127" STYLE_REF="2" NS="y" QID="11" M="1 * ">&amp;</q>
+			<QW QID="11">_&gt;&amp;</QW>
+			<S S_TYPE="PDF"/>
+			<L BOX="965 124 1087 157"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1034 125 1087 154" STYLE_REF="2">מחירה</W>
+			<W BOX="977 124 1026 153" STYLE_REF="2">לשנה</W>
+			<L BOX="1152 136 1167 165"/>
+			<L BOX="894 145 914 174"/>
+			<L BOX="892 154 1175 187"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1153 154 1167 183" STYLE_REF="2" NS="y" M="1 * ">_#</W>
+			<W BOX="1160 154 1175 183" STYLE_REF="2" M="1 * ">_'</W>
+			<W BOX="894 145 914 174" STYLE_REF="2" M="1 * ">_^</W>
+			<Q BOX="1152 136 1161 165" STYLE_REF="2" QID="12" M="1 * ">^</Q>
+			<q BOX="1158 136 1167 165" STYLE_REF="2" QID="12">&gt;</q>
+			<QW QID="12">_^&gt;</QW>
+			<W BOX="965 128 982 157" STYLE_REF="2" NS="y">:</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1103 154 1132 183" STYLE_REF="2">באר</W>
+			<W BOX="1090 158 1103 187" STYLE_REF="2">ץ</W>
+			<W BOX="1032 155 1082 184" STYLE_REF="2">תוגרמה</W>
+			<W BOX="1014 155 1028 184" STYLE_REF="2" DIR="ltr">4</W>
+			<Q BOX="987 155 1011 184" STYLE_REF="2" QID="13">מאג</Q>
+			<Q BOX="982 155 993 184" STYLE_REF="2" QID="13">'</Q>
+			<q BOX="960 155 985 184" STYLE_REF="2" QID="13">ידי</q>
+			<QW QID="13">מאג'ידי</QW>
+			<W BOX="930 156 955 185" STYLE_REF="2">כסף</W>
+			<L BOX="895 176 1174 211"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1153 182 1174 211" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="892 156 900 185" STYLE_REF="2" NS="y">|</W>
+			<W BOX="894 156 903 185" STYLE_REF="2" NS="y" M="1 * ">_$</W>
+			<W BOX="899 156 908 185" STYLE_REF="2" NS="y">&gt;</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1032 176 1097 205" STYLE_REF="2">באוסטריא</W>
+			<W BOX="1011 176 1030 205" STYLE_REF="2" DIR="ltr">16</W>
+			<W BOX="965 176 1009 205" STYLE_REF="2">כתריס</W>
+			<L BOX="896 196 1174 231"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1153 202 1174 231" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="895 177 904 206" STYLE_REF="2" NS="y" DIR="ltr">4</W>
+			<W BOX="901 177 910 206" STYLE_REF="2" NS="y">&gt;</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1048 196 1095 225" STYLE_REF="2">בצרפת</W>
+			<W BOX="1022 197 1042 226" STYLE_REF="2" DIR="ltr">20</W>
+			<W BOX="971 196 1016 225" STYLE_REF="2">פראנק</W>
+			<L BOX="895 216 1173 248"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1153 216 1173 245" STYLE_REF="2" M="1 * ">_#</W>
+			<W BOX="896 197 914 226" STYLE_REF="2" NS="y" M="1 * ">_#</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1088 217 1151 246" STYLE_REF="2">בבריטניא</W>
+			<W BOX="1019 218 1088 247" STYLE_REF="2">ואמעריקא</W>
+			<W BOX="981 218 1016 247" STYLE_REF="2">לירא</W>
+			<W BOX="914 219 980 248" STYLE_REF="2">שטערלינג</W>
+			<L BOX="895 238 1168 268"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1152 239 1168 267" STYLE_REF="2" DIR="ltr">y</W>
+			<W BOX="895 219 916 248" STYLE_REF="2" NS="y" DIR="ltr">4</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1038 239 1086 268" STYLE_REF="2">ברוסיא</W>
+			<W BOX="1013 239 1032 268" STYLE_REF="2" DIR="ltr">10</W>
+			<Q BOX="989 239 1007 268" STYLE_REF="2" QID="14">רו</Q>
+			<Q BOX="982 239 992 268" STYLE_REF="2" QID="14">"</Q>
+			<q BOX="974 239 985 268" STYLE_REF="2" QID="14">כ</q>
+			<QW QID="14">רו"כ</QW>
+			<L BOX="895 255 1174 284"/>
+			<L BOX="893 269 1175 302"/>
+			<S S_TYPE="LRO"/>
+			<Q BOX="1058 271 1064 300" STYLE_REF="2" QID="15" M="1 * ">?</Q>
+			<Q BOX="1062 271 1068 300" STYLE_REF="2" QID="15" M="1 * ">»</Q>
+			<q BOX="1073 270 1083 299" STYLE_REF="2" NS="y" QID="15">&lt;</q>
+			<QW QID="15">_?»&lt;</QW>
+			<W BOX="1082 270 1092 299" STYLE_REF="2" M="1 * ">_£</W>
+			<Q BOX="1093 269 1104 298" STYLE_REF="2" QID="16">&lt;</Q>
+			<Q BOX="1104 269 1114 298" STYLE_REF="2" QID="16" M="1 * ">&amp;</Q>
+			<q BOX="1111 269 1122 298" STYLE_REF="2" NS="y" QID="16">&lt;</q>
+			<QW QID="16">_&lt;&amp;&lt;</QW>
+			<W BOX="1121 269 1132 298" STYLE_REF="2" M="1 * ">_£</W>
+			<W BOX="1134 269 1144 298" STYLE_REF="2" NS="y">&lt;</W>
+			<W BOX="1142 269 1152 298" STYLE_REF="2" NS="y" M="1 * ">_$</W>
+			<Q BOX="1149 269 1159 298" STYLE_REF="2" QID="17">&gt;</Q>
+			<q BOX="1158 269 1167 298" STYLE_REF="2" NS="y" QID="17" M="1 * ">&amp;</q>
+			<QW QID="17">_&gt;&amp;</QW>
+			<W BOX="1165 269 1175 298" STYLE_REF="2" M="1 * ">_£</W>
+			<W BOX="895 255 901 284" STYLE_REF="2" NS="y">&lt;</W>
+			<W BOX="900 255 906 284" STYLE_REF="2" NS="y" DIR="ltr">8</W>
+			<W BOX="904 255 910 284" STYLE_REF="2">&gt;</W>
+			<W BOX="1153 255 1174 284" STYLE_REF="2">$</W>
+			<W BOX="895 238 912 267" STYLE_REF="2" NS="y" M="1 * ">_#</W>
+			<S S_TYPE="PDF"/>
+			<W BOX="1054 271 1060 300" STYLE_REF="2" NS="y">־</W>
+			<Q BOX="1049 271 1055 300" STYLE_REF="2" R="«" QID="18">»</Q>
+			<S S_TYPE="BUL">
+				<q BOX="1047 271 1052 300" STYLE_REF="2" QID="18">•</q>
+			</S>
+			<QW QID="18">»•</QW>
+			<W BOX="1035 273 1045 302" STYLE_REF="2" NS="y">־</W>
+			<W BOX="1030 273 1039 302" STYLE_REF="2" NS="y">*</W>
+			<W BOX="1025 273 1035 302" STYLE_REF="2" NS="y">י</W>
+			<S S_TYPE="BUL">
+				<W BOX="1020 273 1030 302" STYLE_REF="2">•</W>
+			</S>
+			<S S_TYPE="LRO"/>
+			<W BOX="993 270 1002 299" STYLE_REF="2" NS="y">«</W>
+			<W BOX="1001 270 1009 299" STYLE_REF="2" NS="y" M="1 * ">_£</W>
+			<W BOX="1008 270 1017 299" STYLE_REF="2" NS="y">»</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="BUL">
+				<W BOX="988 270 997 299" STYLE_REF="2" NS="y">•</W>
+			</S>
+			<S S_TYPE="LRO"/>
+			<Q BOX="893 270 904 299" STYLE_REF="2" QID="19" M="1 * ">«</Q>
+			<q BOX="904 270 914 299" STYLE_REF="2" NS="y" QID="19">«</q>
+			<QW QID="19">_««</QW>
+			<W BOX="913 272 924 301" STYLE_REF="2" NS="y">£</W>
+			<Q BOX="922 272 933 301" STYLE_REF="2" QID="20">&gt;</Q>
+			<Q BOX="931 272 942 301" STYLE_REF="2" QID="20">&lt;</Q>
+			<q BOX="942 272 953 301" STYLE_REF="2" QID="20" M="1 * ">?</q>
+			<QW QID="20">_&gt;&lt;?</QW>
+			<Q BOX="951 270 960 299" STYLE_REF="2" QID="21">&lt;</Q>
+			<Q BOX="959 270 967 299" STYLE_REF="2" QID="21" M="1 * ">&amp;</Q>
+			<q BOX="965 270 974 299" STYLE_REF="2" NS="y" QID="21">&lt;</q>
+			<QW QID="21">_&lt;&amp;&lt;</QW>
+			<W BOX="973 270 981 299" STYLE_REF="2" NS="y">$</W>
+			<W BOX="980 270 988 299" STYLE_REF="2" M="1 * ">_&gt;</W>
+			<S S_TYPE="PDF"/>
+		</Primitive>
+	</Content>
+	<AdFrame>
+		<Img BOX="892 28 1170 290" ID="Ad0010401" HREF="/1/Img/Ad0010401.png" I_RES="130" TOC_ENTRY_ID="1" SEQ_NO="0"/>
+	</AdFrame>
+</XMD-entity>

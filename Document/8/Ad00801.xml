@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="windows-1255" standalone="no"?>
+<XMD-entity REPOSITORY_FORMAT="1.0" PRXML_VER="2.2" ENTITY_TYPE="Ad" DOC_UID="HZT_03/01/1908" DOC_VER="1" FIRST_TOC_ENTRY_ID="20" DEPTH_LEVEL="1" INDEX_IN_DOC="27" PAGE_NO="8" ID="Ad00801" BOX="566 97 1133 993" LANGUAGE="Hebrew" SNP="Ad00801S.png" SNP_WIDTH="76" SNP_HEIGHT="120">
+	<Meta NAME="Untitled Ad" DESCRIPTION="" SUBTYPE="" BASE_HREF="HZT/1908/01/03" SOURCE_TYPE="TIFF" PUBLICATION="HZT" SECTION="None" ISSUE_DATE="03/01/1908" WORDCNT="69" RELEASE_NO="021-HZT-1908-01-03-001" PAGE_ID="" PAGE_TYPE="Single" PAGE_WIDTH="491" PAGE_HEIGHT="657" DEFAULT_IMG_EXT="png" PDF_DESTINATION_MAPPED="OLV0_Entity_0008_0002" IMAGES_RESOLUTION="122" XMD_VER="2.6.241.4" PAGE_LABEL="8" TOTAL_CHARS_COUNT="0" SUSPICIOUS_CHARS_COUNT="0"/>
+	<Link SOURCE="021-HZT-1908-01-03-001.pdf" FIRST_ID="Ar00200" LAST_ID="Ad00802" NEXT_ID="Ad00802" PREV_ID="Ad00800" TOC_ID="W:/Repository/HZT/1908/01/03/TOC.xml"/>
+	<DataFiles>
+		<Files TYPE="DOC_PDF" PRESENT="1"/>
+		<Files TYPE="PAGE_PDF" PRESENT="0"/>
+		<Files TYPE="DOC_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_VIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PAGE_PREVIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PRIMITIVE_IMG" PRESENT="1"/>
+		<Files TYPE="SNIPPET_IMG" PRESENT="1"/>
+		<Files TYPE="SEGMENTATION" PRESENT="0"/>
+	</DataFiles>
+	<Content>
+		<Primitive BOX="566 98 1134 993" ID="Ad0080100" E="N" SEQ_NO="1" TOC_ENTRY_ID="20" DEPTH_LEVEL="1">
+			<L BOX="574 106 1108 139"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="574 110 674 139" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="587 110 712 139" STYLE_REF="2" M="1 * ">_"</W>
+			<W BOX="884 106 1009 135" STYLE_REF="2">~</W>
+			<W BOX="934 106 1059 135" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="983 106 1108 135" STYLE_REF="2" NS="y" M="1 * ">_^</W>
+			<S S_TYPE="PDF"/>
+			<L BOX="632 128 1131 163"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1096 128 1131 157" STYLE_REF="2" NS="y">ך</W>
+			<S S_TYPE="LRO"/>
+			<W BOX="743 134 943 163" STYLE_REF="2">!</W>
+			<W BOX="1038 128 1072 157" STYLE_REF="2" NS="y">~</W>
+			<W BOX="1071 128 1106 157" STYLE_REF="2" NS="y" M="1 * ">_°</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="822 134 899 163" STYLE_REF="2">הכרזה</W>
+			<L BOX="676 178 688 207"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="676 178 688 207" STYLE_REF="2">'</W>
+			<W BOX="632 134 832 163" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="675 134 876 163" STYLE_REF="2" NS="y" DIR="ltr" M="1 * ">_y</W>
+			<S S_TYPE="PDF"/>
+			<L BOX="469 791 793 819"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="469 791 793 819" STYLE_REF="2" DIR="ltr">1</W>
+			<L BOX="903 804 958 835"/>
+			<W BOX="945 806 958 835" STYLE_REF="2" NS="y">יי</W>
+			<L BOX="579 814 1103 854"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="881 824 888 853" STYLE_REF="2">.</W>
+			<W BOX="892 814 896 843" STYLE_REF="2">'</W>
+			<W BOX="894 821 908 849" STYLE_REF="2" NS="y">.</W>
+			<W BOX="905 821 909 850" STYLE_REF="2" NS="y">;</W>
+			<Q BOX="909 821 913 850" STYLE_REF="2" QID="1">.</Q>
+			<q BOX="899 821 914 849" STYLE_REF="2" QID="1">,</q>
+			<QW QID="1">.,</QW>
+			<W BOX="916 823 920 852" STYLE_REF="2">.</W>
+			<W BOX="1079 825 1103 854" STYLE_REF="2" M="1 * ">_^</W>
+			<W BOX="903 804 909 833" STYLE_REF="2" NS="y">'</W>
+			<W BOX="941 806 948 835" STYLE_REF="2" NS="y">"</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="806 822 823 851" STYLE_REF="2" M="2 * ">_הן</W>
+			<S S_TYPE="LRO"/>
+			<W BOX="798 822 809 851" STYLE_REF="2" NS="y">?</W>
+			<W BOX="817 823 821 851" STYLE_REF="2" NS="y">.</W>
+			<S S_TYPE="PDF"/>
+			<W BOX="777 822 803 851" STYLE_REF="2" NS="y" M="3 * ">_ןור</W>
+			<S S_TYPE="BUL">
+				<W BOX="770 822 782 851" STYLE_REF="2">•</W>
+			</S>
+			<W BOX="674 822 767 851" STYLE_REF="2" DIR="ltr" M="1 * 4 * ">_wstvpy</W>
+			<W BOX="658 825 671 854" STYLE_REF="2">י</W>
+			<S S_TYPE="LRO"/>
+			<Q BOX="648 824 656 852" STYLE_REF="2" QID="2">-</Q>
+			<q BOX="655 822 665 851" STYLE_REF="2" NS="y" QID="2">.</q>
+			<QW QID="2">.</QW>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="624 820 634 848" STYLE_REF="2" NS="y">?</W>
+			<W BOX="608 820 626 848" STYLE_REF="2">ד־</W>
+			<L BOX="1032 831 1117 865"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1038 831 1045 859" STYLE_REF="2" M="1 * ">_-</W>
+			<W BOX="1060 833 1072 862" STYLE_REF="2" DIR="ltr">i</W>
+			<W BOX="1104 836 1117 865" STYLE_REF="2" DIR="ltr">I</W>
+			<W BOX="579 817 580 846" STYLE_REF="2">?</W>
+			<Q BOX="594 824 603 853" STYLE_REF="2" QID="3">[</Q>
+			<q BOX="598 824 607 853" STYLE_REF="2" NS="y" QID="3">?</q>
+			<QW QID="3">[?</QW>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="1033 836 1043 865" STYLE_REF="2">י</W>
+			<W BOX="1032 831 1039 859" STYLE_REF="2" DIR="ltr">i</W>
+			<L BOX="677 850 760 883"/>
+			<W BOX="732 854 760 883" STYLE_REF="2">י</W>
+			<L BOX="691 862 1118 899"/>
+			<S S_TYPE="LRO"/>
+			<W BOX="1060 870 1118 899" STYLE_REF="2" DIR="ltr">11</W>
+			<W BOX="677 850 679 879" STYLE_REF="2" NS="y">?</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="786 864 805 893" STYLE_REF="2" R="«" NS="y" M="1 * ">_»</W>
+			<W BOX="772 864 791 893" STYLE_REF="2" NS="y">ע</W>
+			<W BOX="744 866 785 895" STYLE_REF="2" M="1 * ">_$</W>
+			<W BOX="734 866 775 895" STYLE_REF="2">:</W>
+			<W BOX="727 862 744 891" STYLE_REF="2" NS="y">,</W>
+			<W BOX="691 862 725 891" STYLE_REF="2" M="1 * ">_ד־</W>
+			<L BOX="641 885 1117 921"/>
+			<W BOX="1100 890 1117 919" STYLE_REF="2" DIR="ltr">i</W>
+			<W BOX="1060 892 1074 921" STYLE_REF="2">ן</W>
+			<W BOX="788 889 845 918" STYLE_REF="2">למעשה</W>
+			<W BOX="750 891 781 919" STYLE_REF="2">שמן</W>
+			<W BOX="692 889 750 918" STYLE_REF="2">ובורית</W>
+			<W BOX="661 889 685 918" STYLE_REF="2" NS="y">בא</W>
+			<W BOX="654 885 666 914" STYLE_REF="2">"</W>
+			<W BOX="641 890 664 919" STYLE_REF="2">ין</W>
+			<L BOX="594 900 603 929"/>
+			<L BOX="597 932 1112 971"/>
+			<S S_TYPE="LRO"/>
+			<Q BOX="1059 939 1081 968" STYLE_REF="2" QID="4">\</Q>
+			<q BOX="1076 939 1097 968" STYLE_REF="2" NS="y" QID="4">§</q>
+			<QW QID="4">\§</QW>
+			<W BOX="1090 939 1112 968" STYLE_REF="2" DIR="ltr">J</W>
+			<W BOX="594 900 603 929" STYLE_REF="2" NS="y" DIR="ltr">J</W>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="974 932 1035 961" STYLE_REF="2">האדריםה</W>
+			<W BOX="933 933 970 962" STYLE_REF="2" NS="y">אלינו</W>
+			<W BOX="923 933 938 962" STYLE_REF="2">:</W>
+			<W BOX="841 935 902 964" STYLE_REF="2" DIR="ltr">Jaffa</W>
+			<W BOX="819 933 838 962" STYLE_REF="2">או</W>
+			<S S_TYPE="LRO"/>
+			<W BOX="597 942 631 970" STYLE_REF="2" NS="y" M="1 * ">_%</W>
+			<W BOX="618 940 635 969" STYLE_REF="2" NS="y" M="1 * ">_*</W>
+			<W BOX="632 940 649 969" STYLE_REF="2" DIR="ltr">J</W>
+			<W BOX="675 942 690 971" STYLE_REF="2">"</W>
+			<Q BOX="684 932 753 960" STYLE_REF="2" DIR="ltr" QID="5">Athidu</Q>
+			<Q BOX="744 933 760 962" STYLE_REF="2" LH="y" QID="5">—</Q>
+			<q BOX="758 933 836 962" STYLE_REF="2" DIR="ltr" QID="5">Haifa</q>
+			<QW QID="5">Athidu—Haifa</QW>
+			<S S_TYPE="PDF"/>
+		</Primitive>
+	</Content>
+	<AdFrame>
+		<Img BOX="566 98 1134 993" ID="Ad0080101" HREF="/8/Img/Ad0080101.png" I_RES="130" TOC_ENTRY_ID="20" SEQ_NO="0"/>
+	</AdFrame>
+</XMD-entity>
