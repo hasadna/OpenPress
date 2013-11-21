@@ -36,3 +36,4 @@ def main(toc_path, output_path):
 if __name__ == '__main__':
     from sys import argv
     main(*argv[1:])
+    main(*argv[1:])
