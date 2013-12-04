@@ -30,27 +30,39 @@ ATTRIBUTE_TEMPLATE = """                <Attribute name="{KEY}">{VALUE}</Attribu
  ARTICLE_ARTICLE_ID,
  ARTICLE_ATTRIBUTES) = range(3)
 
-def create_urls_block(url_list):
-    nodes = []
-    for loc, lastmod, attributes in iter(url_list):
+
+def parse_urls(urls):
+    '''
+    Parses the urls, it should be a generator expression (as created by get_articles)
+    This is a generator which generates the url in template form.
+    '''
+    for loc, lastmod, attributes in urls:
         attributes_list = []
+
         for key, value in attributes.iteritems():
             attributes_list.append(ATTRIBUTE_TEMPLATE.format(KEY=key, VALUE=value))
-        nodes.append(URL_TEMPLATE.format(LOC=loc, LASTMOD="date", ATTRIBUTES="".join(attributes_list)))
-    return "".join(nodes)
+        yield URL_TEMPLATE.format(LOC=loc, LASTMOD=lastmod, ATTRIBUTES="".join(attributes_list))
 
 
 def get_loc(paper_id, article_id):
     return LOC_TEMPLATE.format(PAPER_ID=paper_id.replace("/","%2F"), ARTICLE_ID=article_id)
 
+
 def get_url(article, date=DEFAULT_DATE):
-    return (get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID]), date, article[ARTICLE_ATTRIBUTES])
+    return get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID]), date, article[ARTICLE_ATTRIBUTES]
+
+
+def get_articles():
+    '''
+    Returns the articles in the directory, currently returns only a test thingy.
+    '''
+    return [("MAR/1987/01/02","Ar00108", {})]
+
 
 def main(argv):
-    articles = [("MAR/1987/01/02","Ar00108", {"Attribute1" : "value 1"})]
-    urls = [get_url(article) for article in articles]
-    urls_block = create_urls_block(urls)
-    print SITEMAP_TEMPLATE.format(URLS = urls_block)
+    articles = get_articles()
+    urls = (get_url(article) for article in articles)
+    print SITEMAP_TEMPLATE.format(URLS = "".join(parse_urls(urls)))
     
 
 
