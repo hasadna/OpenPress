@@ -17,6 +17,7 @@ URL_TEMPLATE = """    <url>
         </PageMap>
     </url>"""
 
+#adding &mode=text at the end will get us textual results
 LOC_TEMPLATE = "http://jpress.nli.org.il/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&id={ARTICLE_ID}&mode=text"
 
 ATTRIBUTE_TEMPLATE = """                <Attribute name="{KEY}">{VALUE}</Attribute>
@@ -52,18 +53,41 @@ def get_url(article, date=DEFAULT_DATE):
     return get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID]), date, article[ARTICLE_ATTRIBUTES]
 
 
-def get_articles():
+def parse_xml_file(filePath, fileName):
+    '''
+    Parses an xml file. currently only greps the base path and no attributes.
+    We should actually parse the XML to get the attributes.
+    '''
+    attributes = {}
+    import re
+    with open(filePath) as file_:
+        lines = file_.read()
+        base_href = re.search("BASE_HREF=\"([^\"]+)", lines)
+
+    return base_href.group(1), fileName, attributes
+
+
+
+def get_articles_from_folder(folder):
     '''
     Returns the articles in the directory, currently returns only a test thingy.
     '''
-    return [("MAR/1987/01/02","Ar00108", {})]
+
+    #use os.walk to iterate over all of our files
+    from os import walk
+    from os.path import join
+
+    for root, dirs, files in walk(folder):
+        for fileName in files:
+            if fileName.endswith(".xml") and "Pg" not in fileName:
+                yield parse_xml_file(join(root, fileName), fileName)
 
 
 def main(argv):
-    articles = get_articles()
-    urls = (get_url(article) for article in articles)
+    #articles =
+    urls = (get_url(article) for article in get_articles_from_folder("./Document"))
     print SITEMAP_TEMPLATE.format(URLS = "".join(parse_urls(urls)))
-    
+
 
 
 if __name__ == "__main__":
