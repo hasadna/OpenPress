@@ -84,9 +84,8 @@ def get_articles_from_folder(folder):
 
 
 def main(argv):
-    #articles =
     urls = (get_url(article) for article in get_articles_from_folder("./Document"))
-    print SITEMAP_TEMPLATE.format(URLS = "".join(parse_urls(urls)))
+    print SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 
 
