@@ -20,3 +20,14 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+
+Table of contents
+=================
+
+.. toctree::
+   :maxdepth: 1
+
+   guide/start
+
+Class's
+=======
