@@ -5,14 +5,19 @@ from os.path import join, splitext, exists
 ZIP_PATH = join(".", "Document.zip")
 FOLDER_PATH = join(".", "Document")
 
-#import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
+
+META_ATTRIBUTES = { "ISSUE_DATE" : "issue_date",
+                    "PUBLICATION" : "publication"}
+                    
+DEFAULT_DATE = "2013-01-01"
+DEFAULT_CHANGEFREQ = "monthly"
+
 SITEMAP_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {URLS}
 </urlset>
 """
-DEFAULT_DATE = "2013-01-01"
-DEFAULT_CHANGEFREQ = "monthly"
 URL_TEMPLATE = """    <url>
         <loc>{LOC}</loc>
         <lastmod>{LASTMOD}</lastmod>
@@ -21,7 +26,8 @@ URL_TEMPLATE = """    <url>
 {ATTRIBUTES}
             </DataObject>
         </PageMap>
-    </url>"""
+    </url>
+"""
 
 #adding &mode=text at the end will get us textual results
 LOC_TEMPLATE = "http://jpress.nli.org.il/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&id={ARTICLE_ID}&mode=text"
@@ -66,10 +72,17 @@ def parse_xml_file(file_stream, file_name):
     '''
     attributes = {}
     import re
-    lines = file_stream.read()
-    base_href = re.search("BASE_HREF=\"([^\"]+)", lines)
+    tree = ET.parse(file_stream)
+    root = tree.getroot()
+    
+    
+    meta = root.findall("./Meta")
+    base_href = meta[0].attrib["BASE_HREF"]
+    
+    for xml_attr, sitemap_attr in META_ATTRIBUTES.iteritems():
+        attributes[sitemap_attr] = meta[0].attrib[xml_attr]
 
-    return base_href.group(1), file_name, attributes
+    return base_href, file_name, attributes
 
 def get_articles_from_zip(zip_path):
     '''
