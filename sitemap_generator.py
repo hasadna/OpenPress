@@ -1,5 +1,10 @@
 import sys
-import zipfile
+from zipfile import ZipFile
+
+from os.path import join, splitext, exists
+ZIP_PATH = join(".", "Document.zip")
+FOLDER_PATH = join(".", "Document")
+
 #import xml.etree.ElementTree as ET
 SITEMAP_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -54,20 +59,35 @@ def get_url(article, date=DEFAULT_DATE):
     return get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID]), date, article[ARTICLE_ATTRIBUTES]
 
 
-def parse_xml_file(file_path, file_name):
+def parse_xml_file(file_stream, file_name):
     '''
     Parses an xml file. currently only greps the base path and no attributes.
     We should actually parse the XML to get the attributes.
     '''
     attributes = {}
     import re
-    with open(file_path) as file_:
-        lines = file_.read()
-        base_href = re.search("BASE_HREF=\"([^\"]+)", lines)
+    lines = file_stream.read()
+    base_href = re.search("BASE_HREF=\"([^\"]+)", lines)
 
     return base_href.group(1), file_name, attributes
 
+def get_articles_from_zip(zip_path):
+    '''
+    Returns the articles in the zip file, currently returns only a test thingy.
+    '''
 
+    #use os.walk to iterate over all of our files
+    
+    zip_file = ZipFile(zip_path)
+    
+    for zip_info in zip_file.infolist():
+        file_name = zip_info.filename
+        if file_name.lower().endswith(".xml") and "Pg" not in file_name:
+            file_stream = zip_file.open(file_name, "r")
+            yield parse_xml_file(file_stream, splitext(file_name)[0])
+            file_stream.close()
+        
+    zip_file.close()
 
 def get_articles_from_folder(folder):
     '''
@@ -76,16 +96,20 @@ def get_articles_from_folder(folder):
 
     #use os.walk to iterate over all of our files
     from os import walk
-    from os.path import join, splitext
 
     for root, dirs, files in walk(folder):
         for file_name in files:
             if file_name.lower().endswith(".xml") and "Pg" not in file_name:
-                yield parse_xml_file(join(root, file_name), splitext(file_name)[0])
+                file_stream = open(join(root, file_name), "rb")
+                yield parse_xml_file(file_stream, splitext(file_name)[0])
+                file_stream.close()
 
 
 def main(argv):
-    urls = (get_url(article) for article in get_articles_from_folder("./Document"))
+    if exists(ZIP_PATH):
+        urls = (get_url(article) for article in get_articles_from_zip(ZIP_PATH))
+    else:
+        urls = (get_url(article) for article in get_articles_from_folder(FOLDER_PATH))
     print SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 
