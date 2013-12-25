@@ -67,8 +67,8 @@ def get_url(article, date=DEFAULT_DATE):
 
 def parse_xml_file(file_stream, file_name):
     '''
-    Parses an xml file. currently only greps the base path and no attributes.
-    We should actually parse the XML to get the attributes.
+    Parses an xml file. Parses META_ATTRIBUTES from the meta node
+    and the path.
     '''
     attributes = {}
     import re
