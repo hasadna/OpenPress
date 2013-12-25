@@ -2,8 +2,9 @@ import sys
 from zipfile import ZipFile
 
 from os.path import join, splitext, exists
-ZIP_PATH = join(".", "Document.zip")
-FOLDER_PATH = join(".", "Document")
+ZIP_PATH = "Document.zip"
+FOLDER_PATH = "Document"
+TOC_PATH = "TOC.xml"
 
 import xml.etree.ElementTree as ET
 
@@ -15,16 +16,14 @@ DEFAULT_CHANGEFREQ = "monthly"
 
 SITEMAP_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{URLS}
-</urlset>
+{URLS}</urlset>
 """
 URL_TEMPLATE = """    <url>
         <loc>{LOC}</loc>
         <lastmod>{LASTMOD}</lastmod>
         <PageMap xmlns="http://www.google.com/schemas/sitemap-pagemap/1.0">
             <DataObject type="document">
-{ATTRIBUTES}
-            </DataObject>
+{ATTRIBUTES}            </DataObject>
         </PageMap>
     </url>
 """
@@ -117,13 +116,25 @@ def get_articles_from_folder(folder):
                 yield parse_xml_file(file_stream, splitext(file_name)[0])
                 file_stream.close()
 
+def generate_publication_sitemap(publication_path):
+    '''
+    Returns a tuple of a publication's name and the text of its sitemap.
+    '''
+    tree = ET.parse(join(publication_path, TOC_PATH))
+    root = tree.getroot()
+    meta = root.findall("./Head_np/Meta")
+    publication_name = meta[0].attrib["BASE_HREF"].replace("/", "-")
+    
+    if exists(join(publication_path, ZIP_PATH)):
+        urls = (get_url(article) for article in get_articles_from_zip(join(publication_path, ZIP_PATH)))
+    else:
+        urls = (get_url(article) for article in get_articles_from_folder(join(publication_path, FOLDER_PATH)))
+    return publication_name, SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 def main(argv):
-    if exists(ZIP_PATH):
-        urls = (get_url(article) for article in get_articles_from_zip(ZIP_PATH))
-    else:
-        urls = (get_url(article) for article in get_articles_from_folder(FOLDER_PATH))
-    print SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
+    xml_name, xml_content = generate_publication_sitemap(".")
+    print xml_content
+    print xml_name + ".xml"
 
 
 
