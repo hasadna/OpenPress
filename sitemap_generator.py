@@ -85,7 +85,8 @@ def parse_xml_file(file_stream, file_name):
 
 def get_articles_from_zip(zip_path):
     '''
-    Returns the articles in the zip file, currently returns only a test thingy.
+    Returns the articles in the zip file, currently returns a bit 
+    more than a test thingy.
     '''
 
     #use os.walk to iterate over all of our files
@@ -103,7 +104,8 @@ def get_articles_from_zip(zip_path):
 
 def get_articles_from_folder(folder):
     '''
-    Returns the articles in the directory, currently returns only a test thingy.
+    Returns the articles in the directory, currently returns a bit 
+    more than a test thingy.
     '''
 
     #use os.walk to iterate over all of our files
@@ -116,25 +118,27 @@ def get_articles_from_folder(folder):
                 yield parse_xml_file(file_stream, splitext(file_name)[0])
                 file_stream.close()
 
-def generate_publication_sitemap(publication_path):
+def generate_document_sitemap(publication_path):
     '''
     Returns a tuple of a publication's name and the text of its sitemap.
     '''
     tree = ET.parse(join(publication_path, TOC_PATH))
     root = tree.getroot()
+    
+    publication_name = root.attrib["PUBLICATION"]
     meta = root.findall("./Head_np/Meta")
-    publication_name = meta[0].attrib["BASE_HREF"].replace("/", "-")
+    base_href = meta[0].attrib["BASE_HREF"].replace("/", "-")
     
     if exists(join(publication_path, ZIP_PATH)):
         urls = (get_url(article) for article in get_articles_from_zip(join(publication_path, ZIP_PATH)))
     else:
         urls = (get_url(article) for article in get_articles_from_folder(join(publication_path, FOLDER_PATH)))
-    return publication_name, SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
+    return publication_name, base_href, SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 def main(argv):
-    xml_name, xml_content = generate_publication_sitemap(".")
+    publication_name, xml_name, xml_content = generate_publication_sitemap(".")
     print xml_content
-    print xml_name + ".xml"
+    print join(publication_name, xml_name + ".xml")
 
 
 
