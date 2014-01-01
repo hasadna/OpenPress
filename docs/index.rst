@@ -6,6 +6,17 @@
 Welcome to open-news's documentation!
 =====================================
 
+Ways to contribute
+==================
+
+You can contribute to the project in a number of ways:
+
+**Write some code**: https://github.com/hasadna/OpenPress
+
+**Read the docs**: http://open-budgets.readthedocs.org/
+
+**Tackle an open issue**: https://github.com/hasadna/openmuni-budgets/issues
+
 Contents:
 
 .. toctree::
