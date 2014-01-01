@@ -3,31 +3,27 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to open-news's documentation!
+Welcome to Open Press documentation!
 =====================================
 
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-
-
-Indices and tables
+Ways to contribute
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+You can contribute to the project in a number of ways:
+
+**Write some code**: https://github.com/hasadna/OpenPress
+
+**Read the docs**: http://openpress.readthedocs.org/
+**Tackle an open issue**: https://github.com/hasadna/OpenPress/issues
+
 
 
 Table of contents
 =================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
 
    guide/start
 
-Class's
-=======
+
