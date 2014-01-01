@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="open-news.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,19 +60,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.rst" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.rst" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="14" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="16" column="69" selection-start="572" selection-end="572" vertical-scroll-proportion="0.4152249">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.15570934">
+            <state line="6" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -146,8 +144,8 @@
         <option value="$PROJECT_DIR$/sitemap_generator.py" />
         <option value="$PROJECT_DIR$/source/open_cv_example.py" />
         <option value="$PROJECT_DIR$/docs/guide/start.rst" />
-        <option value="$PROJECT_DIR$/docs/index.rst" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/index.rst" />
       </list>
     </option>
   </component>
@@ -656,16 +654,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.rst">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+        <state line="6" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.15570934">
+        <state line="16" column="69" selection-start="572" selection-end="572" vertical-scroll-proportion="0.4152249">
           <folding />
         </state>
       </provider>
