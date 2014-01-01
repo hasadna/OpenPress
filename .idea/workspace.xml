@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/requirements/opencv_latest.sh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="$PROJECT_DIR$/docs/conf.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/open-news.iml" afterPath="$PROJECT_DIR$/.idea/open-news.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/guide/start.rst" afterPath="$PROJECT_DIR$/docs/guide/start.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="open-news.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,7 +62,7 @@
       <file leaf-file-name="index.rst" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="413" selection-end="449" vertical-scroll-proportion="0.33737025">
+            <state line="24" column="15" selection-start="625" selection-end="625" vertical-scroll-proportion="0.2733564">
               <folding />
             </state>
           </provider>
@@ -704,7 +698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="413" selection-end="449" vertical-scroll-proportion="0.33737025">
+        <state line="24" column="15" selection-start="625" selection-end="625" vertical-scroll-proportion="0.2733564">
           <folding />
         </state>
       </provider>
