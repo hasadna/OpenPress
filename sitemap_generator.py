@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 META_ATTRIBUTES = { "ISSUE_DATE" : "issue_date",
                     "PUBLICATION" : "publication"}
-                    
+
 DEFAULT_DATE = "2013-01-01"
 DEFAULT_CHANGEFREQ = "monthly"
 
@@ -74,11 +74,11 @@ def parse_xml_file(file_stream, file_name):
     import re
     tree = ET.parse(file_stream)
     root = tree.getroot()
-    
-    
+
+
     meta = root.findall("./Meta")
     base_href = meta[0].attrib["BASE_HREF"]
-    
+
     for xml_attr, sitemap_attr in META_ATTRIBUTES.iteritems():
         attributes[sitemap_attr] = meta[0].attrib[xml_attr]
 
@@ -90,17 +90,14 @@ def get_articles_from_zip(zip_path):
     '''
 
     #use os.walk to iterate over all of our files
-    
-    zip_file = ZipFile(zip_path)
-    
-    for zip_info in zip_file.infolist():
-        file_name = zip_info.filename
-        if file_name.lower().endswith(".xml") and "Pg" not in file_name:
-            file_stream = zip_file.open(file_name, "r")
-            yield parse_xml_file(file_stream, splitext(file_name)[0])
-            file_stream.close()
-        
-    zip_file.close()
+
+    with ZipFile(zip_path) as zip_file:
+        for zip_info in zip_file.infolist():
+            file_name = zip_info.filename
+            if file_name.lower().endswith(".xml") and "Pg" not in file_name:
+                with zip_file.open(file_name, "r") as file_stream:
+                    yield parse_xml_file(file_stream, splitext(file_name)[0])
+
 
 def get_articles_from_folder(folder):
     '''
@@ -113,9 +110,8 @@ def get_articles_from_folder(folder):
     for root, dirs, files in walk(folder):
         for file_name in files:
             if file_name.lower().endswith(".xml") and "Pg" not in file_name:
-                file_stream = open(join(root, file_name), "rb")
-                yield parse_xml_file(file_stream, splitext(file_name)[0])
-                file_stream.close()
+                with open(join(root, file_name), "rb") as file_stream:
+                    yield parse_xml_file(file_stream, splitext(file_name)[0])
 
 
 def main(argv):
