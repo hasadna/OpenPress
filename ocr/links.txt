@@ -1,0 +1,29 @@
+Software
+--------------
+www.pygtk.org
+www.gtk.org
+opencv.com
+hocr.berlios.de/install.html #Optional
+pybrain.org/pages/developers #JIK
+
+OCR-Overview
+--------------
+pubs.opengroup.org/onlinepubs/009638399/overview.htm
+https://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_imgproc/py_contours/py_contours_begin/py_contours_begin.htmldocs.opencv.org/trunk/doc/py_tutorials/py_ml/py_knn/py_knn_opencv/py_knn_opencv.html
+answers.opencv.org/question/21556/how-to-train-ocr-to-recognize-characters/
+docs.opencv.org/trunk/doc/py_tutorials/py_ml/py_svm/py_svm_opencv/py_svm_opencv.html
+blog.damiles.com/2008/11/basic-ocr-in-opencv/
+stackoverflow.com/questions/9395303/example-for-ocr-with-ann-in-opencv
+amitrevski.blogspot.co.il/2013/03/extracting-and-recognizing-numbers.html
+www.codeproject.com/Articles/15304/Unicode-Optical-Character-Recognition
+code.activestate.com/recipes/578148-simple-back-propagation-neural-network-in-python-s/
+en.wikipedia.org/wiki/Optical_character_recognition
+
+OCR-Related
+-------------
+www.daveperrett.com/articles/2010/12/14/face-detection-with-osx-and-python/
+stackoverflow.com/questions/18020455/java-opencv-tesseract-ocr-code-regocnition
+stackoverflow.com/questions/5873566/opencv-detect-numbers
+www.codeproject.com/Articles/3907/Creating-Optical-Character-Recognition-OCR-applica
+https://www.google.co.il/search?q=back+propagation+python&ie=utf-8&oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&channel=fflb&gws_rd=cr&ei=vPmMUpLgBObU4QSc-oCQDQ
+
