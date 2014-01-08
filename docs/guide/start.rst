@@ -9,6 +9,7 @@ Open News is written in Python and is open source software released under a BSD 
 
 Open News is a project of the **Public Knowledge Workshop**, a non-profit organization in Israel dedicated to data transparency in government.
 
+
 Stack
 =====
 
@@ -47,15 +48,17 @@ Execute the commands without it if you know you don't need it.
 Update Your System::
 
     	sudo apt-get update
-	sudo apt-get upgrade	
 		
 Install::
 
-	sudo apt-get install build-essential
-	sudo apt-get install cmake
-	sudo apt-get install pkg-config	
-    	sudo apt-get install libgtk2.0-dev python-dev python-numpy
+	    sudo apt-get install build-essential cmake pkg-config libgtk2.0-dev python-dev python-numpy
     	sudo pip install virtualenv virtualenvwrapper
+
+
+
+if you are planning to work on the OCR then you need open-cv::
+
+        sudo apt-get install libopencv-dev python-opencv opencv-doc
 
 
 That's all the packages we need for the system, now we need to configure the user's .profile.
@@ -75,7 +78,7 @@ Configure::
 Installing the project
 ======================
 
-As long as you have met the system requirements above on your chosen OS, we're ready to install the project.
+As long as you have met the system requirements above , we're ready to install the project.
 
 
 Make a virtualenv
@@ -115,14 +118,4 @@ Here we go::
     # Clone the project
     # Important: Note the "." at the end of the git clone command.
     git clone https://github.com/kobiluria/open-news.git .
-
-install open CV
-===============
-
-Here we go::
-	
-	cdproject
-	cd requirements
-	./opencv_latest.sh
-
 
