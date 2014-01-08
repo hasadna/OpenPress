@@ -96,7 +96,7 @@ def get_articles_from_zip(zip_path):
             file_name = zip_info.filename
             if file_name.lower().endswith(".xml") and "Pg" not in file_name:
                 with zip_file.open(file_name, "r") as file_stream:
-                    yield parse_xml_file(file_stream, splitext(file_name)[0])
+                    yield parse_xml_file(file_stream, splitext(file_name.split("/")[1])[0])
 
 
 def get_articles_from_folder(folder):
@@ -132,7 +132,7 @@ def generate_document_sitemap(publication_path):
     return publication_name, base_href, SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 def main(argv):
-    publication_name, xml_name, xml_content = generate_publication_sitemap(".")
+    publication_name, xml_name, xml_content = generate_document_sitemap(".")
     print xml_content
     print join(publication_name, xml_name + ".xml")
 
