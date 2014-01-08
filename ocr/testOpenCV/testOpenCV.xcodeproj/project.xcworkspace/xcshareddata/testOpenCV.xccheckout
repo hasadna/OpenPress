@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8EEE53A7-B13B-4BDD-A35E-39FB23E7EC9B</string>
+	<string>1B809D6D-9264-47A6-9419-9953FC50947A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>OCR Test</string>
+	<string>testOpenCV</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</key>
 		<string>https://github.com/kobiluria/open-news.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ocr/OCR Test/OCR Test.xcodeproj/project.xcworkspace</string>
+	<string>ocr/testOpenCV/testOpenCV.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</key>

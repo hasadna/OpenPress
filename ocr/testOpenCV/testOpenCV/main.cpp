@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  OCR Test
+//  testOpenCV
 //
 //  Created by Asaf Valadarsky on 1/8/14.
 //  Copyright (c) 2014 Asaf Valadarsky. All rights reserved.
