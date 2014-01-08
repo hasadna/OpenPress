@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>799F8453-816B-4C04-A251-50375C7CBB0E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OCR Test</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</key>
+		<string>https://github.com/kobiluria/open-news.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ocr/OCR Test/OCR Test.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kobiluria/open-news.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</string>
+			<key>IDESourceControlWCCName</key>
+			<string>open-news</string>
+		</dict>
+	</array>
+</dict>
+</plist>
