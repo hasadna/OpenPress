@@ -1,18 +1,17 @@
-//
-//  main.cpp
-//  testOpenCV
-//
-//  Created by Asaf Valadarsky on 1/8/14.
-//  Copyright (c) 2014 Asaf Valadarsky. All rights reserved.
-//
-
 #include <iostream>
+#include <opencv2/opencv.hpp>
 
-int main(int argc, const char * argv[])
+using namespace std;
+using namespace cv;
+
+int main (int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    Mat img = imread("/Users/sadeep/Desktop/image.jpg"); //Change the image path here.
+    if (img.data == 0) {
+        cerr << "Image not found!" << endl;
+        return -1;
+    }
+    namedWindow("image", CV_WINDOW_AUTOSIZE);
+    imshow("image", img);
+    waitKey();
 }
-

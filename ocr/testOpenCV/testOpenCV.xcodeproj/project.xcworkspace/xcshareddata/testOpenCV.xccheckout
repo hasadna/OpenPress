@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1B809D6D-9264-47A6-9419-9953FC50947A</string>
+	<string>932C618D-E1A7-485D-8493-487929E541A3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>testOpenCV</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1DC5DE84-2191-4F0F-A2B0-C421675EDE53</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OCR Test</string>
+			<string>testOpenCV</string>
 		</dict>
 	</array>
 </dict>
