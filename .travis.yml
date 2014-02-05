@@ -7,4 +7,8 @@ install:
 
 # command to run tests, e.g. python setup.py test
 script:
-  - open-news/open_news/manage.py test
+  - python open-news/open_news/manage.py test
+
+notifications:
+  email:
+    - kobi@luria.net
