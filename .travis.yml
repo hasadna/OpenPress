@@ -7,7 +7,7 @@ install:
 
 # command to run tests, e.g. python setup.py test
 script:
-  - python open-news/open_news/manage.py test
+  - python backend/manage.py test
 
 notifications:
   email:
