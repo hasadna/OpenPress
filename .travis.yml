@@ -11,4 +11,5 @@ script:
 
 notifications:
   email:
-    - kobi@luria.net
+    	- kobi@luria.net
+	- asaf.valadarsky@gmail.com
