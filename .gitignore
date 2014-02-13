@@ -1,2 +1,4 @@
 *.idea
-*.pvc
+*.pyc
+*.sqlite3
+backend/open-news-stub

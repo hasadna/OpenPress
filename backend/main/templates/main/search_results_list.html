@@ -1,0 +1,17 @@
+
+{% extends "layouts/generic-template.html" %}
+
+{% block h1 %}
+    <div class="h1"> ,תוצאות חיפוש</div>
+{% endblock %}
+
+{% block details %}
+    Num of Results: {{ articles_list.count }}
+{% endblock %}
+
+{% block content %}
+
+    {% for article in articles_list %}
+        <a href="{% url 'article-detail' article.pk %}"> {{ article.title }}</a>
+    {% endfor %}
+{% endblock %}

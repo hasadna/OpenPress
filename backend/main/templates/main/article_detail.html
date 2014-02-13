@@ -1,0 +1,14 @@
+
+{% extends "layouts/generic-template.html" %}
+
+{% block h1 %}
+    <div class="h1"> {{ article.title }}</div>
+{% endblock %}
+
+{% block content %}
+    <ul>
+    {% for paragraph in article.paragraphs.all %}
+        <li>{{ paragraph.extracted_text }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
