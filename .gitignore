@@ -2,6 +2,4 @@
 *.pyc
 *.sqlite3
 backend/open-news-stub
-.idea/workspace.xml
-.idea/open-news.iml
-.idea/misc.xml
+.idea/*
