@@ -3,13 +3,13 @@ python:
   - "2.7"
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
-  - pip install -r requirements.txt
+ - pip install -r requirements.txt
 
 # command to run tests, e.g. python setup.py test
 script:
-  - python backend/manage.py test
+ - python backend/manage.py test
 
 notifications:
-  email:
-    	- kobi@luria.net
-	- asaf.valadarsky@gmail.com
+email:
+ - kobi@luria.net
+ - asaf.valadarsky@gmail.com
