@@ -15,7 +15,9 @@ DEFAULT_DATE = "2013-01-01"
 DEFAULT_CHANGEFREQ = "monthly"
 
 SITEMAP_TEMPLATE = """<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:content="http://www.google.com/schemas/sitemap-content/1.0">
+
 {URLS}</urlset>
 """
 URL_TEMPLATE = """    <url>
@@ -29,7 +31,7 @@ URL_TEMPLATE = """    <url>
 """
 
 #adding &mode=text at the end will get us textual results
-LOC_TEMPLATE = "http://jpress.nli.org.il/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&id={ARTICLE_ID}&mode=text"
+LOC_TEMPLATE = "http://jpress.nli.org.il/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&amp;id={ARTICLE_ID}&amp;mode=text"
 
 ATTRIBUTE_TEMPLATE = """                <Attribute name="{KEY}">{VALUE}</Attribute>
 """
