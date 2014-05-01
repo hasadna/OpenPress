@@ -33,8 +33,15 @@
          lang : "he",
          source: 'data.json'
         }
+        
       </script>
       <script type="text/javascript" src="./build/js/storyjs-embed.js"></script>
+      <script type="text/javascript">
+      $(document).on("click", "img.media-image", function(e){
+	  		e.preventDefault();
+	    	alert("woot");
+      });
+      </script>
       <!-- END Timeline Embed-->
   </body>
 </html>
