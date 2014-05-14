@@ -2,30 +2,19 @@
 {
     "timeline":
     {
-        "headline":"השאילתא שנשאלה<br> תופיע כאן",
+        "headline":"ליל הגשרים",
         "type":"default",
 		"startDate":"2009,1",
-		"text":"פה אפשר לשים עוד דברים שונים ומשונים",
+		"text":"פילטרים: תאריך, סרטונים",
 		
         "date": [
-            {
-                "startDate":"2009,2",
-                "headline":"סרטון על ליל הגשרים",
-                "text":"יחיאל בארי ז\"ל מספר על פיצוץ גשר אל-חמה",
-                "asset":
-                {
-                    "media":"http://www.youtube.com/watch?v=-AS6Rz2EfH8",
-                    "credit":"",
-                    "caption":""
-                }
-            },
             {
                 "startDate":"2009,5",
                 "headline":"עיתון חבצלת",
                 "text":"גליון 3",
                 "asset":
                 {
-                    "media":"assets/img/shots/Pg001.png",
+                    "media":"shots/Pg001.png",
                     "caption":""
                 }
             },
@@ -35,7 +24,7 @@
                 "text":"גליון 5",
                 "asset":
                 {
-                    "media":"assets/img/shots/Pg004.png",
+                    "media":"shots/Pg004.png",
                     "caption":""
                 }
             }
