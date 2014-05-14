@@ -1,6 +1,39 @@
 
 body {
     font-family: "Arial";
+}
+
+#search-area {
     text-align: center;
     padding-top: 10%;
+}
+
+#submit-button {
+    border: 0px;
+    background-color: #00ADEF;
+    border-radius: 5px;
+    color: #ffffff;
+    height: 40px;
+    width: 135px;
+    font-weight: bold;
+}
+
+#submit-button:hover {
+    background-color: #0092c6;
+}
+
+#regularInput {
+    height: 40px;
+    width: 30%;
+}
+
+footer {
+    margin-top: 10%;
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+footer .one-third {
+    border-left: solid 1px #00ADEF;
+
 }
