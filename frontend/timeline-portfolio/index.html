@@ -18,6 +18,7 @@
     
     <!-- The default timeline stylesheet -->
     <link rel="stylesheet" href="./build/css/timeline.css" />
+	<link rel="stylesheet" href="./css/colorbox.css" />
   
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
@@ -36,12 +37,33 @@
         
       </script>
       <script type="text/javascript" src="./build/js/storyjs-embed.js"></script>
-      <script type="text/javascript">
-      $(document).on("click", "img.media-image", function(e){
-	  		e.preventDefault();
-	    	alert("woot");
-      });
+      <script type="text/javascript" src="./js/jquery.colorbox-min.js"></script>
+      <script type="text/javascript" src="./js/wheelzoom.js"></script>
+      <script type="text/javascript">      	
+		$(document).on("click", "img.media-image", function(e){
+			  		e.preventDefault();
+			  		// alert($("h2 .start").text());
+			  		// href:$(this).attr('src')
+			  		$("#hiddenImg").attr("src", $(this).attr('src'));
+			    	$(this).colorbox(	{rel: 'group1', 
+			    						open: true, 
+			    						inline: true,
+			    						href:"#hidden"
+			    						});
+			    	
+			    	
+			    						
+			    	return false; 
+		      });
+		$(document).ready(function(){
+			
+		});
       </script>
       <!-- END Timeline Embed-->
+	  <div style="display:none">
+	  	<div id="hidden">
+	  		<img id="hiddenImg"></img>
+	  	</div>
+	  </div>
   </body>
 </html>
