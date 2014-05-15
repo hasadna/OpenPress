@@ -50,13 +50,18 @@ class Article(object):
     article_id = 0
 
     def _parse_META(self, element):
+	doc_id = ''
+        id_ = ''
         for name, item in element.items():
             if name == 'ISSUE_DATE':
-                pass
-               # self._info['date'] = item
+                self._info['issue_date'] = item
             if name == 'PUBLICATION':
-                pass
-                #self._info['publisher'] = item
+                self._info['publisher'] = item
+            if name == 'DOC_ID':
+                doc_id = item
+            if name == 'ID':
+                id_ = item
+        self._info['id'] = doc_id + id_
 
     def _parse_Link(self, element):
         pass
@@ -89,23 +94,24 @@ class Article(object):
         Article.article_id += 1
         self._info['id'] = str(Article.article_id)
         
+def upload_directory(solr, path):
+    for article in get_articles_from_zip(join(path, ZIP_PATH)):
+        ar = Article(article)
+        solr.add([ar._info])
+
+def upload_all(solr, input_folder):
+    from os import walk, mkdir
+
+    for root, dirs, files in walk(input_folder):
+        if TOC_PATH in files:
+            upload_directory(solr, root)
+
 def main(argv):
     # Setup a Solr instance. The timeout is optional.
     solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
     # You can optimize the index when it gets fragmented, for better speed.
     solr.optimize()
-
-    path = argv[1]
-
-    info_list = []
-    for article in get_articles_from_zip(join(path, ZIP_PATH)):
-        info_list.append(Article(article)._info)
-
-    solr.add(info_list)
-        
-    
-    
-
+    upload_all(solr, argv[1])
 
 
 if __name__ == "__main__":
