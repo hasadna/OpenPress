@@ -67,8 +67,8 @@ class Article(object):
             for term in primative.getchildren():
                 if term.tag in WORDS:
                     content += term.text
-                if term.tag in LINE:
-                    content += " "
+                #if term.tag in LINE:
+                content += " "
                     
         self._info['content'] = content
 
@@ -96,9 +96,12 @@ def main(argv):
     solr.optimize()
 
     path = argv[1]
+
+    info_list = []
     for article in get_articles_from_zip(join(path, ZIP_PATH)):
-        ar = Article(article)
-        solr.add([ar._info])
+        info_list.append(Article(article)._info)
+
+    solr.add(info_list)
         
     
     
