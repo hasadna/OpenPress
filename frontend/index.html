@@ -4,7 +4,9 @@
 
     <meta charset="utf-8">
     <title>Open Press</title>
-    
+    <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    <!--@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);-->
+    <link href='http://fonts.googleapis.com/earlyaccess/alefhebrew.css' rel='stylesheet' type='text/css'>
     <!-- CSS styles for the site -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- CSS Responsive Framework Skeleton -->
@@ -18,26 +20,44 @@
         <!-- Search -->
         <img src="http://www.hasadna.org.il/wp-content/themes/sadna2012/images/sadna-logo.png">
         <h1>חפשו במאגר העיתונות הפתוחה</h1>
-        <h2>Search the Open Press Database</h2>
+        <h3>Search the Open Press Database</h3>
         <form method="get">
-            <input id="regularInput" type="search" name="query">
-            <button id="submit-button">Search Now ! חפשו</button>
+            <div class="search">
+                <input id="regularInput" type="search" name="query">
+                <button id="submit-button"><img src="search-icon.png"></button>
+            </div>
         </form>
     </div>
 
     <div class="clear"></div>
 
-    <footer>
+    <div class="info">
         <div class="one-third column alpha">
-            <p>lala</p>
+            <div class="text">
+                <p>על הסדנא</p>
+                <div class="about">
+                    הסדנא לידע ציבורי (ע"ר) פועלת להגברת השתתפות ציבורית בישראל, על ידי איסוף, פתיחה והנגשה של מידע שמצוי ברשותם של גופי ממשל ומגזר ציבורי.
+                    <a href="http://www.hasadna.org.il/">לאתר של הסדנה</a>
+                </div>
+                <div id="code">הקוד <a href="https://github.com/hasadna/OpenPress">כאן</a> </div>
+            </div>
         </div>
         <div class="one-third column">
-            <p>aaaa</p>
+            <div class="text">
+                <p>על הפרוייקט</p>
+                <div class="about">
+                    הספרייה הלאומית ואוניברסיטת תל-אביב ייסדו והנגישו לציבור את אוסף העיתונות ההיסטורי, הכולל למעלה מ- 1,173,000 עמודים סרוקים. מטרתנו היא לאפשר חיפושים מורכבים וכן גישה ישירה ממנועי חיפוש חיצוניים.
+                </div>
+            </div>
         </div>
         <div class="one-third column omega">
-            <p>bbba</p>
+            <div class="text">
+                <p>חיפוש מתקדם</p>
+                <div class="about">החיפוש המתקדם בתהליכי בניה. אתם מוזמנים לראות תוצאת חיפוש לדוגמה בתצורת ציר זמן</div>
+                <button id="advanced-button">דוגמא</button>
+            </div>
         </div>
-    </footer>
+    </div>
 
 </div>
 
