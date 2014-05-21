@@ -3,6 +3,7 @@
 from __future__ import print_function
 import pysolr
 import sys
+import os
 from zipfile import ZipFile
 from os.path import join, splitext, exists
 import xml.etree.ElementTree as ET
@@ -12,59 +13,62 @@ LINE = ['L']
 ZIP_PATH = "Document.zip"
 FOLDER_PATH = "Document"
 TOC_PATH = "TOC.xml"
+PAGE = "Pg"
+ARTICLE = "Ar"
 
 
-def get_articles_from_zip(zip_path):
-    '''
-    Returns the articles in the zip file, currently returns a bit 
-    more than a test thingy.
-    '''
+class Page(object):
+    def __init__(self, file_stream):
+        self.METADATA = METADATA= {
+                                   "Entity" : self._parse_entity,}
 
-    #use os.walk to iterate over all of our files
+        self.entities = {}
+        self.articles = []
 
-    with ZipFile(zip_path) as zip_file:
-        for zip_info in zip_file.infolist():
-            file_name = zip_info.filename
-            if file_name.lower().endswith(".xml") and "Pg" not in file_name:
-                with zip_file.open(file_name, "r") as file_stream:
-                    yield file_stream
+        tree = ET.parse(file_stream)
+        root = tree.getroot()
 
+        for element in root.getchildren():
+            if element.tag in self.METADATA:
+                self.METADATA[element.tag](element)
+    
+    def _parse_entity(self, element):
+        box = None
+        ID = None
 
-def get_articles_from_folder(folder):
-    '''
-    Returns the articles in the directory, currently returns a bit 
-    more than a test thingy.
-    '''
+        for name, item in element.items():
+            if name == 'BOX':
+                box = item
+            if name == 'ID':
+                id_ = item
 
-    #use os.walk to iterate over all of our files
-    from os import walk
+        self.entities[id_] = box
+                
+    def add_article(self, article):
+        self.articles.append(article)
 
-    for root, dirs, files in walk(folder):
-        for file_name in files:
-            if file_name.lower().endswith(".xml") and "Pg" not in file_name:
-                with open(join(root, file_name), "rb") as file_stream:
-                    yield file_stream
+        if article.id in self.entities:
+            article._info['box'] = self.entities[article.id]
+
+    def get_articles(self):
+        return self.articles[:]
 
 
 class Article(object):
-    article_id = 0
-
     def _parse_META(self, element):
-	doc_id = ''
+
+        doc_id = ''
         id_ = ''
         for name, item in element.items():
             if name == 'ISSUE_DATE':
                 self._info['issue_date'] = item
             if name == 'PUBLICATION':
                 self._info['publisher'] = item
-            if name == 'DOC_ID':
-                doc_id = item
-            if name == 'ID':
-                id_ = item
-        self._info['id'] = doc_id + id_
+
 
     def _parse_Link(self, element):
         pass
+
     def _parse_Content(self, element):
         content = ''
         
@@ -87,17 +91,54 @@ class Article(object):
         tree = ET.parse(file_stream)
         root = tree.getroot()
 
+        for name, item in root.items():
+            if name == 'DOC_UID':
+                doc_id = item
+            if name == 'ID':
+                id_ = item
+
+        self.id = id_
+        self._info['id'] = doc_id + id_
+
         for element in root.getchildren():
             if element.tag in self.METADATA:
                 self.METADATA[element.tag](element)
-                
-        Article.article_id += 1
-        self._info['id'] = str(Article.article_id)
-        
+
+
 def upload_directory(solr, path):
-    for article in get_articles_from_zip(join(path, ZIP_PATH)):
-        ar = Article(article)
-        solr.add([ar._info])
+    '''
+    Upload one direcotry to solr.
+    '''
+
+    with ZipFile(join(path, ZIP_PATH)) as zip_file:
+        # Find all the pages in the current zip.
+        pages = [info for info in zip_file.infolist() 
+                      if (PAGE in info.filename and
+                          info.filename.endswith(".xml"))]
+
+        for page_file in pages:
+            # Create a page object.
+            print(page_file.filename)
+            page = Page(zip_file.open(page_file.filename, "r"))
+            
+            page_dir = os.path.dirname(page_file.filename)
+            # Find all the articles in the given page.
+            article_files = [info for info in zip_file.infolist()
+                                  if (page_dir in info.filename and
+                                      ARTICLE in info.filename and
+                                      info.filename.endswith(".xml"))]
+                                     
+            for article_file in article_files:
+                # Create the article object.
+                ar = Article(zip_file.open(article_file.filename, "r"))
+                # Add it to the page.
+                page.add_article(ar)
+            
+            import pdb
+            pdb.set_trace()
+            # Add the articles to solr.
+            solr.add(page.get_articles())
+
 
 def upload_all(solr, input_folder):
     from os import walk, mkdir
@@ -111,6 +152,7 @@ def main(argv):
     solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
     # You can optimize the index when it gets fragmented, for better speed.
     solr.optimize()
+
     upload_all(solr, argv[1])
 
 
