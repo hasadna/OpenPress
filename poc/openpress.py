@@ -23,7 +23,6 @@ def id_to_url(article_id):
     '''
     article_id = article_id.replace(r"/", "")
     url =  r"http://opa.org.il/article/"
-    print article_id
     url += (article_id[:4] + article_id[8:12] +
             article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
