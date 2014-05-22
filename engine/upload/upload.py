@@ -51,7 +51,7 @@ class Page(object):
             article._info['box'] = self.entities[article.id]
 
     def get_articles(self):
-        return self.articles[:]
+        return [ar._info for ar in self.articles]
 
 
 class Article(object):
@@ -117,8 +117,8 @@ def upload_directory(solr, path):
                           info.filename.endswith(".xml"))]
 
         for page_file in pages:
-            # Create a page object.
             print(page_file.filename)
+            # Create a page object.
             page = Page(zip_file.open(page_file.filename, "r"))
             
             page_dir = os.path.dirname(page_file.filename)
@@ -134,8 +134,6 @@ def upload_directory(solr, path):
                 # Add it to the page.
                 page.add_article(ar)
             
-            import pdb
-            pdb.set_trace()
             # Add the articles to solr.
             solr.add(page.get_articles())
 
