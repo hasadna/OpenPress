@@ -27,20 +27,28 @@ def id_to_url(article_id):
             article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
 
+
+def convert_result(result):
+    result['url'] = id_to_url(result['id'])
+    result['date'] = 0 # TODO
+    result['headline'] = '' # TODO
+    result['issue'] = '' # TODO
+    result['image'] = '' # TODO
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         query = self.get_argument("query", default=None, strip=False)
         if query is None:
             self.render("index.html")
         else:
-            results = g_solr.search(query)
-
+            results = g_solr.search(query, rows=20)
+            results = results.docs
             # Add the url to the article for every result.
             for result in results:
-                result['url'] = id_to_url(result['id'])
-
-            results = results.docs[:100]
+                convert_result(result)
             self.render("results.html", results=results)
+
+            # TODO: self.render("timeline.html", results=results, query=query, start_date=start_date)
 
 
 def main():

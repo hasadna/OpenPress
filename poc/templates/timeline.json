@@ -1,0 +1,36 @@
+
+{
+    "timeline":
+    {
+        "headline":"{{ query }}", //What did we search for
+        "type":"default", //should not change
+		"startDate":"{{ start_date }}", //the first date this was found FIXME: in which format?
+		"text":"", //did we use any filters? if so what were they  TODO: we don't have filters yet.
+		
+        "date": [
+        {% for result in results %}
+            {
+                "startDate":"{{ result['date'] }}", //the date of the article
+                "headline":"{{ result['headline'] }}", //which paper
+                "text":"{{ result['issue'] }}", //which issue
+                "asset":
+                {
+                    "media":"{{ result['image'] }}", //where is the picture of that page
+                    "caption":""
+                }
+            },
+        {% end %}
+            {
+                "startDate":"2012,3",
+                "headline":"עיתון חבצלת",
+                "text":"גליון 5",
+                "asset":
+                {
+                    "media":"shots/Pg004.png",
+                    "caption":""
+                }
+            }
+            
+        ]
+    }
+}
