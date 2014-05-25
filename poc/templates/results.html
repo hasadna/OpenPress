@@ -5,7 +5,7 @@
   <body>
     <ul>
       {% for result in results %}
-      <li><b>{{ result['id'] }}</b>: <a href="{{ result['url'] }}">{{ result['url'] }}</a></li>
+      <li><b>{{ result['id'] }}</b>: <a href="{{ result['url'] }}">{{ result['headline'] }}</a></li>
       {% end %}
     </ul>
   </body>

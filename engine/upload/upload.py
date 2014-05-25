@@ -35,6 +35,11 @@ class Page(object):
     def _parse_entity(self, element):
         box = None
         ID = None
+        entity_name = None
+
+        for child in element.getchildren():
+            if child.tag == "Name":
+                entity_name = child.text
 
         for name, item in element.items():
             if name == 'BOX':
@@ -42,13 +47,16 @@ class Page(object):
             if name == 'ID':
                 id_ = item
 
-        self.entities[id_] = box
+        self.entities[id_] = {'box': box,
+                              'headline': entity_name}
                 
     def add_article(self, article):
         self.articles.append(article)
 
         if article.id in self.entities:
-            article._info['box'] = self.entities[article.id]
+            attrs = self.entities[article.id].items()
+            for attr_name, attr_value in attrs:
+                article._info[attr_name] = attr_value
 
     def get_articles(self):
         return [ar._info for ar in self.articles]
@@ -57,8 +65,6 @@ class Page(object):
 class Article(object):
     def _parse_META(self, element):
 
-        doc_id = ''
-        id_ = ''
         for name, item in element.items():
             if name == 'ISSUE_DATE':
                 self._info['issue_date'] = item
@@ -127,6 +133,7 @@ def upload_directory(solr, path):
                                   if (page_dir in info.filename and
                                       ARTICLE in info.filename and
                                       info.filename.endswith(".xml"))]
+            # TODO: also search the Ads
                                      
             for article_file in article_files:
                 # Create the article object.
