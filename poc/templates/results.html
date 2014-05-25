@@ -21,17 +21,19 @@
     	<table id="results" class="tablesorter"> 
 		<thead> 
 		<tr> 
+			<th>תוצאה</th>
+			<th>שנת פרסום</th> 
 		    <th>הוצאה</th> 
-		    <th>שנת פרסום</th> 
-		    <th>תוצאה</th>
+		    
+		    
 		</tr> 
 		</thead> 
 		<tbody>
 	      {% for result in results %}
 	      <tr>
-	      	<td>{{ result['publisher'] }}</td>
-	      	<td>{{ result['year'] }}</td>
 	      	<td><a href="{{ result['url'] }}">{{ result['headline'] }}</a></td>
+	      	<td>{{ result['year'] }}</td>
+	      	<td>{{ result['publisher'] }}</td>
 	      </tr>
 	      {% end %}
 		</tbody>
