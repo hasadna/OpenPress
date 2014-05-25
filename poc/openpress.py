@@ -30,7 +30,7 @@ def id_to_url(article_id):
 
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
-    result['date'] = 0 # TODO
+    result['year'] = result['issue_date'][6:] # TODO
     result['issue'] = '' # TODO
     result['image'] = '' # TODO
 
