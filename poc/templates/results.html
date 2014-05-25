@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Results</title>
-    <!-- CSS styles for the site -->
-    <link rel="stylesheet" href="{{ static_url("css/styles.css") }}">
     <!-- CSS Responsive Framework Skeleton -->
     <link rel="stylesheet" href="{{ static_url("css/skeleton.css") }}">
     
@@ -15,11 +13,12 @@
     
   </head>
   <body>
-    <ul>
-    <img src="http://www.hasadna.org.il/wp-content/themes/sadna2012/images/sadna-logo.png">
-    <center>
-        תוצאות חיפוש עבור השאילתא:   		
-         <b>{ { query } }</b></center>
+    <center><img src="http://www.hasadna.org.il/wp-content/themes/sadna2012/images/sadna-logo.png"></center>
+    	<br><br>
+		<div align="center" dir="rtl" style="font-size:20pt">
+	    תוצאות חיפוש עבור השאילתא:   		
+	     <b>{{ query }}</b>
+	     </div>
          <br><br>
     	<table id="results" class="tablesorter"> 
 		<thead> 
@@ -40,11 +39,13 @@
 	      </tr>
 	      {% end %}
 		</tbody>
-    </ul>
-    
+		
     <script type=text/javascript>
     	$(document).ready(function(){
 	    	$("#results").tablesorter(); 
+	    	document.body.innerHTML = document.body.innerHTML.replace('HZT', 'חבצלת');
+	    	document.body.innerHTML = document.body.innerHTML.replace('HZV', 'חפציבה');
+	    	document.body.innerHTML = document.body.innerHTML.replace('MGD', 'המגיד');
     	});
     </script>
   </body>
