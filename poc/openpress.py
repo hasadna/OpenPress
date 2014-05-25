@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
 import logging
@@ -11,6 +12,11 @@ import pysolr
 
 from tornado import gen
 from tornado.options import define, options, parse_command_line
+
+PUBLI = { 'HZT':     ,
+          'HZV':     ,
+          'MGD':     }
+          
 
 define("port", default=8888, help="run on the given port", type=int)
 
@@ -31,6 +37,7 @@ def id_to_url(article_id):
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
     result['year'] = result['issue_date'][6:] # TODO
+    result['publisher'] = PUBLI[result['publisher']]
     result['issue'] = '' # TODO
     result['image'] = '' # TODO
 
