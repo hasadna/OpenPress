@@ -7,10 +7,23 @@
     <link rel="stylesheet" href="{{ static_url("css/styles.css") }}">
     <!-- CSS Responsive Framework Skeleton -->
     <link rel="stylesheet" href="{{ static_url("css/skeleton.css") }}">
+    
+    <script type="text/javascript" src="{{ static_url("js/jquery.tablesorter.js") }}"></script> 
+    <script type="text/javascript" src="{{ static_url("js/jquery-2.1.1.min.js") }}"></script> 
   </head>
   <body>
     <ul>
     <img src="http://www.hasadna.org.il/wp-content/themes/sadna2012/images/sadna-logo.png">
+    
+    	<table id="results" class="tablesorter"> 
+		<thead> 
+		<tr> 
+		    <th>הוצאה</th> 
+		    <th>שנת פרסום</th> 
+		    <th>תוצאה</th>
+		</tr> 
+		</thead> 
+    
       {% for result in results %}
       <h1><a href="{{ result['url'] }}">{{ result['headline'] }}</a></h1>
       {% end %}
