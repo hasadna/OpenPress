@@ -13,9 +13,9 @@ import pysolr
 from tornado import gen
 from tornado.options import define, options, parse_command_line
 
-PUBLI = { 'HZT':     ,
-          'HZV':     ,
-          'MGD':     }
+PUBLI = { 'HZT':"חבצלת",
+          'HZV':"חפיצבה",
+          'MGD':"המגיד"     }
           
 
 define("port", default=8888, help="run on the given port", type=int)
