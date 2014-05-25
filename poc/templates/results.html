@@ -7,13 +7,45 @@
     <link rel="stylesheet" href="{{ static_url("css/styles.css") }}">
     <!-- CSS Responsive Framework Skeleton -->
     <link rel="stylesheet" href="{{ static_url("css/skeleton.css") }}">
+    
+    <!-- CSS styles for the site -->
+    <link rel="stylesheet" href="{{ static_url("css/theme.blue/style.css") }}">
+    <script type="text/javascript" src="{{ static_url("js/jquery-2.1.1.min.js") }}"></script> 
+    <script type="text/javascript" src="{{ static_url("js/jquery.tablesorter.js") }}"></script> 
+    
   </head>
   <body>
     <ul>
     <img src="http://www.hasadna.org.il/wp-content/themes/sadna2012/images/sadna-logo.png">
-      {% for result in results %}
-      <h1><a href="{{ result['url'] }}">{{ result['headline'] }}</a></h1>
-      {% end %}
+    <center>
+        תוצאות חיפוש עבור השאילתא:   		
+         <b>{ { query } }</b></center>
+         <br><br>
+    	<table id="results" class="tablesorter"> 
+		<thead> 
+		<tr> 
+			<th>תוצאה</th>
+			<th>שנת פרסום</th> 
+		    <th>הוצאה</th> 
+		    
+		    
+		</tr> 
+		</thead> 
+		<tbody>
+	      {% for result in results %}
+	      <tr>
+	      	<td><a href="{{ result['url'] }}">{{ result['headline'] }}</a></td>
+	      	<td>{{ result['year'] }}</td>
+	      	<td>{{ result['publisher'] }}</td>
+	      </tr>
+	      {% end %}
+		</tbody>
     </ul>
+    
+    <script type=text/javascript>
+    	$(document).ready(function(){
+	    	$("#results").tablesorter(); 
+    	});
+    </script>
   </body>
 </html>
