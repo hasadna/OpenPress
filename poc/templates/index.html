@@ -8,9 +8,9 @@
     <!--@import url(http://fonts.googleapis.com/earlyaccess/alefhebrew.css);-->
     <link href='http://fonts.googleapis.com/earlyaccess/alefhebrew.css' rel='stylesheet' type='text/css'>
     <!-- CSS styles for the site -->
-    <link rel="stylesheet" href="{{ static_url("css/styles.css") }}">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- CSS Responsive Framework Skeleton -->
-    <link rel="stylesheet" href="{{ static_url("css/skeleton.css") }}>
+    <link rel="stylesheet" href="css/skeleton.css">
     
 </head>
 <body>
@@ -24,7 +24,7 @@
         <form method="get">
             <div class="search">
                 <input id="regularInput" type="search" name="query">
-                <button id="submit-button"><img src="search-icon.png"></button>
+                <button id="submit-button"><img src="{{ static_url(search-icon.png) }}"></button>
             </div>
         </form>
     </div>
