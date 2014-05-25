@@ -45,7 +45,7 @@ class MainHandler(tornado.web.RequestHandler):
             # Add the url to the article for every result.
             for result in results:
                 convert_result(result)
-            self.render("results.html", results=results)
+            self.render("results.html", results=results, query=query)
 
             # TODO: self.render("timeline.html", results=results, query=query, start_date=start_date)
 
