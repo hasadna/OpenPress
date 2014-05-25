@@ -23,10 +23,21 @@
 		    <th>תוצאה</th>
 		</tr> 
 		</thead> 
-    
-      {% for result in results %}
-      <h1><a href="{{ result['url'] }}">{{ result['headline'] }}</a></h1>
-      {% end %}
+		<tbody>
+	      {% for result in results %}
+	      <tr>
+	      	<td>{{ result['publisher'] }}</td>
+	      	<td>{{ result['year'] }}</td>
+	      	<td><a href="{{ result['url'] }}">{{ result['headline'] }}</a></td>
+	      </tr>
+	      {% end %}
+		</tbody>
     </ul>
+    
+    <script type=text/javascript>
+    	$(document).ready(function(){
+	    	$("#results").tablesorter(); 
+    	});
+    </script>
   </body>
 </html>
