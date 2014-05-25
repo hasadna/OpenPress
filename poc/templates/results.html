@@ -35,17 +35,14 @@
 	      <tr>
 	      	<td><a href="{{ result['url'] }}">{{ result['headline'] }}</a></td>
 	      	<td>{{ result['year'] }}</td>
-	      	<td>{{ result['publisher'] }}</td>
+	      	<td>{{ result['publisher1'] }}</td>
 	      </tr>
 	      {% end %}
 		</tbody>
 		
     <script type=text/javascript>
     	$(document).ready(function(){
-	    	$("#results").tablesorter(); 
-	    	document.body.innerHTML = document.body.innerHTML.replace('HZT', 'חבצלת');
-	    	document.body.innerHTML = document.body.innerHTML.replace('HZV', 'חפציבה');
-	    	document.body.innerHTML = document.body.innerHTML.replace('MGD', 'המגיד');
+	    	$("#results").tablesorter();
     	});
     </script>
   </body>
