@@ -30,9 +30,11 @@ table.tablesorter tbody tr.odd td {
 }
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(asc.gif);
+	text-align: left;
 }
 table.tablesorter thead tr .headerSortDown {
 	background-image: url(desc.gif);
+	text-align: left;
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
 background-color: #8dbdd8;
