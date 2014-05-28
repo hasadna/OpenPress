@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Timeline JS Example</title>
+    <title>חיפוש - {{ query }}</title>
     <meta charset="utf-8">
     <meta name="description" content="TimelineJS example">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,10 +17,10 @@
     </style>
     
     <!-- The default timeline stylesheet -->
-    <link rel="stylesheet" href="./build/css/timeline.css" />
-	<link rel="stylesheet" href="./css/colorbox.css" />
+    <link rel="stylesheet" href="{{ static_url("css/timeline/timeline.css") }}" />
+	<link rel="stylesheet" href="{{ static_url("css/colorbox.css") }}" />
   
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ static_url("js/jquery-2.1.1.min") }}"></script>
     <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
