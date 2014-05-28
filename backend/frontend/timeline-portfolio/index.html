@@ -28,11 +28,39 @@
       <!-- BEGIN Timeline Embed -->
       <div id="timeline-embed"></div>
       <script type="text/javascript">
+      	var the_story = 
+					{
+					    "timeline":
+					    {
+					        "headline":"{{ query }}", //What did we search for
+					        "type":"default", //should not change
+							"startDate":"{{ start_date }}", //the first date this was found FIXME: in which format?
+							"text":"", //did we use any filters? if so what were they  TODO: we don't have filters yet.
+							
+					        "date": [
+					        {% for result in results %}
+					            {
+					                "startDate":"{{ result['date'] }}", //the date of the article
+					                "headline":"{{ result['headline'] }}", //which paper
+					                "text":"{{ result['issue'] }}", //which issue
+					                "asset":
+					                {
+					                    "media":"{{ result['image'] }}", //where is the picture of that page
+					                    "caption":""
+					                }
+					            },
+					        {% end %}
+					
+					            
+					        ]
+					    }
+					};
+      
         var timeline_config = {
          width: "100%",
          height: "100%",
          lang : "he",
-         source: 'data.json'
+         source: the_story
         }
         
       </script>

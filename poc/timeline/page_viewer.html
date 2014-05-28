@@ -1,0 +1,67 @@
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="./js/jquery.imagemapster.min.js" ></script>
+    <script type="text/javascript" src="./js/wheelzoom.js" ></script>
+    <script type="text/javascript" src="./js/jquery.colorbox-min.js"></script>
+    <link rel="stylesheet" href="./css/colorbox.css" />
+    
+    <script type="text/javascript">
+    	$(document).ready(function() {
+			$('img').mapster({
+				noHrefIsMask: false,
+				fillColor: '0a7a0a',
+				fillOpacity: 0.7,
+				mapKey: "group",
+				strokeWidth: 2,
+				stroke:true,
+				strokeColor: 'F88017'
+		
+			});
+			
+			
+			
+			//coords="x1,y1,x2,y2"
+		});
+		
+    </script>
+  </head>
+  <body>
+  
+
+	  
+	  <img id="myimage" src="./shots/Pg001.png" usemap="#map">
+	  
+	  <map name="map">								
+	  	<area shape="rect" class="img_zone" loc="./images/Ad0010101.png"  group="rectangle" coords="100,60,160,130" href="#" >
+	  </map>
+	  <script type="text/javascript">
+		  $(document).on("click", "img.img_zone", function(e){
+			  		e.preventDefault();
+			  		// alert($("h2 .start").text());
+			  		// href:$(this).attr('src')
+			  		alert($(this).attr('loc'));
+			  		$("#hiddenImg").attr("src", $(this).attr('loc'));
+			    	$(this).colorbox(	{rel: 'group1', 
+			    						open: true, 
+			    						inline: true,
+			    						href:"#hidden"
+			    						});
+			    	
+			    	
+			    						
+			    	return false; 
+		      });
+	  </script>
+	  
+	  <div style="display:none">
+	  	<div id="hidden">
+	  		<img id="hiddenImg"></img>
+	  	</div>
+	  	
+	  </div>	
+	  
+  </body>	
+
+</html>
