@@ -34,6 +34,18 @@ def id_to_url(article_id):
     return url
 
 
+def find_start_date(results):
+    '''
+    FIXME: this is a hack please fixme
+    '''
+    min_date = 0
+    for result in results:
+         year = int(result['year'])
+         if year < min_date:
+            min_date = year
+    return min_date
+        
+        
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
     result['year'] = result['issue_date'][6:] # TODO
@@ -52,9 +64,11 @@ class MainHandler(tornado.web.RequestHandler):
             # Add the url to the article for every result.
             for result in results:
                 convert_result(result)
-            self.render("results.html", results=results, query=query)
 
-            # TODO: self.render("timeline.html", results=results, query=query, start_date=start_date)
+            start_date = find_start_date(results)
+
+            self.render("timeline.html", results=results, query=query, start_date=start_date)
+            #self.render("results.html", results=results, query=query)
 
 
 def main():
