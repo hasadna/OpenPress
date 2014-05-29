@@ -33,6 +33,18 @@ def id_to_url(article_id):
             article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
 
+def get_image(result):
+    """
+    Hacky as always... (please FIXME)
+    """
+    article_id = result['id']
+    id_ = article_id[14:]
+    href = article_id[:14]
+
+    #FIXME: not working
+    image_url = "http://www.jpress.nli.org.il/Olive/APA/NLI_heb/get/GetImage.ashx?kind=block&href=%s&id=%s&ext=.png" %(href, id_)
+    
+    return image_url
 
 def find_start_date(results):
     '''
@@ -51,7 +63,7 @@ def convert_result(result):
     result['year'] = result['issue_date'][6:] # TODO
     result['publisher'] = PUBLI[result['publisher']]
     result['issue'] = '' # TODO
-    result['image'] = '' # TODO
+    result['image'] = get_image(result)
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
