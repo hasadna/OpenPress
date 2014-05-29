@@ -40,7 +40,7 @@
 					        "date": [
 					        {% for result in results %}
 					            {
-					                "startDate":"{{ result['date'] }}", //the date of the article
+					                "startDate":"{{ result['year'] }}", //the date of the article
 					                "headline":"{{ result['headline'] }}", //which paper
 					                "text":"{{ result['issue'] }}", //which issue
 					                "asset":
@@ -64,9 +64,9 @@
         }
         
       </script>
-      <script type="text/javascript" src="./build/js/storyjs-embed.js"></script>
-      <script type="text/javascript" src="./js/jquery.colorbox-min.js"></script>
-      <script type="text/javascript" src="./js/wheelzoom.js"></script>
+      <script type="text/javascript" src="{{ static_url("js/storyjs-embed.js") }}"></script>
+      <script type="text/javascript" src="{{ static_url("js/jquery.colorbox-min.js") }}"></script>
+      <script type="text/javascript" src="{{ static_url("js/wheelzoom.js") }}"></script>
       <script type="text/javascript">      	
 		$(document).on("click", "img.media-image", function(e){
 			  		e.preventDefault();
