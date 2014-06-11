@@ -16,7 +16,32 @@ Stack
 Server
 ------
 
-The server is written in Python using Django.
+The server is written in Python using **Tornado** (http://www.tornadoweb.org/en/stable/).
+
+
+Installing Solr
+~~~~~~~~~~~~~~~
+1. Download latest version @ http://apache.spd.co.il/lucene/solr/
+2. Extract the tarball
+3. Open a terminal, enter the Example folder
+4. Run "java -jar example.jar"
+5. Now you can access "http://localhost:8983/solr/" - which is the control panel
+
+Installing pysolr
+~~~~~~~~~~~~~~~
+0. Verify that pip is installed.
+0.1. If pip is not installed follow installation manual here:
+http://pip.readthedocs.org/en/latest/installing.html
+
+1. Run the command "pip install pysolr"
+
+Install tornado server
+~~~~~~~~~~~~~~~
+0. Verify that pip is installed.
+0.1. If pip is not installed follow installation manual here:
+http://pip.readthedocs.org/en/latest/installing.html
+
+1. Run the command "pip install tornado"
 
 
 Client
@@ -48,7 +73,7 @@ Execute the commands without it if you know you don't need it.
 Update Your System::
 
     	sudo apt-get update
-		
+
 Install::
 
 	    sudo apt-get install build-essential cmake pkg-config libgtk2.0-dev python-dev python-numpy
@@ -118,4 +143,3 @@ Here we go::
     # Clone the project
     # Important: Note the "." at the end of the git clone command.
     git clone https://github.com/kobiluria/open-news.git .
-
