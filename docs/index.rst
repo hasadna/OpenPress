@@ -14,6 +14,7 @@ You can contribute to the project in a number of ways:
 **Write some code**: https://github.com/hasadna/OpenPress
 
 **Read the docs**: http://openpress.readthedocs.org/
+
 **Tackle an open issue**: https://github.com/hasadna/OpenPress/issues
 
 
@@ -25,5 +26,3 @@ Table of contents
    :maxdepth: 0
 
    guide/start
-
-
