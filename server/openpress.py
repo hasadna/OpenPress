@@ -6,6 +6,7 @@ import tornado.auth
 import tornado.escape
 import tornado.ioloop
 import tornado.web
+import tornado.wsgi
 import os.path
 import uuid
 import pysolr
