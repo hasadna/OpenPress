@@ -1,6 +1,76 @@
 
+
 body {
-    font-family: "Arial";
+    direction: rtl;
+    font-family: 'Alef Hebrew', serif;
+}
+
+h3 {
+    font-family: 'Alef', sans-serif;
+}
+
+#search-area {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5%;
+}
+
+.search {
+    height: 45px;
+}
+
+#submit-button {
+    vertical-align: middle;
+    border: 0px;
+    background-color: #00ADEF;
+    border-radius: 5px;
+    height: 45px;
+    width: 45px;
+}
+
+#advanced-button {
+    border: 0px;
+    background-color: #00ADEF;
+    color: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    width: 45px;
+}
+
+#submit-button:hover {
+    background-color: #0092c6;
+}
+
+#regularInput {
+    vertical-align: middle;
+    height: 45px;
+    width: 35%;
+}
+
+.info {
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.container .one-third.column {
+    margin-left: 0px;
+}
+
+.container .one-third.column.alpha {
+    margin-left: 20px;
+}
+
+a {
+    color: #0092c6;
+    text-decoration: none;
+}
+
+.info .one-third {
+    border-right: solid 1px #00ADEF;
+    margin-top: 10%;
+    height: 100%;
+    text-align: justify;
+}
+
+.text {
+    padding-right: 10px;
 }
