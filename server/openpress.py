@@ -84,8 +84,8 @@ class MainHandler(tornado.web.RequestHandler):
             #self.render("results.html", results=results, query=query)
 
 
-def create_app():
-    app = tornado.wsgi.WSGIApplication(
+def create_app(app_class):
+    app = app_class(
         [
             (r"/", MainHandler),
             ],
@@ -95,13 +95,12 @@ def create_app():
     return app
 
 def application(env, start_response):
-    application = create_app()
-    wsgi_app = tornado.wsgi.WSGIAdapter(application)
+    wsgi_app = create_app(tornado.wsgi.WSGIApplication)
     return wsgi_app(env, start_response)
     
 def main():
     parse_command_line()
-    app = create_app()
+    app = create_app(tornado.web.Application)
     app.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
 
