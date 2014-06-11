@@ -1,0 +1,8 @@
+001="Courier New-Normal-1255",10.000,(0,0,0)
+002="Courier New-Normal-1255",13.000,(0,0,0)
+003="Courier New-Normal-1255",16.000,(0,0,0)
+004="Courier New-Normal-1255",14.000,(0,0,0)
+005="Courier New-Normal-1255",22.000,(0,0,0)
+006="Courier New-Normal-1255",15.000,(0,0,0)
+007="Courier New-Normal-1255",21.000,(0,0,0)
+008="Courier New-Normal-1255",17.000,(0,0,0)
