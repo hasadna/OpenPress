@@ -53,8 +53,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     EOS
   end
 
+<<<<<<< HEAD
   config.vm.provision :shell, :path => "./vagrant/bootstrap.sh"
 
+=======
+>>>>>>> 1dc600a2be348a4f4641e52d8801915a965f930d
   config.vm.provision :shell do |shell|
     shell.inline = <<-EOS
       [ -f /var/lock/provision/completed ] || exit 1
