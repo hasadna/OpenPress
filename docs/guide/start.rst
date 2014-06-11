@@ -30,15 +30,13 @@ Installing Solr
 Installing pysolr
 ~~~~~~~~~~~~~~~
 1. Verify that pip is installed.
-2. If pip is not installed follow installation manual here:
-http://pip.readthedocs.org/en/latest/installing.html
+2. If pip is not installed follow installation manual here: http://pip.readthedocs.org/en/latest/installing.html
 3. Run the command "pip install pysolr"
 
 Install tornado server
 ~~~~~~~~~~~~~~~
 1. Verify that pip is installed.
-2. If pip is not installed follow installation manual here:
-http://pip.readthedocs.org/en/latest/installing.html
+2. If pip is not installed follow installation manual here: http://pip.readthedocs.org/en/latest/installing.html
 3. Run the command "pip install tornado"
 
 
