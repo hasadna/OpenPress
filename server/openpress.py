@@ -14,6 +14,7 @@ import pysolr
 from tornado import gen
 from tornado.options import define, options, parse_command_line
 
+
 PUBLI = { 'HZT':u"חבצלת",
           'HZV':u"חפציבה",
           'MGD':u"המגיד"     }
@@ -84,24 +85,25 @@ class MainHandler(tornado.web.RequestHandler):
             #self.render("results.html", results=results, query=query)
 
 
-def create_app():
-    app = tornado.web.Application(
-        [
+
+def create_app(app_class):
+    app = app_class( 
+            [
             (r"/", MainHandler),
             ],
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
-        static_path=os.path.join(os.path.dirname(__file__), "static"),
+        static_path=os.path.join(os.path.dirname(__file__), "static")
         )
     return app
+    
 
 def application(env, start_response):
-    application = create_app()
-    wsgi_app = tornado.wsgi.WSGIAdapter(application)
+    wsgi_app = create_app(tornado.wsgi.WSGIApplication)
     return wsgi_app
     
 def main():
     parse_command_line()
-    app = create_app()
+    app = create_app(tornado.web.Application)
     app.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
 
