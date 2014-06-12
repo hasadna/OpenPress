@@ -1,0 +1,5 @@
+site_name: OpenPress
+repo_url: https://github.com/hasadna/OpenPress
+pages:
+- [index.md, Home]
+theme: readthedocs

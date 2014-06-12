@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="yotam: Basic Django Site, Physical and Logical model, view for index, search results and result details, website template.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/doctrees/conf.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/doctrees/guide/hebrew.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/doctrees/guide/start.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/conf.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/guide/hebrew.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/guide/start.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-bright.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/down-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/pygments.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/sidebar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/up-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/_static/websupport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/conf.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/guide/hebrew.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/guide/start.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/py-modindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/conf.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/guide/hebrew.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/guide/start.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/make.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="yotam: Basic Django Site, Physical and Logical model, view for index, search results and result details, website template." />
     <ignored path="open-news.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="backend/open-news-stub" />
