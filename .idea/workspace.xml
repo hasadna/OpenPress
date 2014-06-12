@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="yotam: Basic Django Site, Physical and Logical model, view for index, search results and result details, website template." />
+    <list default="true" id="55e3a340-bcdd-4829-ba6a-5bcd8a9191bf" name="Default" comment="yotam: Basic Django Site, Physical and Logical model, view for index, search results and result details, website template.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.md" afterPath="$PROJECT_DIR$/docs/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="open-news.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="backend/open-news-stub" />
@@ -33,7 +37,16 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="370" selection-end="370" vertical-scroll-proportion="0.33978873" vertical-offset="2" max-vertical-offset="735">
+            <state line="21" column="3" selection-start="632" selection-end="632" vertical-scroll-proportion="0.302926" vertical-offset="139" max-vertical-offset="735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -42,7 +55,7 @@
       <file leaf-file-name="mkdocs.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mkdocs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+            <state line="3" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
               <folding />
             </state>
           </provider>
@@ -85,8 +98,8 @@
         <option value="$PROJECT_DIR$/docs/guide/start.rst" />
         <option value="$PROJECT_DIR$/docs/server.md" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
       </list>
     </option>
   </component>
@@ -536,9 +549,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+        <state line="3" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
           <folding />
         </state>
       </provider>
@@ -548,7 +568,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="370" selection-end="370" vertical-scroll-proportion="0.33978873" vertical-offset="2" max-vertical-offset="735">
+        <state line="21" column="3" selection-start="632" selection-end="632" vertical-scroll-proportion="0.302926" vertical-offset="139" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
