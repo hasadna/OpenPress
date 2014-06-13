@@ -36,3 +36,14 @@ if [ ! -f /var/lock/provision/elasticsearch ]; then
         touch /var/lock/provision/elasticsearch
    fi
 fi
+
+
+if [ ! -f /var/lock/provision/elasticsearch_head ]; then
+  /usr/share/elasticsearch/bin/plugin -install mobz/elasticsearch-head
+
+
+   if [ $? == 0 ]; then
+        touch /var/lock/provision/elasticsearch_head
+   fi
+fi
+
