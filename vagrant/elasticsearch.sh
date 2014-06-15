@@ -27,7 +27,7 @@ if [ ! -f /var/lock/provision/elasticsearch ]; then
    echo "deb http://packages.elasticsearch.org/elasticsearch/1.2/debian stable main" >> /etc/apt/sources.list.d/elasticsearch.list
    apt-get update
    apt-get install -y -q elasticsearch
-
+   pip install elasticsearch
 
    if [ $? == 0 ]; then
        update-rc.d elasticsearch defaults 95 10
