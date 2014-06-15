@@ -25,4 +25,4 @@ Table of contents
 .. toctree::
    :maxdepth: 0
 
-   guide/start
+   guide/server
