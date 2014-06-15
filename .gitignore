@@ -1,7 +1,7 @@
-.idea/*
+.idea/
+.vagrant/
 *.pyc
 *.sqlite3
 backend/open-news-stub
-.idea
-.vagrant
-.idea/workspace.xml
+
+
