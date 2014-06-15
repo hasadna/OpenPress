@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/hasadna/OpenPress.png?branch=develop)](https://travis-ci.org/hasadna/OpenPress)
 # Open Press
 
 
