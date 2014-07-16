@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="windows-1255" standalone="no"?>
+<XMD-entity REPOSITORY_FORMAT="1.0" PRXML_VER="2.2" ENTITY_TYPE="Article" FIRST_TOC_ENTRY_ID="4" DEPTH_LEVEL="1" INDEX_IN_DOC="5" PAGE_NO="2" ID="Ar00200" BOX="127 89 876 660" LANGUAGE="Hebrew" CONTINUATION_FROM="Ar00100">
+	<Meta NAME="Untitled Article" DESCRIPTION="" SUBTYPE="" BASE_HREF="HZT/1863/07/30" SOURCE_TYPE="TIFF" PUBLICATION="HZT" SECTION="None" ISSUE_DATE="30/07/1863" WORDCNT="520" RELEASE_NO="021-HZT-1863-07-30-001" PAGE_ID="" PAGE_TYPE="Single" PAGE_WIDTH="451" PAGE_HEIGHT="575" DEFAULT_IMG_EXT="png" PDF_DESTINATION_MAPPED="OLV0_Entity_0002_0001" IMAGES_RESOLUTION="122" XMD_VER="2.6.241.15" PAGE_LABEL="3" TOTAL_CHARS_COUNT="1876" SUSPICIOUS_CHARS_COUNT="14"/>
+	<Link SOURCE="021-HZT-1863-07-30-001.pdf" FIRST_ID="Ar00200" LAST_ID="Ar00404" NEXT_ID="Ar00201" PREV_ID="" TOC_ID="W:/Repository/HZT/1863/07/30/TOC.xml"/>
+	<DataFiles>
+		<Files TYPE="DOC_PDF" PRESENT="1"/>
+		<Files TYPE="PAGE_PDF" PRESENT="0"/>
+		<Files TYPE="DOC_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_IMG" PRESENT="0"/>
+		<Files TYPE="PAGE_VIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PAGE_PREVIEW_IMG" PRESENT="1"/>
+		<Files TYPE="PRIMITIVE_IMG" PRESENT="1"/>
+		<Files TYPE="SNIPPET_IMG" PRESENT="1"/>
+		<Files TYPE="SEGMENTATION" PRESENT="0"/>
+	</DataFiles>
+	<Content>
+		<Primitive BOX="129 89 866 352" ID="Ar0020000" SEQ_NO="0" TOC_ENTRY_ID="4" DEPTH_LEVEL="1">
+			<L BOX="131 86 857 121"/>
+			<W BOX="820 86 857 115" STYLE_REF="1">בעמקי</W>
+			<W BOX="725 87 819 116" STYLE_REF="1" M="6 * 9 * ">_הדאצית־ובשצם</W>
+			<W BOX="706 88 724 117" STYLE_REF="1">כי</W>
+			<W BOX="660 88 701 117" STYLE_REF="1">אדונינו</W>
+			<W BOX="634 88 656 117" STYLE_REF="1">דוד</W>
+			<W BOX="614 88 631 117" STYLE_REF="1">מל</W>
+			<W BOX="606 92 616 121" STYLE_REF="1">ך</W>
+			<W BOX="563 89 604 118" STYLE_REF="1">ישראל</W>
+			<W BOX="522 90 558 119" STYLE_REF="1">השבע</W>
+			<W BOX="480 90 520 119" STYLE_REF="1">השביע</W>
+			<W BOX="454 90 475 119" STYLE_REF="1">את</W>
+			<W BOX="425 90 451 119" STYLE_REF="1">עמו</W>
+			<W BOX="387 91 407 119" STYLE_REF="1">חם</W>
+			<Q BOX="354 91 380 119" STYLE_REF="1" QID="1">חשכ</Q>
+			<q BOX="339 92 356 120" STYLE_REF="1" QID="1">חך</q>
+			<QW QID="1">חשכחך</QW>
+			<W BOX="289 90 338 119" STYLE_REF="1">ירושלם</W>
+			<Q BOX="288 87 299 116" STYLE_REF="1" QID="2">י</Q>
+			<Q BOX="284 87 295 116" STYLE_REF="1" QID="2" M="1 * ">'</Q>
+			<q BOX="250 90 290 119" STYLE_REF="1" QID="2">וחדוע</q>
+			<QW QID="2">_י'וחדוע</QW>
+			<W BOX="229 90 247 119" STYLE_REF="1">לא</W>
+			<W BOX="195 90 227 119" STYLE_REF="1">יהיה</W>
+			<W BOX="165 91 193 119" STYLE_REF="1">להם</W>
+			<W BOX="131 91 162 120" STYLE_REF="1">וכחן</W>
+			<L BOX="129 99 862 139"/>
+			<W BOX="807 105 862 134" STYLE_REF="1">מירושלם</W>
+			<W BOX="781 106 804 135" STYLE_REF="1">בכל</W>
+			<W BOX="756 107 779 136" STYLE_REF="1">עת</W>
+			<W BOX="742 106 751 135" STYLE_REF="1" NS="y">?</W>
+			<W BOX="712 107 735 136" STYLE_REF="1" NS="y">וע</W>
+			<W BOX="706 106 717 134" STYLE_REF="1" NS="y">"</W>
+			<W BOX="699 107 709 136" STYLE_REF="1">כ</W>
+			<W BOX="660 108 697 137" STYLE_REF="1">אזרתי</W>
+			<W BOX="624 108 656 137" STYLE_REF="1">כגבר</W>
+			<Q BOX="593 108 620 137" STYLE_REF="1" QID="3">חלצי</Q>
+			<q BOX="587 108 596 137" STYLE_REF="1" QID="3">"</q>
+			<QW QID="3">חלצי"</QW>
+			<W BOX="546 109 588 138" STYLE_REF="1">ומתני</W>
+			<W BOX="505 109 542 138" STYLE_REF="1">שנםתי</W>
+			<Q BOX="481 109 503 137" STYLE_REF="1" QID="4">להו</Q>
+			<q BOX="463 108 487 137" STYLE_REF="1" QID="4">ציא</q>
+			<QW QID="4">להוציא</QW>
+			<W BOX="446 109 458 138" STYLE_REF="1" NS="y">מ</W>
+			<W BOX="440 107 450 136" STYLE_REF="1" NS="y">"</W>
+			<W BOX="431 110 445 138" STYLE_REF="1">ע</W>
+			<W BOX="412 99 422 128" STYLE_REF="1">"</W>
+			<W BOX="375 110 421 138" STYLE_REF="1" NS="y">החבצלת</W>
+			<W BOX="369 108 379 137" STYLE_REF="1">"</W>
+			<W BOX="339 110 364 138" STYLE_REF="1">הזה</W>
+			<W BOX="305 110 329 138" STYLE_REF="1">בכל</W>
+			<W BOX="275 110 298 139" STYLE_REF="1">עת</W>
+			<W BOX="248 110 272 139" STYLE_REF="1">שבו</W>
+			<W BOX="201 110 236 139" STYLE_REF="1">יוודע</W>
+			<W BOX="149 110 190 138" STYLE_REF="1">לאחלי</W>
+			<W BOX="129 110 144 139" STYLE_REF="1">כל</W>
+			<L BOX="129 118 861 158"/>
+			<W BOX="819 125 861 153" STYLE_REF="1">הנעשה</W>
+			<W BOX="767 125 822 154" STYLE_REF="1">והנשמע</W>
+			<W BOX="721 126 767 155" STYLE_REF="1" M="6 * ">_כשרצינו</W>
+			<W BOX="675 126 716 155" STYLE_REF="1" NS="y">הקרוש</W>
+			<W BOX="669 126 681 155" STYLE_REF="1">:</W>
+			<W BOX="655 125 670 154" STYLE_REF="1">.</W>
+			<W BOX="620 127 652 156" STYLE_REF="1">והיה</W>
+			<W BOX="586 128 620 157" STYLE_REF="1">בשיט</W>
+			<W BOX="524 128 582 157" STYLE_REF="1">מזחותיהם</W>
+			<W BOX="501 129 520 158" STYLE_REF="1">בין</W>
+			<W BOX="464 128 498 157" STYLE_REF="1">עניני</W>
+			<W BOX="438 128 457 157" STYLE_REF="1" NS="y">אה</W>
+			<W BOX="432 127 442 156" STYLE_REF="1" NS="y">"</W>
+			<W BOX="424 129 436 158" STYLE_REF="1">ק</W>
+			<W BOX="416 118 426 147" STYLE_REF="1">"</W>
+			<W BOX="382 129 424 158" STYLE_REF="1">זכרונה</W>
+			<W BOX="342 129 378 158" STYLE_REF="1">תעלה</W>
+			<W BOX="318 129 338 158" STYLE_REF="1">על</W>
+			<W BOX="285 129 317 158" STYLE_REF="1">לבבם</W>
+			<W BOX="242 129 280 158" STYLE_REF="1">להקים</W>
+			<W BOX="213 129 238 158" STYLE_REF="1">דגר</W>
+			<W BOX="171 128 209 157" STYLE_REF="1">מלכינו</W>
+			<W BOX="142 128 168 157" STYLE_REF="1">םלה</W>
+			<W BOX="129 128 146 157" STYLE_REF="1">!</W>
+			<L BOX="427 164 873 198" P="S"/>
+			<W BOX="859 166 873 194" STYLE_REF="1">ג</W>
+			<W BOX="799 169 832 198" STYLE_REF="1">אף</W>
+			<W BOX="734 167 809 196" STYLE_REF="1">ישמיע</W>
+			<W BOX="696 168 729 197" STYLE_REF="1">מה</W>
+			<W BOX="659 170 702 198" STYLE_REF="1">יתן</W>
+			<Q BOX="641 169 658 198" STYLE_REF="1" QID="5">"</Q>
+			<Q BOX="562 169 625 198" STYLE_REF="1" QID="5">החבצלת</Q>
+			<q BOX="552 169 569 198" STYLE_REF="1" QID="5">"</q>
+			<QW QID="5">"החבצלת"</QW>
+			<W BOX="508 170 546 198" STYLE_REF="1">ומה</W>
+			<W BOX="455 170 517 198" STYLE_REF="1">יוסיף</W>
+			<W BOX="431 167 454 196" STYLE_REF="1" NS="y">וגו</W>
+			<W BOX="427 164 443 193" STYLE_REF="1">'</W>
+			<L BOX="130 192 858 227"/>
+			<W BOX="830 192 858 221" STYLE_REF="1">הוא</W>
+			<W BOX="796 193 832 221" STYLE_REF="1">יצרור</W>
+			<W BOX="753 193 790 222" STYLE_REF="1">בכנפיו</W>
+			<W BOX="728 194 749 223" STYLE_REF="1">את</W>
+			<W BOX="670 195 723 223" STYLE_REF="1">הזכחטת</W>
+			<W BOX="608 195 664 224" STYLE_REF="1">העתיקות</W>
+			<W BOX="551 196 598 225" STYLE_REF="1">הנשואות</W>
+			<W BOX="528 196 548 225" STYLE_REF="1">על</W>
+			<Q BOX="493 196 520 224" STYLE_REF="1" QID="6">העהי</Q>
+			<Q BOX="487 196 499 224" STYLE_REF="1" QID="6" M="1 * ">'</Q>
+			<q BOX="479 196 491 225" STYLE_REF="1" QID="6">ק</q>
+			<QW QID="6">_העהי'ק</QW>
+			<W BOX="469 196 475 225" STYLE_REF="1">"</W>
+			<W BOX="421 198 457 227" STYLE_REF="1">ואשר</W>
+			<W BOX="396 198 419 227" STYLE_REF="1">חלף</W>
+			<W BOX="358 198 393 227" STYLE_REF="1">ועבר</W>
+			<W BOX="335 198 355 227" STYLE_REF="1">על</W>
+			<W BOX="289 198 338 227" STYLE_REF="1">ירושלם</W>
+			<W BOX="257 197 287 226" STYLE_REF="1">מימי</W>
+			<W BOX="220 198 245 227" STYLE_REF="1">היא</W>
+			<W BOX="196 198 217 227" STYLE_REF="1">עד</W>
+			<W BOX="165 197 198 226" STYLE_REF="1">היום</W>
+			<W BOX="130 198 156 227" STYLE_REF="1">הזה</W>
+			<L BOX="151 211 859 246"/>
+			<W BOX="822 211 859 240" STYLE_REF="1">ואשר</W>
+			<W BOX="788 212 822 241" STYLE_REF="1">רמת</W>
+			<W BOX="745 213 787 241" STYLE_REF="1">שמעט</W>
+			<W BOX="727 213 742 241" STYLE_REF="1">ק</W>
+			<W BOX="687 214 723 242" STYLE_REF="1">ראיט</W>
+			<W BOX="653 214 682 243" STYLE_REF="1">מיום</W>
+			<Q BOX="631 214 649 243" STYLE_REF="1" QID="7">הו</Q>
+			<q BOX="616 214 634 243" STYLE_REF="1" QID="7">סר</q>
+			<QW QID="7">הוסר</QW>
+			<W BOX="575 215 616 244" STYLE_REF="1">ישיבת</W>
+			<W BOX="513 215 571 244" STYLE_REF="1">האשנמיס</W>
+			<W BOX="481 216 508 245" STYLE_REF="1" NS="y">כאה</W>
+			<W BOX="476 214 486 243" STYLE_REF="1" NS="y">"</W>
+			<W BOX="468 217 480 246" STYLE_REF="1">ק</W>
+			<W BOX="436 217 464 246" STYLE_REF="1">אשר</W>
+			<W BOX="404 217 432 246" STYLE_REF="1">עכר</W>
+			<W BOX="350 217 399 246" STYLE_REF="1">ראשיהם</W>
+			<W BOX="336 217 343 246" STYLE_REF="1">"</W>
+			<W BOX="300 217 329 246" STYLE_REF="1">אשר</W>
+			<W BOX="246 217 295 246" STYLE_REF="1">ישתוקקו</W>
+			<W BOX="225 217 241 246" STYLE_REF="1">כל</W>
+			<W BOX="190 217 212 246" STYLE_REF="1">בני</W>
+			<W BOX="151 217 185 246" STYLE_REF="1">עמיט</W>
+			<L BOX="129 229 858 265"/>
+			<W BOX="814 231 858 260" STYLE_REF="1">לדעתם</W>
+			<W BOX="799 229 805 258" STYLE_REF="1">*</W>
+			<W BOX="742 232 799 260" STYLE_REF="1">ומשטמה</W>
+			<W BOX="791 234 792 263" STYLE_REF="1" NS="y">.</W>
+			<W BOX="710 232 741 261" STYLE_REF="1">כעת</W>
+			<W BOX="674 233 709 262" STYLE_REF="1">הזאת</W>
+			<S S_TYPE="BUL">
+				<W BOX="665 230 674 259" STYLE_REF="1">•</W>
+			</S>
+			<W BOX="629 234 663 263" STYLE_REF="1">ובמה</W>
+			<W BOX="600 235 625 264" STYLE_REF="1">היא</W>
+			<W BOX="551 235 596 264" STYLE_REF="1">משתנית</W>
+			<W BOX="524 235 549 264" STYLE_REF="1">מכל</W>
+			<W BOX="490 235 520 264" STYLE_REF="1">חלקי</W>
+			<W BOX="441 235 488 264" STYLE_REF="1">הארצות</W>
+			<W BOX="422 236 435 265" STYLE_REF="1">־־־</W>
+			<W BOX="397 236 418 265" STYLE_REF="1">גם</W>
+			<W BOX="353 236 392 265" STYLE_REF="1">בתוכם</W>
+			<Q BOX="329 236 350 265" STYLE_REF="1" QID="8">כבו</Q>
+			<q BOX="312 236 332 265" STYLE_REF="1" QID="8">אם</q>
+			<QW QID="8">כבואם</QW>
+			<W BOX="283 236 313 265" STYLE_REF="1">יבאו</W>
+			<W BOX="237 236 276 265" STYLE_REF="1">חדשות</W>
+			<W BOX="183 236 229 265" STYLE_REF="1">הנעשות</W>
+			<W BOX="156 236 179 265" STYLE_REF="1">בכל</W>
+			<W BOX="129 236 155 265" STYLE_REF="1">ערי</W>
+			<L BOX="129 250 857 284"/>
+			<W BOX="816 250 857 279" STYLE_REF="1">ממלכת</W>
+			<Q BOX="788 250 812 279" STYLE_REF="1" QID="9">הסו</Q>
+			<q BOX="760 252 790 281" STYLE_REF="1" QID="9">לטאן</q>
+			<QW QID="9">הסולטאן</QW>
+			<W BOX="724 251 757 280" STYLE_REF="1">מעיר</W>
+			<W BOX="675 252 721 281" STYLE_REF="1">המלוכה</W>
+			<W BOX="582 253 673 282" STYLE_REF="1">קאשטאנטינאפל</W>
+			<W BOX="549 254 581 282" STYLE_REF="1">יוקחי</W>
+			<W BOX="515 254 544 283" STYLE_REF="1">מהמ</W>
+			<Q BOX="514 251 524 280" STYLE_REF="1" QID="10" M="1 * ">י</Q>
+			<Q BOX="510 251 520 280" STYLE_REF="1" QID="10">'</Q>
+			<q BOX="500 254 514 283" STYLE_REF="1" QID="10">ע</q>
+			<QW QID="10">_י'ע</QW>
+			<W BOX="466 254 501 283" STYLE_REF="1">היוצא</W>
+			<W BOX="435 255 463 284" STYLE_REF="1">שמת</W>
+			<W BOX="404 255 431 284" STYLE_REF="1">אשר</W>
+			<W BOX="376 255 402 284" STYLE_REF="1">רוח</W>
+			<W BOX="322 255 374 284" STYLE_REF="1">הממשלה</W>
+			<W BOX="291 255 321 284" STYLE_REF="1">דובר</W>
+			<W BOX="267 255 287 284" STYLE_REF="1" NS="y">בו</W>
+			<W BOX="260 255 272 284" STYLE_REF="1" NS="y">.</W>
+			<W BOX="234 255 262 284" STYLE_REF="1">ועד</W>
+			<W BOX="199 255 232 284" STYLE_REF="1">קריה</W>
+			<Q BOX="185 255 197 284" STYLE_REF="1" QID="11">ק</Q>
+			<q BOX="162 255 189 284" STYLE_REF="1" QID="11">טנה</q>
+			<QW QID="11">קטנה</QW>
+			<W BOX="129 255 156 284" STYLE_REF="1">אשר</W>
+			<L BOX="132 270 856 303"/>
+			<W BOX="814 270 856 298" STYLE_REF="1">בירכתי</W>
+			<W BOX="784 270 810 299" STYLE_REF="1">תבל</W>
+			<W BOX="754 270 784 299" STYLE_REF="1">ארצו</W>
+			<W BOX="672 271 751 300" STYLE_REF="1">ובמקוצעותיה</W>
+			<W BOX="641 272 669 301" STYLE_REF="1">אשר</W>
+			<W BOX="591 272 640 301" STYLE_REF="1">בעיתים</W>
+			<W BOX="559 273 586 302" STYLE_REF="1">הללו</W>
+			<W BOX="504 274 554 302" STYLE_REF="1">בהתנער</W>
+			<W BOX="447 274 498 303" STYLE_REF="1">הממשלה</W>
+			<W BOX="375 274 437 303" STYLE_REF="1">מתרדמתה</W>
+			<W BOX="336 274 378 302" STYLE_REF="1">יוצחחו</W>
+			<W BOX="293 275 335 303" STYLE_REF="1" M="4 * ">_חישית</W>
+			<W BOX="261 274 289 303" STYLE_REF="1">מיום</W>
+			<W BOX="239 274 256 303" STYLE_REF="1">אל</W>
+			<W BOX="211 275 237 303" STYLE_REF="1">יום</W>
+			<S S_TYPE="BUL">
+				<W BOX="197 271 206 299" STYLE_REF="1">•</W>
+			</S>
+			<W BOX="165 274 193 303" STYLE_REF="1">אשר</W>
+			<W BOX="132 274 164 303" STYLE_REF="1">נחוץ</W>
+			<L BOX="129 289 861 323"/>
+			<W BOX="814 289 861 317" STYLE_REF="1">לדעתם</W>
+			<W BOX="799 289 812 318" STYLE_REF="1" NS="y">.</W>
+			<W BOX="774 289 794 318" STYLE_REF="1">גם</W>
+			<W BOX="741 289 769 318" STYLE_REF="1">הזמן</W>
+			<W BOX="708 290 739 319" STYLE_REF="1">יביא</W>
+			<W BOX="658 290 698 319" STYLE_REF="1">חדשות</W>
+			<W BOX="630 292 655 320" STYLE_REF="1">מכל</W>
+			<W BOX="575 292 627 320" STYLE_REF="1">המדינות</W>
+			<W BOX="540 293 573 321" STYLE_REF="1">וארץ</W>
+			<W BOX="488 293 536 321" STYLE_REF="1">מרחקים</W>
+			<W BOX="465 293 483 321" STYLE_REF="1">אל</W>
+			<W BOX="436 293 464 322" STYLE_REF="1">תוך</W>
+			<Q BOX="422 293 432 321" STYLE_REF="1" QID="12">מ</Q>
+			<Q BOX="415 293 426 321" STYLE_REF="1" QID="12">"</Q>
+			<q BOX="406 294 420 323" STYLE_REF="1" QID="12">ע</q>
+			<QW QID="12">מ"ע</QW>
+			<S S_TYPE="LRO"/>
+			<Q BOX="391 293 400 321" STYLE_REF="1" QID="13">,</Q>
+			<q BOX="396 293 404 321" STYLE_REF="1" NS="y" QID="13">,</q>
+			<QW QID="13">,,</QW>
+			<S S_TYPE="PDF"/>
+			<W BOX="357 293 395 322" STYLE_REF="1" NS="y">חבצלת</W>
+			<W BOX="352 292 362 320" STYLE_REF="1">"</W>
+			<W BOX="311 293 348 322" STYLE_REF="1">הזה־־־</W>
+			<W BOX="260 293 300 322" STYLE_REF="1">תקותינו</W>
+			<W BOX="222 293 254 322" STYLE_REF="1">חזקה</W>
+			<W BOX="174 293 219 322" STYLE_REF="1">ונשגבה</W>
+			<W BOX="163 292 170 321" STYLE_REF="1">"</W>
+			<W BOX="147 293 163 322" STYLE_REF="1">כי</W>
+			<W BOX="129 293 144 322" STYLE_REF="1">כל</W>
+			<L BOX="129 308 858 342"/>
+			<W BOX="828 308 858 337" STYLE_REF="1">העם</W>
+			<W BOX="800 308 823 337" STYLE_REF="1">בכל</W>
+			<W BOX="756 309 798 338" STYLE_REF="1">המקים</W>
+			<W BOX="722 309 750 338" STYLE_REF="1">אשר</W>
+			<W BOX="692 309 718 338" STYLE_REF="1">דבר</W>
+			<Q BOX="678 311 688 340" STYLE_REF="1" QID="14">"</Q>
+			<q BOX="634 311 680 340" STYLE_REF="1" QID="14">החבצלת</q>
+			<QW QID="14">"החבצלת</QW>
+			<W BOX="620 309 629 338" STYLE_REF="1">"</W>
+			<W BOX="588 311 617 340" STYLE_REF="1">יגיע</W>
+			<W BOX="538 311 581 340" STYLE_REF="1">ימהח</W>
+			<W BOX="496 312 534 341" STYLE_REF="1">לאספו</W>
+			<W BOX="480 312 489 341" STYLE_REF="1" DIR="ltr" M="1 * 2 * ">_fc</W>
+			<W BOX="452 314 477 342" STYLE_REF="1" M="2 * ">_תיך</W>
+			<W BOX="413 312 446 341" STYLE_REF="1">ביתם</W>
+			<W BOX="375 312 409 341" STYLE_REF="1">לאטל</W>
+			<W BOX="334 312 368 341" STYLE_REF="1">מפריו</W>
+			<W BOX="277 312 327 341" STYLE_REF="1">ולשבוע</W>
+			<W BOX="235 312 271 341" STYLE_REF="1">מטובו</W>
+			<W BOX="222 310 228 338" STYLE_REF="1">*</W>
+			<Q BOX="171 312 210 341" STYLE_REF="1" QID="15">וימהר</Q>
+			<q BOX="166 312 183 341" STYLE_REF="1" QID="15">ו</q>
+			<QW QID="15">וימהרו</QW>
+			<W BOX="129 312 166 341" STYLE_REF="1">לשלוח</W>
+			<L BOX="300 324 860 360"/>
+			<W BOX="848 327 860 356" STYLE_REF="1" NS="y">ד</W>
+			<W BOX="842 327 853 356" STYLE_REF="1" NS="y">&amp;</W>
+			<W BOX="812 327 846 356" STYLE_REF="1">ריהם</W>
+			<W BOX="784 324 807 352" STYLE_REF="1">אלי</W>
+			<W BOX="744 325 781 354" STYLE_REF="1">לדרשו</W>
+			<W BOX="729 329 740 357" STYLE_REF="1" NS="y">מ</W>
+			<W BOX="722 329 733 357" STYLE_REF="1" NS="y" M="1 * ">_^</W>
+			<W BOX="708 329 727 357" STYLE_REF="1">תי</W>
+			<W BOX="679 329 707 358" STYLE_REF="1">וידי</W>
+			<W BOX="638 329 677 358" STYLE_REF="1">נטטת</W>
+			<W BOX="595 330 634 359" STYLE_REF="1">להשיב</W>
+			<W BOX="570 330 593 359" STYLE_REF="1">לכל</W>
+			<W BOX="537 330 571 359" STYLE_REF="1">שואל</W>
+			<W BOX="479 331 541 360" STYLE_REF="1">ולהטעים</W>
+			<W BOX="460 331 476 360" STYLE_REF="1">כל</W>
+			<W BOX="424 331 462 360" STYLE_REF="1">עמיט</W>
+			<W BOX="383 331 423 360" STYLE_REF="1">ממיטב</W>
+			<W BOX="354 331 382 360" STYLE_REF="1">פריו</W>
+			<W BOX="300 331 355 360" STYLE_REF="1">ומחלכימ</W>
+		</Primitive>
+		<Primitive BOX="510 387 876 657" ID="Ar0020001" SEQ_NO="1" TOC_ENTRY_ID="4" DEPTH_LEVEL="1">
+			<L BOX="511 386 880 419" P="S"/>
+			<W BOX="852 389 880 417" STYLE_REF="1">גס</W>
+			<W BOX="800 386 836 415" STYLE_REF="1">אציגה</W>
+			<W BOX="779 386 799 415" STYLE_REF="1">נא</W>
+			<W BOX="752 386 774 415" STYLE_REF="1">עד</W>
+			<W BOX="723 388 748 417" STYLE_REF="1">אחי</W>
+			<W BOX="697 388 718 417" STYLE_REF="1">את</W>
+			<W BOX="661 388 692 417" STYLE_REF="1">מעווי</W>
+			<W BOX="623 388 661 417" STYLE_REF="1">ושרשי</W>
+			<W BOX="572 389 623 418" STYLE_REF="1">החבצלת</W>
+			<W BOX="529 389 559 418" STYLE_REF="1">אשר</W>
+			<W BOX="511 390 526 419" STYLE_REF="1">מן</W>
+			<L BOX="510 405 835 437"/>
+			<W BOX="811 405 835 434" STYLE_REF="1">לשד</W>
+			<W BOX="760 406 811 435" STYLE_REF="1">השרשים</W>
+			<W BOX="723 406 757 435" STYLE_REF="1">האלה</W>
+			<W BOX="689 408 719 436" STYLE_REF="1">תינק</W>
+			<W BOX="678 405 685 434" STYLE_REF="1">"</W>
+			<W BOX="625 407 680 436" STYLE_REF="1">ובמעוזם</W>
+			<W BOX="584 408 625 437" STYLE_REF="1">תוסיף</W>
+			<W BOX="560 408 582 437" STYLE_REF="1">תת</W>
+			<W BOX="540 408 557 437" STYLE_REF="1">כח</W>
+			<W BOX="510 408 538 437" STYLE_REF="1">אשר</W>
+			<L BOX="586 425 811 456"/>
+			<W BOX="767 425 811 454" STYLE_REF="1">עליהם</W>
+			<W BOX="744 426 762 454" STYLE_REF="1">לא</W>
+			<W BOX="715 426 743 454" STYLE_REF="1">יבול</W>
+			<W BOX="675 426 713 454" STYLE_REF="1">ופריה</W>
+			<W BOX="652 426 670 455" STYLE_REF="1">לא</W>
+			<W BOX="612 427 650 456" STYLE_REF="1">יקוסס</W>
+			<Q BOX="599 427 612 456" STYLE_REF="1" QID="16">נ</Q>
+			<q BOX="586 427 603 456" STYLE_REF="1" QID="16">צח</q>
+			<QW QID="16">נצח</QW>
+			<L BOX="511 463 883 497" P="S"/>
+			<W BOX="861 465 883 494" STYLE_REF="1">א</W>
+			<W BOX="817 463 853 492" STYLE_REF="1">השרש</W>
+			<W BOX="781 463 818 492" STYLE_REF="1">הגדול</W>
+			<W BOX="735 464 781 493" STYLE_REF="1">והקדוש</W>
+			<W BOX="707 464 733 493" STYLE_REF="1">הוא</W>
+			<W BOX="634 468 702 497" STYLE_REF="1">האמת</W>
+			<W BOX="619 466 635 495" STYLE_REF="1">כי</W>
+			<W BOX="564 466 617 495" STYLE_REF="1">אךהאמת</W>
+			<W BOX="545 465 568 494" STYLE_REF="1">נר</W>
+			<Q BOX="527 465 545 494" STYLE_REF="1" QID="17">לר</Q>
+			<q BOX="511 466 534 495" STYLE_REF="1" QID="17">גלי</q>
+			<QW QID="17">לרגלי</QW>
+			<L BOX="512 482 859 514"/>
+			<W BOX="824 483 859 511" STYLE_REF="1">הענין</W>
+			<W BOX="781 483 819 511" STYLE_REF="1">הנשגב</W>
+			<W BOX="740 482 773 510" STYLE_REF="1">שהי</W>
+			<W BOX="698 484 731 513" STYLE_REF="1">והוא</W>
+			<W BOX="641 484 686 513" STYLE_REF="1">המטרה</W>
+			<W BOX="587 485 628 514" STYLE_REF="1">הנטנה</W>
+			<W BOX="554 485 582 513" STYLE_REF="1">אשר</W>
+			<W BOX="512 485 545 513" STYLE_REF="1">הצגנו</W>
+			<L BOX="512 501 861 532"/>
+			<W BOX="836 501 861 530" STYLE_REF="1">מול</W>
+			<W BOX="780 501 826 530" STYLE_REF="1">מפעליט</W>
+			<W BOX="749 502 777 531" STYLE_REF="1">לבלי</W>
+			<W BOX="707 502 744 531" STYLE_REF="1">החטא</W>
+			<W BOX="674 502 704 531" STYLE_REF="1">ממט</W>
+			<W BOX="645 504 672 532" STYLE_REF="1">מלא</W>
+			<Q BOX="616 504 645 532" STYLE_REF="1" QID="18">שער</Q>
+			<q BOX="608 504 619 532" STYLE_REF="1" QID="18">ה</q>
+			<QW QID="18">שערה</QW>
+			<W BOX="584 504 611 532" STYLE_REF="1">ועל</W>
+			<Q BOX="562 504 579 532" STYLE_REF="1" QID="19">כל</Q>
+			<q BOX="512 504 562 532" STYLE_REF="1" QID="19">הענינים</q>
+			<QW QID="19">כלהענינים</QW>
+			<L BOX="512 520 859 552"/>
+			<W BOX="820 521 859 549" STYLE_REF="1">חרשים</W>
+			<W BOX="797 521 819 550" STYLE_REF="1">גם</W>
+			<W BOX="762 521 803 550" STYLE_REF="1">ישנים</W>
+			<W BOX="748 520 755 549" STYLE_REF="1">"</W>
+			<W BOX="712 522 738 551" STYLE_REF="1">הוא</W>
+			<W BOX="664 522 717 551" STYLE_REF="1">יתנוסס</W>
+			<W BOX="643 522 667 551" STYLE_REF="1" NS="y">והי</W>
+			<W BOX="639 520 655 549" STYLE_REF="1">'</W>
+			<W BOX="606 523 634 552" STYLE_REF="1">להם</W>
+			<W BOX="556 523 603 552" STYLE_REF="1">לעטרת</W>
+			<S S_TYPE="BUL">
+				<W BOX="542 520 552 549" STYLE_REF="1">•</W>
+			</S>
+			<W BOX="512 523 539 552" STYLE_REF="1">ועל</W>
+			<L BOX="637 538 818 571"/>
+			<W BOX="808 538 818 567" STYLE_REF="1">,</W>
+			<W BOX="711 541 749 570" STYLE_REF="1">ראשם</W>
+			<Q BOX="700 542 711 571" STYLE_REF="1" QID="20">'</Q>
+			<q BOX="689 542 701 571" STYLE_REF="1" NS="y" QID="20">צ</q>
+			<QW QID="20">'צ</QW>
+			<W BOX="683 542 694 571" STYLE_REF="1" NS="y">?</W>
+			<Q BOX="656 541 680 570" STYLE_REF="1" QID="21">נזר</Q>
+			<q BOX="651 542 668 571" STYLE_REF="1" QID="21">ו</q>
+			<QW QID="21">נזרו</QW>
+			<W BOX="637 542 642 571" STYLE_REF="1">־</W>
+			<L BOX="514 557 880 591"/>
+			<W BOX="860 562 880 591" STYLE_REF="1" DIR="ltr">3</W>
+			<W BOX="788 562 840 591" STYLE_REF="1">השלום</W>
+			<W BOX="777 558 784 587" STYLE_REF="1">"</W>
+			<W BOX="739 560 773 589" STYLE_REF="1">משנה</W>
+			<W BOX="698 561 737 589" STYLE_REF="1">האמת</W>
+			<W BOX="684 561 700 590" STYLE_REF="1">כי</W>
+			<W BOX="680 557 681 586" STYLE_REF="1">?</W>
+			<W BOX="655 561 680 590" STYLE_REF="1">מא</W>
+			<W BOX="619 561 653 590" STYLE_REF="1" NS="y">כהאמ</W>
+			<W BOX="616 558 629 587" STYLE_REF="1" NS="y">'</W>
+			<W BOX="586 561 618 590" STYLE_REF="1">אהיב</W>
+			<Q BOX="557 561 583 589" STYLE_REF="1" QID="22">אצלי</Q>
+			<q BOX="548 561 559 590" STYLE_REF="1" QID="22">ט</q>
+			<QW QID="22">אצליט</QW>
+			<W BOX="514 561 545 590" STYLE_REF="1">מאד־</W>
+			<L BOX="513 578 866 610"/>
+			<W BOX="825 578 866 607" STYLE_REF="1">וטרם</W>
+			<W BOX="787 579 825 607" STYLE_REF="1">נקריב</W>
+			<W BOX="764 579 782 607" STYLE_REF="1">אל</W>
+			<W BOX="731 579 762 608" STYLE_REF="1">מזבח</W>
+			<W BOX="682 580 729 609" STYLE_REF="1">החבצלת</W>
+			<W BOX="653 580 678 609" STYLE_REF="1">דבר</W>
+			<W BOX="622 580 650 609" STYLE_REF="1">אמת</W>
+			<W BOX="588 580 622 609" STYLE_REF="1">נשאל</W>
+			<Q BOX="571 580 582 609" STYLE_REF="1" QID="23">ר</Q>
+			<q BOX="536 581 581 610" STYLE_REF="1" QID="23">יזשינה</q>
+			<QW QID="23">ריזשינה</QW>
+			<W BOX="513 581 533 610" STYLE_REF="1">את</W>
+			<L BOX="513 596 863 629"/>
+			<W BOX="845 598 863 627" STYLE_REF="1">פי</W>
+			<Q BOX="810 598 840 626" STYLE_REF="1" QID="24">השלו</Q>
+			<q BOX="801 598 813 627" STYLE_REF="1" QID="24">ם</q>
+			<QW QID="24">השלום</QW>
+			<W BOX="770 598 794 627" STYLE_REF="1" NS="y">והי</W>
+			<W BOX="765 596 783 624" STYLE_REF="1">'</W>
+			<W BOX="723 599 758 628" STYLE_REF="1">כאשר</W>
+			<W BOX="694 599 720 628" STYLE_REF="1">שתי</W>
+			<W BOX="663 599 689 628" STYLE_REF="1">אלה</W>
+			<W BOX="611 599 662 628" STYLE_REF="1">האחוזים</W>
+			<W BOX="583 600 609 628" STYLE_REF="1">יחד</W>
+			<W BOX="538 600 579 628" STYLE_REF="1">כתאומי</W>
+			<W BOX="513 600 534 629" STYLE_REF="1">בטן</W>
+			<L BOX="512 616 861 649"/>
+			<W BOX="843 616 861 645" STYLE_REF="1">לא</W>
+			<W BOX="810 617 844 646" STYLE_REF="1">ימצאו</W>
+			<W BOX="764 618 805 646" STYLE_REF="1">עולתה</W>
+			<W BOX="748 617 763 646" STYLE_REF="1">בו</W>
+			<S S_TYPE="LRO"/>
+			<Q BOX="729 620 736 649" STYLE_REF="1" QID="25">"</Q>
+			<q BOX="734 620 746 649" STYLE_REF="1" NS="y" DIR="ltr" QID="25">fi</q>
+			<QW QID="25">"fi</QW>
+			<S S_TYPE="PDF"/>
+			<S S_TYPE="SPACE"/>
+			<W BOX="699 619 724 647" STYLE_REF="1">הוא</W>
+			<W BOX="673 619 699 647" STYLE_REF="1">יבא</W>
+			<W BOX="624 619 669 647" STYLE_REF="1">השערה</W>
+			<W BOX="600 619 617 647" STYLE_REF="1">בו</W>
+			<W BOX="558 619 597 647" STYLE_REF="1">ישמחו</W>
+			<W BOX="512 619 559 647" STYLE_REF="1">ויתהללו</W>
+			<L BOX="548 635 791 667"/>
+			<W BOX="775 637 791 665" STYLE_REF="1">כל</W>
+			<W BOX="746 637 772 665" STYLE_REF="1">זרע</W>
+			<W BOX="704 637 746 666" STYLE_REF="1">ישראל</W>
+			<W BOX="672 637 688 666" STYLE_REF="1">כל</W>
+			<W BOX="630 637 666 666" STYLE_REF="1">אוהבי</W>
+			<W BOX="599 639 628 667" STYLE_REF="1">אתת</W>
+			<Q BOX="570 639 600 667" STYLE_REF="1" QID="26">ושלו</Q>
+			<q BOX="561 639 573 667" STYLE_REF="1" QID="26">ם</q>
+			<QW QID="26">ושלום</QW>
+			<W BOX="548 635 554 664" STYLE_REF="1">*</W>
+		</Primitive>
+		<Primitive BOX="127 391 490 660" ID="Ar0020002" SEQ_NO="2" TOC_ENTRY_ID="4" DEPTH_LEVEL="1">
+			<L BOX="128 390 498 421"/>
+			<W BOX="480 392 498 421" STYLE_REF="1">ג</W>
+			<W BOX="459 390 479 418" STYLE_REF="1">כל</W>
+			<W BOX="431 390 457 418" STYLE_REF="1">דבר</W>
+			<W BOX="395 390 423 419" STYLE_REF="1">גמל</W>
+			<W BOX="363 390 394 419" STYLE_REF="1">וקטן</W>
+			<W BOX="327 390 357 419" STYLE_REF="1">טרם</W>
+			<W BOX="283 390 323 419" STYLE_REF="1">יעלה</W>
+			<W BOX="258 390 278 419" STYLE_REF="1">על</W>
+			<W BOX="223 390 255 419" STYLE_REF="1">מזבח</W>
+			<W BOX="173 390 211 419" STYLE_REF="1">הלשם</W>
+			<W BOX="128 390 160 419" STYLE_REF="1">בטר</W>
+			<L BOX="128 407 475 438"/>
+			<W BOX="430 409 475 438" STYLE_REF="1">הבחינה</W>
+			<W BOX="396 409 426 438" STYLE_REF="1">יצרף</W>
+			<W BOX="349 409 393 438" STYLE_REF="1">כחטהר</W>
+			<W BOX="320 410 345 438" STYLE_REF="1">כסף</W>
+			<W BOX="311 407 326 436" STYLE_REF="1">י</W>
+			<W BOX="272 409 310 438" STYLE_REF="1">וחכמי</W>
+			<W BOX="252 409 268 438" STYLE_REF="1">לב</W>
+			<W BOX="216 409 250 438" STYLE_REF="1" NS="y">ויראי</W>
+			<W BOX="197 407 214 435" STYLE_REF="1">'</W>
+			<W BOX="201 409 213 438" STYLE_REF="1">ה</W>
+			<W BOX="165 410 194 438" STYLE_REF="1">המה</W>
+			<W BOX="128 409 165 438" STYLE_REF="1">יפקחו</W>
+			<L BOX="128 427 479 457"/>
+			<W BOX="429 428 479 457" STYLE_REF="1">עיניהם</W>
+			<Q BOX="413 428 428 457" STYLE_REF="1" QID="27">ו</Q>
+			<q BOX="390 428 417 457" STYLE_REF="1" QID="27">ינפו</q>
+			<QW QID="27">וינפו</QW>
+			<Q BOX="366 428 387 457" STYLE_REF="1" QID="28">את</Q>
+			<q BOX="331 428 366 457" STYLE_REF="1" QID="28">הענין</q>
+			<QW QID="28">אתהענין</QW>
+			<W BOX="298 429 328 457" STYLE_REF="1">עשר</W>
+			<W BOX="252 428 296 457" STYLE_REF="1">פעמים</W>
+			<W BOX="242 427 249 456" STYLE_REF="1">"</W>
+			<W BOX="201 429 237 457" STYLE_REF="1">האמת</W>
+			<W BOX="172 428 202 457" STYLE_REF="1">היא</W>
+			<W BOX="128 428 167 456" STYLE_REF="1">הישבו</W>
+			<L BOX="128 438 476 479"/>
+			<W BOX="448 448 476 477" STYLE_REF="1">ענף</W>
+			<W BOX="422 447 447 476" STYLE_REF="1">ריב</W>
+			<W BOX="398 447 423 476" STYLE_REF="1">וכל</W>
+			<W BOX="359 447 396 476" STYLE_REF="1">תלונה</W>
+			<W BOX="341 447 359 476" STYLE_REF="1">או</W>
+			<W BOX="311 447 330 476" STYLE_REF="1">לא</W>
+			<Q BOX="290 446 307 475" STYLE_REF="1" QID="29">הי</Q>
+			<q BOX="282 447 294 476" STYLE_REF="1" QID="29">ש</q>
+			<QW QID="29">היש</QW>
+			<W BOX="263 447 280 476" STYLE_REF="1">בו</W>
+			<W BOX="233 447 258 476" STYLE_REF="1">דבר</W>
+			<W BOX="204 447 231 476" STYLE_REF="1">דופי</W>
+			<Q BOX="191 447 201 476" STYLE_REF="1" QID="30">ח</Q>
+			<Q BOX="186 438 200 479" STYLE_REF="4" QID="30">יי</Q>
+			<q BOX="181 447 196 476" STYLE_REF="1" QID="30">ו</q>
+			<QW QID="30">חייו</QW>
+			<W BOX="158 447 178 476" STYLE_REF="1">על</W>
+			<W BOX="128 447 159 476" STYLE_REF="1">כבוד</W>
+			<L BOX="128 465 477 496"/>
+			<W BOX="451 466 477 495" STYLE_REF="1" NS="y">עיה</W>
+			<W BOX="446 465 455 493" STYLE_REF="1" NS="y">"</W>
+			<W BOX="437 466 449 495" STYLE_REF="1">ק</W>
+			<W BOX="415 466 434 495" STYLE_REF="1">או</W>
+			<W BOX="393 466 411 495" STYLE_REF="1">לא</W>
+			<W BOX="379 466 388 495" STYLE_REF="1" NS="y">?</W>
+			<W BOX="353 466 378 495" STYLE_REF="1">היש</W>
+			<W BOX="333 466 351 495" STYLE_REF="1">בו</W>
+			<W BOX="303 466 329 495" STYLE_REF="1">קלון</W>
+			<W BOX="282 466 297 495" STYLE_REF="1">כל</W>
+			<W BOX="253 466 278 495" STYLE_REF="1">איש</W>
+			<Q BOX="228 466 240 495" STYLE_REF="1" QID="31">ק</Q>
+			<q BOX="215 468 230 496" STYLE_REF="1" QID="31">טן</q>
+			<QW QID="31">קטן</QW>
+			<Q BOX="163 466 205 495" STYLE_REF="1" QID="32">וגדול</Q>
+			<Q BOX="152 466 166 495" STYLE_REF="1" LH="y" QID="32">—</Q>
+			<q BOX="128 466 162 495" STYLE_REF="1" QID="32">ואם</q>
+			<QW QID="32">וגדול—ואם</QW>
+			<L BOX="128 484 476 514"/>
+			<W BOX="439 485 476 514" STYLE_REF="1">מאחת</W>
+			<W BOX="396 485 431 514" STYLE_REF="1">מהנה</W>
+			<Q BOX="369 485 389 514" STYLE_REF="1" QID="33">תמ</Q>
+			<q BOX="355 485 373 514" STYLE_REF="1" QID="33">צא</q>
+			<QW QID="33">תמצא</QW>
+			<W BOX="334 485 352 514" STYLE_REF="1">בו</W>
+			<W BOX="309 485 315 514" STYLE_REF="1">־</W>
+			<W BOX="274 484 302 513" STYLE_REF="1">ירה</W>
+			<W BOX="241 485 273 514" STYLE_REF="1">יירה</W>
+			<W BOX="211 485 238 514" STYLE_REF="1">ואל</W>
+			<W BOX="155 485 202 514" STYLE_REF="1">החבצלת</W>
+			<W BOX="128 485 147 513" STYLE_REF="1">לא</W>
+			<L BOX="128 504 479 533"/>
+			<W BOX="445 504 479 533" STYLE_REF="1">יעלה</W>
+			<W BOX="404 504 430 533" STYLE_REF="1">זרה</W>
+			<W BOX="365 504 399 533" STYLE_REF="1">הלאה</W>
+			<W BOX="348 504 365 533" STYLE_REF="1">כי</W>
+			<W BOX="260 504 345 533" STYLE_REF="1">לאקדשו־־ואך</W>
+			<W BOX="233 504 254 533" STYLE_REF="1">את</W>
+			<W BOX="195 504 221 533" STYLE_REF="1">אלה</W>
+			<W BOX="155 504 193 533" STYLE_REF="1">נקריב</W>
+			<W BOX="128 504 156 533" STYLE_REF="1">אשר</W>
+			<L BOX="129 520 478 553"/>
+			<W BOX="451 523 478 552" STYLE_REF="1">נדע</W>
+			<W BOX="413 523 447 552" STYLE_REF="1">הדבר</W>
+			<W BOX="392 523 409 552" STYLE_REF="1">אל</W>
+			<W BOX="364 524 392 553" STYLE_REF="1">נכון</W>
+			<W BOX="342 524 360 553" STYLE_REF="1">כי</W>
+			<W BOX="325 524 340 553" STYLE_REF="1">כן</W>
+			<W BOX="303 524 321 553" STYLE_REF="1" NS="y">הי</W>
+			<W BOX="300 520 315 549" STYLE_REF="1">'</W>
+			<W BOX="257 523 301 552" STYLE_REF="1">ונחקור</W>
+			<W BOX="218 523 245 552" STYLE_REF="1">מאד</W>
+			<Q BOX="188 523 220 552" STYLE_REF="1" QID="34">ונדר</Q>
+			<q BOX="174 523 195 552" STYLE_REF="1" QID="34">וש</q>
+			<QW QID="34">ונדרוש</QW>
+			<W BOX="147 523 173 552" STYLE_REF="1">האק</W>
+			<W BOX="129 523 146 552" STYLE_REF="1">בו</W>
+			<L BOX="130 539 479 571"/>
+			<W BOX="445 543 479 571" STYLE_REF="1">נפתל</W>
+			<W BOX="414 543 427 571" STYLE_REF="1" DIR="ltr">p</W>
+			<W BOX="386 543 407 571" STYLE_REF="1">את</W>
+			<W BOX="357 543 384 571" STYLE_REF="1">אשר</W>
+			<W BOX="322 542 356 571" STYLE_REF="1">יוולר</W>
+			<W BOX="298 542 319 571" STYLE_REF="1">פה</W>
+			<W BOX="262 542 294 571" STYLE_REF="1">אתנו</W>
+			<W BOX="251 539 258 568" STYLE_REF="1">*</W>
+			<W BOX="229 542 247 571" STYLE_REF="1">או</W>
+			<W BOX="187 542 222 571" STYLE_REF="1">באחת</W>
+			<W BOX="130 542 174 571" STYLE_REF="1">מארצות</W>
+			<L BOX="130 558 475 591"/>
+			<W BOX="440 562 475 591" STYLE_REF="1">הקדש</W>
+			<W BOX="430 560 437 589" STYLE_REF="1">"</W>
+			<W BOX="399 562 426 591" STYLE_REF="1">צפת</W>
+			<W BOX="381 562 394 590" STYLE_REF="1" NS="y">ט</W>
+			<W BOX="372 562 386 590" STYLE_REF="1" NS="y">:</W>
+			<W BOX="361 562 380 590" STYLE_REF="1" NS="y">רי</W>
+			<W BOX="357 559 374 588" STYLE_REF="1">'</W>
+			<S S_TYPE="BUL">
+				<W BOX="348 559 356 588" STYLE_REF="1">•</W>
+			</S>
+			<W BOX="310 562 345 590" STYLE_REF="1">חברון</W>
+			<W BOX="296 561 303 590" STYLE_REF="1">"</W>
+			<W BOX="271 561 296 590" STYLE_REF="1">יפו</W>
+			<W BOX="262 561 270 590" STYLE_REF="1">"</W>
+			<W BOX="229 562 256 591" STYLE_REF="1">שפס</W>
+			<W BOX="185 562 212 591" STYLE_REF="1">בהם</W>
+			<Q BOX="146 560 185 589" STYLE_REF="1" QID="35">ובחצר</Q>
+			<q BOX="134 562 153 590" STYLE_REF="1" NS="y" QID="35">יה</q>
+			<QW QID="35">ובחצריה</QW>
+			<W BOX="130 558 146 587" STYLE_REF="1" M="1 * ">_'</W>
+			<L BOX="132 580 486 609"/>
+			<W BOX="457 580 486 609" STYLE_REF="1" M="1 * ">_וק</W>
+			<W BOX="406 580 452 609" STYLE_REF="1">הדברים</W>
+			<W BOX="376 580 403 609" STYLE_REF="1">אשר</W>
+			<W BOX="329 580 373 609" STYLE_REF="1">ממרחק</W>
+			<W BOX="303 580 333 609" STYLE_REF="1">יבאו</W>
+			<W BOX="272 580 303 609" STYLE_REF="1">כולם</W>
+			<W BOX="235 580 270 609" STYLE_REF="1">יבחט</W>
+			<W BOX="193 580 230 609" STYLE_REF="1">האמת</W>
+			<Q BOX="146 580 184 609" STYLE_REF="1" QID="36">אתם</Q>
+			<Q BOX="132 580 147 609" STYLE_REF="1" QID="36">—</Q>
+			<L BOX="131 597 476 629"/>
+			<q BOX="449 600 476 629" STYLE_REF="1" QID="36">ואם</q>
+			<QW QID="36">אתםואם</QW>
+			<W BOX="427 600 445 629" STYLE_REF="1">לא</W>
+			<W BOX="405 600 423 629" STYLE_REF="1">צא</W>
+			<W BOX="370 600 405 629" STYLE_REF="1">נאמר</W>
+			<W BOX="342 600 369 629" STYLE_REF="1">להם</W>
+			<W BOX="289 600 342 628" STYLE_REF="1" NS="y">וחלותינו</W>
+			<W BOX="272 597 289 626" STYLE_REF="1">'</W>
+			<W BOX="277 600 288 628" STYLE_REF="1">ה</W>
+			<W BOX="234 600 273 629" STYLE_REF="1" M="2 * ">_אלקים</W>
+			<W BOX="202 599 235 628" STYLE_REF="1">יעזר</W>
+			<W BOX="180 599 202 628" STYLE_REF="1">לנו</W>
+			<W BOX="142 600 176 628" STYLE_REF="1">להפק</W>
+			<W BOX="131 598 139 627" STYLE_REF="1">"</W>
+			<L BOX="128 619 474 649"/>
+			<W BOX="445 619 474 648" STYLE_REF="1">זממי</W>
+			<W BOX="434 619 445 648" STYLE_REF="1">ט</W>
+			<Q BOX="397 619 431 648" STYLE_REF="1" QID="37">הטוב</Q>
+			<q BOX="348 619 401 648" STYLE_REF="1" QID="37">והחנצלת</q>
+			<QW QID="37">הטובוהחנצלת</QW>
+			<W BOX="320 620 344 649" STYLE_REF="1">תתן</W>
+			<Q BOX="284 619 315 647" STYLE_REF="1" QID="38">פריה</Q>
+			<q BOX="277 619 287 647" STYLE_REF="1" QID="38">"</q>
+			<QW QID="38">פריה"</QW>
+			<W BOX="246 619 280 648" STYLE_REF="1">ותהי</W>
+			<W BOX="209 619 245 647" STYLE_REF="1">תאוה</W>
+			<W BOX="167 619 212 647" STYLE_REF="1">לעינים</W>
+			<W BOX="128 619 169 648" STYLE_REF="1">ומתיק</W>
+			<L BOX="265 637 390 668"/>
+			<W BOX="359 639 390 668" STYLE_REF="1">לחיך</W>
+			<W BOX="346 637 353 666" STYLE_REF="1">"</W>
+			<W BOX="305 638 340 667" STYLE_REF="1">כאשר</W>
+			<W BOX="265 638 300 667" STYLE_REF="1">יחלט</W>
+		</Primitive>
+	</Content>
+</XMD-entity>

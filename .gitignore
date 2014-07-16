@@ -1,10 +1,7 @@
-.idea/*
+.idea/
+.vagrant/
 *.pyc
 *.sqlite3
 backend/open-news-stub
-<<<<<<< HEAD
-.idea
-.vagrant
-=======
-.vagrant
->>>>>>> 1dc600a2be348a4f4641e52d8801915a965f930d
+
+

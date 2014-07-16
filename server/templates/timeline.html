@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>חיפוש - {{ query }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="TimelineJS example">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Style-->
+    <style>
+      html, body {
+       height:100%;
+       padding: 0px;
+       margin: 0px;
+      }
+    </style>
+    
+    <!-- The default timeline stylesheet -->
+    <link rel="stylesheet" href="{{ static_url("css/timeline/timeline.css") }}" />
+	<link rel="stylesheet" href="{{ static_url("css/colorbox.css") }}" />
+  
+    <script type="text/javascript" src="{{ static_url("js/jquery-2.1.1.min.js") }}"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body>
+      <!-- BEGIN Timeline Embed -->
+      <div id="timeline-embed"></div>
+      <script type="text/javascript">
+      	var the_story = 
+					{
+					    "timeline":
+					    {
+					        "headline":"{{ query }}", //What did we search for
+					        "type":"default", //should not change
+							"startDate":"{{ start_date }}", //the first date this was found FIXME: in which format?
+							"text":"", //did we use any filters? if so what were they  TODO: we don't have filters yet.
+							
+					        "date": [
+					        {% for result in results %}
+					            {
+					                "startDate":"{{ result['year'] }}", //the date of the article
+					                "headline":"{{ result['headline'] }}", //which paper
+					                "text":"{{ result['issue'] }}", //which issue
+					                "asset":
+					                {
+					                    "media":"{{ result['image'] }}", //where is the picture of that page
+					                    "caption":""
+					                }
+					            },
+					        {% end %}
+					
+					            
+					        ]
+					    }
+					};
+      
+        var timeline_config = {
+         width: "100%",
+         height: "100%",
+         lang : "he",
+         source: the_story
+        }
+        
+      </script>
+      <script type="text/javascript" src="{{ static_url("js/storyjs-embed.js") }}"></script>
+      <script type="text/javascript" src="{{ static_url("js/jquery.colorbox-min.js") }}"></script>
+      <script type="text/javascript" src="{{ static_url("js/wheelzoom.js") }}"></script>
+      <script type="text/javascript">      	
+		$(document).on("click", "img.media-image", function(e){
+			  		e.preventDefault();
+			  		// alert($("h2 .start").text());
+			  		// href:$(this).attr('src')
+			  		$("#hiddenImg").attr("src", $(this).attr('src'));
+			    	$(this).colorbox(	{rel: 'group1', 
+			    						open: true, 
+			    						inline: true,
+			    						href:"#hidden"
+			    						});
+			    	
+			    	
+			    						
+			    	return false; 
+		      });
+      </script>
+      <!-- END Timeline Embed-->
+	  <div style="display:none">
+	  	<div id="hidden">
+	  		<img id="hiddenImg"></img>
+	  	</div>
+	  </div>
+  </body>
+</html>
