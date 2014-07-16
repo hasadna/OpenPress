@@ -62,7 +62,13 @@ def find_start_date(results):
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
     result['year'] = result['issue_date'][6:] # TODO
-    result['publisher'] = PUBLI[result['publisher']]
+    # FIXME:
+    result['publisher1'] = PUBLI[result['publisher']]
+
+    # FIXME:
+    if 'headline' not in result:
+        result['headline'] = "Undefine"
+
     result['issue'] = '' # TODO
     result['image'] = get_image(result)
 
