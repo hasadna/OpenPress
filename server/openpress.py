@@ -92,8 +92,9 @@ class MainHandler(tornado.web.RequestHandler):
 
 
             if api is not None:
-                results_json = json.dumps(results)
-                self.write(results_json)
+                response = { 'count' : len(results), 'results': results}
+                response_json = json.dumps(response)
+                self.write(response_json)
             else:
                 self.render("timeline.html", results=results, query=query, start_date=start_date)
 
