@@ -94,7 +94,7 @@ class MainHandler(tornado.web.RequestHandler):
             if api is not None:
                 # in case this is an api call Create and return JSON
                 response = { 'count' : len(results), 'results': results}
-                response_json = escape.json_encode(response)
+                response_json = tornado.escape.json_encode(response)
                 self.set_header("Content-Type", "application/json; charset=UTF-8")
                 self.write(response_json)
 
