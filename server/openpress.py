@@ -10,6 +10,7 @@ import tornado.wsgi
 import os.path
 import uuid
 import pysolr
+import json
 
 from tornado import gen
 from tornado.options import define, options, parse_command_line
@@ -75,6 +76,9 @@ def convert_result(result):
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         query = self.get_argument("query", default=None, strip=False)
+        api = self.get_argument("api", default=None, strip=False)
+        # TODO: add a argument that will indicate the number of rows
+
         if query is None:
             self.render("index.html")
         else:
@@ -86,8 +90,12 @@ class MainHandler(tornado.web.RequestHandler):
 
             start_date = find_start_date(results)
 
-            self.render("timeline.html", results=results, query=query, start_date=start_date)
-            #self.render("results.html", results=results, query=query)
+
+            if api is not None:
+                results_json = json.dumps(results)
+                self.write(results_json)
+            else:
+                self.render("timeline.html", results=results, query=query, start_date=start_date)
 
 
 def create_app(app_class):
