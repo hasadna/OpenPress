@@ -73,42 +73,64 @@ def convert_result(result):
     result['issue'] = '' # TODO
     result['image'] = get_image(result)
 
+
+def get_results(query):
+    ''' get results from solr service for a given query '''
+
+    results = g_solr.search(query, rows=20)
+    results = results.docs
+    # Add the url to the article for every result.
+    for result in results:
+        convert_result(result)
+
+    return results
+
+
+
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         query = self.get_argument("query", default=None, strip=False)
-        api = self.get_argument("api", default=None, strip=False)
+
         # TODO: add a argument that will indicate the number of rows
 
         if query is None:
             self.render("index.html")
         else:
-            results = g_solr.search(query, rows=20)
-            results = results.docs
-            # Add the url to the article for every result.
-            for result in results:
-                convert_result(result)
 
-            start_date = find_start_date(results)
+            results = get_results(query)
+
+            start_date = find_start_date(results)  # for the timeline!!
+
+            self.render("timeline.html", results=results, query=query, start_date=start_date)
 
 
-            if api is not None:
-                # in case this is an api call Create and return JSON
-                response = { 'count' : len(results), 'results': results}
-                response_json = tornado.escape.json_encode(response)
-                self.set_header("Content-Type", "application/json; charset=UTF-8")
-                self.write(response_json)
+class ApiHandler(tornado.web.RequestHandler):
 
-            else:
-                self.render("timeline.html", results=results, query=query, start_date=start_date)
+    def get(self):
+
+        query = self.get_argument("query", default=None, strip=False)
+
+        if query:
+            results = get_results(query)
+            response = { 'count' : len(results), 'results': results}
+            response_json = tornado.escape.json_encode(response)
+            self.set_header("Content-Type", "application/json; charset=UTF-8")
+            self.write(response_json)
+        else:
+            welcome = {'welcome_msg': ' Welcome to Open Press API',
+                       'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
+            self.write(welcome)
 
 
 def create_app(app_class):
     app = app_class(
-        [
-            (r"/", MainHandler),
-            ],
+
+        [(r"/", MainHandler), (r"/api/", ApiHandler)],
+
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),
+
         )
     return app
 
