@@ -96,7 +96,7 @@ class Article(object):
         self._info = {}
         tree = ET.parse(file_stream)
         root = tree.getroot()
-
+        doc_id = "" #TODO: Fixme should not be empty
         for name, item in root.items():
             if name == 'DOC_UID':
                 doc_id = item
