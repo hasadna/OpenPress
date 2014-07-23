@@ -23,6 +23,7 @@ PUBLI = { 'HZT':u"חבצלת",
 define("port", default=8888, help="run on the given port", type=int)
 
 g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
+g_api_versions = {1 : 'active'}
 
 def id_to_url(article_id):
     '''
@@ -107,8 +108,11 @@ class MainHandler(tornado.web.RequestHandler):
 
 class ApiHandler(tornado.web.RequestHandler):
 
-    def get(self):
+    def get(self,id):
 
+        if g_api_versions[id] is None:
+            self.write({'Error': 'Unsupported Version',
+                        'supported versions': g_api_versions.keys()})
         query = self.get_argument("query", default=None, strip=False)
 
         if query:
@@ -126,7 +130,7 @@ class ApiHandler(tornado.web.RequestHandler):
 def create_app(app_class):
     app = app_class(
 
-        [(r"/", MainHandler), (r"/api/", ApiHandler)],
+        [(r"/", MainHandler), (r"/api/(v[0-9]+)/", ApiHandler)],
 
         template_path=os.path.join(os.path.dirname(__file__), "templates"),
         static_path=os.path.join(os.path.dirname(__file__), "static"),
