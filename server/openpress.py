@@ -23,7 +23,7 @@ PUBLI = { 'HZT':u"חבצלת",
 define("port", default=8888, help="run on the given port", type=int)
 
 g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
-g_api_versions = {1 : 'active'}
+g_api_versions = {'v1' : 'active'}
 
 def id_to_url(article_id):
     '''
@@ -110,7 +110,8 @@ class ApiHandler(tornado.web.RequestHandler):
 
     def get(self,id):
 
-        if g_api_versions[id] is None:
+        if id not in g_api_versions:
+
             self.write({'Error': 'Unsupported Version',
                         'supported versions': g_api_versions.keys()})
         query = self.get_argument("query", default=None, strip=False)
