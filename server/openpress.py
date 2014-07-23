@@ -111,9 +111,10 @@ class ApiHandler(tornado.web.RequestHandler):
     def get(self,id):
 
         if id not in g_api_versions:
+            err_msg = {'Error': 'Unsupported Version',
+                        'supported versions': g_api_versions.keys()}
+            self.write(err_msg)
 
-            self.write({'Error': 'Unsupported Version',
-                        'supported versions': g_api_versions.keys()})
         query = self.get_argument("query", default=None, strip=False)
 
         if query:
