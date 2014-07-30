@@ -109,11 +109,11 @@ class MainHandler(tornado.web.RequestHandler):
 class ApiHandler(tornado.web.RequestHandler):
 
     def get(self,id):
-
         if id not in g_api_versions:
             err_msg = {'Error': 'Unsupported Version',
                         'supported versions': g_api_versions.keys()}
             self.write(err_msg)
+            return None
 
         query = self.get_argument("query", default=None, strip=False)
 
