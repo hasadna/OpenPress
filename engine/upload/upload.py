@@ -68,12 +68,32 @@ class Article(object):
         for name, item in element.items():
             if name == 'ISSUE_DATE':
                 self._info['issue_date'] = item
+                date = item.split("/")
+                self._info['publication_day'] = int(item[0])
+                self._info['publication_month'] = int(item[1])
+                self._info['publication_year'] = int(item[2])
+
             if name == 'PUBLICATION':
-                self._info['publisher'] = item
+                self._info['newspaper_code'] = item
 
 
     def _parse_Link(self, element):
-        pass
+
+        for name, item in element.items():
+            if name == 'TOC_ID':
+                self._info['original_project_link'] = item
+
+    def _parse_XMD(self,element):
+        for name, item in element.items():
+            if name == 'BOX':
+                self._info['location_in_page'] = [int(_) for _ in item.split(" ")]
+            if name == 'LANGUAGE':
+                self._info['language'] = item
+            if name == 'PAGE_NO':
+                self._info['page_in_paper'] = int(item)
+            if name == 'ID':
+                self._info['original_project_ID'] = item
+
 
     def _parse_Content(self, element):
         content = ''
@@ -92,7 +112,8 @@ class Article(object):
         self.METADATA = METADATA= {
                                    "Meta" : self._parse_META,
                                    "Link" : self._parse_Link,
-                                   "Content": self._parse_Content }
+                                   "Content": self._parse_Content,
+                                    "XMD-entity" : self._parse_XMD}
         self._info = {}
         tree = ET.parse(file_stream)
         root = tree.getroot()
@@ -190,7 +211,7 @@ def main(argv):
     solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
     # You can optimize the index when it gets fragmented, for better speed.
     solr.optimize()
-    
+
     upload_all(solr, argv[1])
 
 
