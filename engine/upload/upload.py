@@ -163,7 +163,7 @@ def upload_dir_from_zip(solr,path):
                                       AD in info.filename and
                                       info.filename.endswith(".xml"))]
 
-            # TODO: also search the Ads 
+            # TODO: also search the Ads
 
             for article_file in article_files:
                 # Create the article object.
@@ -187,10 +187,10 @@ def upload_all(solr, input_folder):
 
 def main(argv):
     # Setup a Solr instance. The timeout is optional.
-    #solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
+    solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
     # You can optimize the index when it gets fragmented, for better speed.
-    #solr.optimize()
-    solr = ""
+    solr.optimize()
+    
     upload_all(solr, argv[1])
 
 
