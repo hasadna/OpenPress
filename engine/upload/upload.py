@@ -48,6 +48,8 @@ class Page(object):
                 id_ = item
 
         self.entities[id_] = {'box': box,
+                              # FIXME: Name defined in the Page and in the Article files 
+                              #        we should check which one is better.
                               'headline': entity_name}
 
     def add_article(self, article):
@@ -69,12 +71,15 @@ class Article(object):
             if name == 'ISSUE_DATE':
                 self._info['issue_date'] = item
                 date = item.split("/")
-                self._info['publication_day'] = int(item[0])
-                self._info['publication_month'] = int(item[1])
-                self._info['publication_year'] = int(item[2])
+                self._info['publication_day'] = int(date[0])
+                self._info['publication_month'] = int(date[1])
+                self._info['publication_year'] = int(date[2])
 
             if name == 'PUBLICATION':
                 self._info['newspaper_code'] = item
+
+            if name == 'BASE_HREF':
+                self.base_href = item
 
 
     def _parse_Link(self, element):
@@ -93,6 +98,7 @@ class Article(object):
                 self._info['page_in_paper'] = int(item)
             if name == 'ID':
                 self._info['original_project_ID'] = item
+                self.id = item
 
 
     def _parse_Content(self, element):
@@ -108,28 +114,33 @@ class Article(object):
         self._info['content'] = content
 
 
+    def _create_id(self):
+        month = self._info['publication_month']
+        year = self._info['publication_year']
+        day = self._info['publication_day']
+        newspaper = self._info['newspaper_code']
+        
+
+        self._info['id'] = "%s_%s_%s_%s_%s" %(newspaper, year, month, day, self.id)
+
     def __init__(self, file_stream):
         self.METADATA = METADATA= {
                                    "Meta" : self._parse_META,
                                    "Link" : self._parse_Link,
                                    "Content": self._parse_Content,
-                                    "XMD-entity" : self._parse_XMD}
+                                   "XMD-entity" : self._parse_XMD}
         self._info = {}
         tree = ET.parse(file_stream)
         root = tree.getroot()
-        doc_id = "" #TODO: Fixme should not be empty
-        for name, item in root.items():
-            if name == 'DOC_UID':
-                doc_id = item
-            if name == 'ID':
-                id_ = item
 
-        self.id = id_
-        self._info['id'] = doc_id + id_
+        self._parse_XMD(root)
+
 
         for element in root.getchildren():
             if element.tag in self.METADATA:
                 self.METADATA[element.tag](element)
+
+        self._create_id()
 
 def upload_dir_from_folder(solr,path):
     from os import walk, mkdir
@@ -191,6 +202,11 @@ def upload_dir_from_zip(solr,path):
                 ar = Article(zip_file.open(article_file.filename, "r"))
                 # Add it to the page.
                 page.add_article(ar)
+            
+            for ad_file in ad_files:
+                # add the Ads to the page.
+                ad = Article(zip_file.open(ad_file.filename, "r"))
+                page.add_article(ad)
 
             # Add the articles to solr.
             solr.add(page.get_articles())
