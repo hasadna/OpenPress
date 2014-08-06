@@ -119,6 +119,7 @@ class ApiHandler(tornado.web.RequestHandler):
             err_msg = {'Error': 'Unsupported Version',
                         'supported versions': g_api_versions.keys()}
             self.write(err_msg)
+            return
 
         query = self.get_argument("query", default=None, strip=False)
 
