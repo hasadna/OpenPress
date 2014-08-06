@@ -12,6 +12,8 @@ import uuid
 import pysolr
 import json
 
+from newspaper_codes import NewspaperCodes
+
 from tornado import gen
 from tornado.options import define, options, parse_command_line
 
@@ -60,16 +62,15 @@ def find_start_date(results):
             min_date = year
     return min_date
         
-        
+# link to image,url, 
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
-    result['year'] = result['issue_date'][6:] # TODO
     # FIXME:
-    result['publisher1'] = PUBLI[result['publisher']]
+    result['newspaper_full_name'] = NewspaperCodes.get_code(result['newspaper_code'])
 
     # FIXME:
     if 'headline' not in result:
-        result['headline'] = "Undefine"
+        result['headline'] = "Undefined"
 
     result['issue'] = '' # TODO
     result['image'] = get_image(result)
