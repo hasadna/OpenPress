@@ -42,11 +42,11 @@ def get_image(result):
     """
     Hacky as always... (please FIXME)
     """
-    article_id = result['id']
-    id_ = article_id[14:]
-    href = article_id[:14]
+    
+    id_fields = result['id'].split('_')
+    id_ = id_fields[4]                  #article_id[14:]
+    href = "/".join(id_fields[0:4])     #article_id[:14]
 
-    #FIXME: not working
     image_url = "http://www.jpress.nli.org.il/Olive/APA/NLI_heb/get/GetImage.ashx?kind=block&href=%s&id=%s&ext=.png" %(href, id_)
     
     return image_url
