@@ -31,8 +31,8 @@ URL_TEMPLATE = """    <url>
 """
 
 #adding &mode=text at the end will get us textual results
-LOC_TEMPLATE = "http://jpress.nli.org.il/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&amp;id={ARTICLE_ID}&amp;mode=text"
-
+#LOC_TEMPLATE = "http://jpress.nli.org.il/Bla/Olive/APA/NLI_heb/get/Article.ashx?href={PAPER_ID}&amp;id={ARTICLE_ID}&amp;mode=text"
+LOC_TEMPLATE = "http://opa.org.il/article/{PAPER_KEY}"
 ATTRIBUTE_TEMPLATE = """                <Attribute name="{KEY}">{VALUE}</Attribute>
 """
 
@@ -45,25 +45,38 @@ ATTRIBUTE_TEMPLATE = """                <Attribute name="{KEY}">{VALUE}</Attribu
  ARTICLE_ATTRIBUTES) = range(3)
 
 
+def get_attribute_list(attributes):
+    attributes_list = []
+    for key, value in attributes.iteritems():
+        attributes_list.append(ATTRIBUTE_TEMPLATE.format(KEY=key, VALUE=value))
+        
+    return attributes_list
+
+# issue_date
 def parse_urls(urls):
     '''
     Parses the urls, it should be a generator expression (as created by get_articles)
     This is a generator which generates the url in template form.
     '''
     for loc, lastmod, attributes in urls:
-        attributes_list = []
+        yield URL_TEMPLATE.format(LOC=loc, LASTMOD=lastmod, ATTRIBUTES="".join(get_attribute_list(attributes)) )
 
-        for key, value in attributes.iteritems():
-            attributes_list.append(ATTRIBUTE_TEMPLATE.format(KEY=key, VALUE=value))
-        yield URL_TEMPLATE.format(LOC=loc, LASTMOD=lastmod, ATTRIBUTES="".join(attributes_list))
+def get_loc(paper_id, article_id, article):
+    # Date is in the from dd/mm/yyyy convert it to a string of the form yyyymmdd
+    issue_date = ''.join(article[ARTICLE_ATTRIBUTES]["issue_date"].split("/")[::-1])
+    article_id = article[ARTICLE_ARTICLE_ID]
+    name = article[ARTICLE_ATTRIBUTES]["publication"]
 
+    # result of loc = http://opa.org.il/article/HVZ_18630730_Ad00103
 
-def get_loc(paper_id, article_id):
-    return LOC_TEMPLATE.format(PAPER_ID=paper_id.replace("/","%2F"), ARTICLE_ID=article_id)
+    key = name+"_"+issue_date+"_"+article_id
+    loc = LOC_TEMPLATE.format(PAPER_KEY=key)    #paper_id.replace("/","%2F"), ARTICLE_ID=article_id)
+    print loc
+    return loc
 
 
 def get_url(article, date=DEFAULT_DATE):
-    return get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID]), date, article[ARTICLE_ATTRIBUTES]
+    return get_loc(article[ARTICLE_PAPER_ID], article[ARTICLE_ARTICLE_ID], article), date, article[ARTICLE_ATTRIBUTES]
 
 
 def parse_xml_file(file_stream, file_name):
@@ -134,7 +147,7 @@ def generate_document_sitemap(publication_path):
     return publication_name, base_href, SITEMAP_TEMPLATE.format(URLS="".join(parse_urls(urls)))
 
 def main(argv):
-    publication_name, xml_name, xml_content = generate_document_sitemap(".")
+    publication_name, xml_name, xml_content = generate_document_sitemap(argv[1]) #".")
     print xml_content
     print join(publication_name, xml_name + ".xml")
 

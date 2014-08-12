@@ -1,7 +1,10 @@
 .idea/
 .vagrant/
+vagrant/
+Vagrantfile
 *.pyc
 *.sqlite3
 backend/open-news-stub
+
 
 
