@@ -61,7 +61,7 @@ def find_start_date(results):
     '''
     min_date = 0
     for result in results:
-         year = int(result['year'])
+         year = int(result['publication_year'])
          if year < min_date:
             min_date = year
     return min_date
