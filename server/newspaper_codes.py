@@ -5,11 +5,12 @@ class NewspaperCodes:
     
     _language_codes = ["he"]
     
-    _newspaper_codes = ["HZT", "HZV", "MGD"]
+    _newspaper_codes = ["HZT", "HZV", "MGD", "DAV"]
     
     _heb_convert = { 'HZT':u"חבצלת",
                       'HZV':u"חפציבה",
-                      'MGD':u"המגיד"}
+                      'MGD':u"המגיד",
+                      'DAV':u"הדוור"}
     
     @classmethod
     def _get_language_dict(cls, language_code):
