@@ -96,12 +96,14 @@ def get_statistics(query, results):
 
     stats[query] = 0
     for result in results:
-        if query in result['content']:
+        if query in result['content'][0] or
+           query in result['headline']:
             stats[query] += 1
 
         else:
             for word in stats:
-                stats[word] += 1 if word in result['content'] else 0
+                stats[word] += 1 if word in result['content'][0] or \
+                                    word in result['headline'] else 0
 
     return stats
 
