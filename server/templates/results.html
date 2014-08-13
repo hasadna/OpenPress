@@ -23,21 +23,21 @@
          <table id="stats" class="tablesorter"> 
 		<thead> 
 		<tr> 
-			<th>מילה</th>
 			<th>כמות מופעים</th> 
+			<th>מילה</th>
 		</tr> 
 		</thead> 
 		<tbody>
 	      {% for key in stats %}
 	      <tr>
-	      	<td>{{ key }}</td>
 	      	<td>{{ stats[key] }}</td>
+	      	<td>{{ key }}</td>
 	      </tr>
 	      {% end %}
 		</tbody>
-		<br/><br/>
+		<br/><br/><center>
 		(המופעים של כל מילה בודדת אינם מוכלים במופעים של כל המילים יחדיו)
-         
+		</center>
          
     	<table id="results" class="tablesorter"> 
 		<thead> 
