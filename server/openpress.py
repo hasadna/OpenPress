@@ -91,6 +91,20 @@ def get_results(query):
 
     return results
 
+def get_statistics(query, results):
+    stats = {word: 0 for word in query.split(" ")}
+
+    stats[query] = 0
+    for result in results:
+        if query in result['content']:
+            stats[query] += 1
+
+        else:
+            for word in stats:
+                stats[word] += 1 if word in result['content'] else 0
+
+    return stats
+
 
 
 
@@ -105,11 +119,14 @@ class MainHandler(tornado.web.RequestHandler):
         else:
 
             results = get_results(query)
+            
+            stats = get_statistics(query, results)
 
             start_date = find_start_date(results)  # for the timeline!!
 
             #self.render("timeline.html", results=results, query=query, start_date=start_date)
-            self.render("results.html", results=results, query=query, start_date=start_date)
+            self.render("results.html", results=results, query=query, start_date=start_date, 
+                                        stats=stats)
 
 class ApiHandler(tornado.web.RequestHandler):
 
