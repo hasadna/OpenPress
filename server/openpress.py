@@ -94,19 +94,24 @@ def get_results(query):
 
     return results
 
+def findWholeWord(w):
+    return re.compile(r'\b({0})\b'.format(w), flags=re.IGNORECASE).search
+
 def get_statistics(query, results):
     stats = {word: 0 for word in query.split(" ")}
 
     stats[query] = 0
     for result in results:
-        if query in result['content'][0] or \
-           query in result['headline']:
+        querySearch = findWholeWord(query)
+#         if query in result['content'][0] or \
+#            query in result['headline']:
+        if querySearch(result['content'][0]) or querySearch(result['headline']):
             stats[query] += 1
 
         else:
             for word in stats:
-                stats[word] += 1 if word in result['content'][0] or \
-                                    word in result['headline'] else 0
+                wordsSearch = findWholeWord(query)
+                stats[word] += 1 if wordsSearch(result['content'][0]) or wordsSearch(result['headline']) else 0
 
     return stats
 
