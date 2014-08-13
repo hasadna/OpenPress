@@ -224,7 +224,7 @@ def upload_all(solr, input_folder):
 
 def main(argv):
     # Setup a Solr instance. The timeout is optional.
-    solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
+    solr = pysolr.Solr('http://localhost:8983/solr/', timeout=600)
     # You can optimize the index when it gets fragmented, for better speed.
     solr.optimize()
 
