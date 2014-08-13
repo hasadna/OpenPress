@@ -96,7 +96,7 @@ def get_statistics(query, results):
 
     stats[query] = 0
     for result in results:
-        if query in result['content'][0] or
+        if query in result['content'][0] or \
            query in result['headline']:
             stats[query] += 1
 
