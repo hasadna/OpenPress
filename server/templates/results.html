@@ -20,6 +20,24 @@
 	     <b>{{ query }}</b>
 	     </div>
          <br><br>
+         <table id="stats" class="tablesorter"> 
+		<thead> 
+		<tr> 
+			<th>מילה</th>
+			<th>כמות מופעים</th> 
+		</tr> 
+		</thead> 
+		<tbody>
+	      {% for key in stats %}
+	      <tr>
+	      	<td>{{ key }}</td>
+	      	<td>{{ result[key] }}</td>
+	      </tr>
+	      {% end %}
+		</tbody>
+		<br/><br/>
+         
+         
     	<table id="results" class="tablesorter"> 
 		<thead> 
 		<tr> 
