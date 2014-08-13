@@ -96,7 +96,7 @@ def get_results(query):
     return results
 
 def findWholeWord(w):
-    return re.compile(r'\b({0})\b'.format(w), flags=re.IGNORECASE).search
+    return re.compile(ur'\b({0})\b'.format(w), flags=re.IGNORECASE).search
 
 def get_statistics(query, results):
     stats = {word: 0 for word in query.split(" ")}
