@@ -164,7 +164,7 @@ class ApiHandler(tornado.web.RequestHandler):
             self.send_json(response)
 
         elif articleId:
-            results = g_solr.search('', fq='id:%s' % articleId, rows=20)
+            results = g_solr.search('id:%s' % articleId, rows=20)
             results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
