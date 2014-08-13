@@ -108,8 +108,8 @@ class MainHandler(tornado.web.RequestHandler):
 
             start_date = find_start_date(results)  # for the timeline!!
 
-            self.render("timeline.html", results=results, query=query, start_date=start_date)
-
+            #self.render("timeline.html", results=results, query=query, start_date=start_date)
+            self.render("results.html", results=results, query=query, start_date=start_date)
 
 class ApiHandler(tornado.web.RequestHandler):
 
