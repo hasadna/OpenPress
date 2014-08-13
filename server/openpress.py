@@ -35,6 +35,9 @@ def id_to_url(article_id):
     id_info = article_id.split("_")
     url =  r"http://opa.org.il/article/"
     
+    id_info[2] = "0"+id_info[2] if len(id_info[2]) < 2 else id_info[2]
+    id_info[3] = "0"+id_info[3] if len(id_info[3]) < 2 else id_info[3]
+    
     # Still very much hacky!
     url += id_info[0]+"_"+"".join(id_info[1:4])+"_"+id_info[4]
     
