@@ -11,6 +11,7 @@ import os.path
 import uuid
 import pysolr
 import json
+import re
 
 from newspaper_codes import NewspaperCodes
 
