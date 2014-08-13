@@ -42,19 +42,21 @@
     	<table id="results" class="tablesorter"> 
 		<thead> 
 		<tr> 
+		    
 			<th>תוצאה</th>
 			<th>שנת פרסום</th> 
 		    <th>הוצאה</th> 
-		    
+		    <th> # </th>
 		    
 		</tr> 
 		</thead> 
 		<tbody>
-	      {% for result in results %}
+	      {% for i,result in enumerate(results) %}
 	      <tr>
 	      	<td><a href="{{ result['url'] }}">{{ result['headline'] }}</a></td>
 	      	<td>{{ result['publication_year'] }}</td>
 	      	<td>{{ result['newspaper_full_name'] }}</td>
+	      	<td>{{ i }} </td>
 	      </tr>
 	      {% end %}
 		</tbody>
