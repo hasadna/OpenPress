@@ -91,7 +91,8 @@ class Article(object):
     def _parse_XMD(self,element):
         for name, item in element.items():
             if name == 'BOX':
-                self._info['location_in_page'] = [int(_) for _ in item.split(" ")]
+                # FIXME: Check if we can chnage it from string to list.
+                self._info['location_in_page'] = str([int(_) for _ in item.split(" ")])
             if name == 'LANGUAGE':
                 self._info['language'] = item
             if name == 'PAGE_NO':
