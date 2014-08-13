@@ -141,6 +141,11 @@ class MainHandler(tornado.web.RequestHandler):
 
 class ApiHandler(tornado.web.RequestHandler):
 
+    def send_json(self, d):
+        response_json = tornado.escape.json_encode(d)
+        self.set_header("Content-Type", "application/json; charset=UTF-8")
+        self.write(response_json)
+
     def get(self,id):
 
         if id not in g_api_versions:
@@ -150,13 +155,19 @@ class ApiHandler(tornado.web.RequestHandler):
             return
 
         query = self.get_argument("query", default=None, strip=False)
+        articleId = self.get_argument("articleId", default=None, strip=False)
+        
 
         if query:
             results = get_results(query)
             response = { 'count' : len(results), 'results': results}
-            response_json = tornado.escape.json_encode(response)
-            self.set_header("Content-Type", "application/json; charset=UTF-8")
-            self.write(response_json)
+            self.send_json(response)
+
+        elif articleId:
+            results = g_solr.search('', fq='id:%s' % articleId, rows=20)
+            response = { 'count' : len(results), 'results': results}
+            self.send_json(response)
+            
         else:
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
