@@ -50,7 +50,7 @@ def get_rows(rows_string):
     match_object = re.compile(NUMBER_REGEX).match(rows_string)
     if not match_object:
         return ROWS_DEFAULT
-    return int(match_object.group(1))
+    return int(match_object.group(0))
 
 def get_image(result):
     """
