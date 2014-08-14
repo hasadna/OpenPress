@@ -17,11 +17,10 @@ from newspaper_codes import NewspaperCodes
 
 from tornado import gen
 from tornado.options import define, options, parse_command_line
-
-PUBLI = { 'HZT':u"חבצלת",
-          'HZV':u"חפציבה",
-          'MGD':u"המגיד"     }
           
+
+ROWS_DEFAULT=20
+NUMBER_REGEX = '^[0-9]{1,4}$'
 
 define("port", default=8888, help="run on the given port", type=int)
 
@@ -45,6 +44,13 @@ def id_to_url(article_id):
     #url += (article_id[0] + article_id[8:12] +
     #        article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
+
+
+def get_rows(rows_string):
+    match_object = re.compile(NUMBER_REGEX).match(rows_string)
+    if not match_object:
+        return ROWS_DEFAULT
+    return int(match_object.group(1))
 
 def get_image(result):
     """
@@ -84,10 +90,10 @@ def convert_result(result):
     result['image'] = get_image(result)
 
 
-def get_results(query):
+def get_results(query, rows):
     ''' get results from solr service for a given query '''
 
-    results = g_solr.search(query, rows=20)
+    results = g_solr.search(query, rows=rows)
     results = results.docs
     # Add the url to the article for every result.
     for result in results:
@@ -104,8 +110,6 @@ def get_statistics(query, results):
     stats[query] = 0
     for result in results:
         querySearch = findWholeWord(query)
-#         if query in result['content'][0] or \
-#            query in result['headline']:
         if querySearch(result['content'][0]) or querySearch(result['headline']):
             stats[query] += 1
 
@@ -122,14 +126,15 @@ def get_statistics(query, results):
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         query = self.get_argument("query", default=None, strip=False)
+        rows = self.get_argument("rows", default='20', strip=True)
 
-        # TODO: add a argument that will indicate the number of rows
+        rows = get_rows(rows)
 
         if query is None:
             self.render("index.html")
         else:
 
-            results = get_results(query)
+            results = get_results(query, rows)
             
             stats = get_statistics(query, results)
 
@@ -156,15 +161,17 @@ class ApiHandler(tornado.web.RequestHandler):
 
         query = self.get_argument("query", default=None, strip=False)
         articleId = self.get_argument("articleId", default=None, strip=False)
+        rows = self.get_argument("rows", default='20', strip=True)
         
+        rows = get_rows(rows)
 
         if query:
-            results = get_results(query)
+            results = get_results(query, rows)
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
 
         elif articleId:
-            results = g_solr.search('id:%s' % articleId, rows=20)
+            results = g_solr.search('id:%s' % articleId, rows=rows)
             results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
