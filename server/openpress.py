@@ -25,7 +25,8 @@ NUMBER_REGEX = '^[0-9]{1,4}$'
 define("port", default=8888, help="run on the given port", type=int)
 
 g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
-g_api_versions = {'v1' : 'active'}
+g_api_versions = {'v1' : {'active':True}}
+g_active_api_ver = "v1"
 
 def id_to_url(article_id):
     '''
@@ -151,11 +152,17 @@ class ApiHandler(tornado.web.RequestHandler):
         self.set_header("Content-Type", "application/json; charset=UTF-8")
         self.write(response_json)
 
-    def get(self,id):
+    def get(self,apiId):
 
-        if id not in g_api_versions:
+        if apiId not in g_api_versions:
             err_msg = {'Error': 'Unsupported Version',
                         'supported versions': g_api_versions.keys()}
+            self.write(err_msg)
+            return
+            
+        elif not g_api_versions[apiId]["active"]:
+        	err_msg = {'Error': 'API version is not active',
+                        'Active version': g_active_api_ver}
             self.write(err_msg)
             return
 
