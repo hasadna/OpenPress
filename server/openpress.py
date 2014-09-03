@@ -21,6 +21,13 @@ from tornado.options import define, options, parse_command_line
 
 ROWS_DEFAULT=20
 NUMBER_REGEX = '^[0-9]{1,4}$'
+COMPLETE_DATE_REGEX = ""
+MONTH_YEAR_DATE_REGEX = ""
+YEAR_DATE_REGEX = "^(19[0-9]{2})$|^(20[0-9]{2})$"
+
+DATE_REGEX = YEAR_DATE_REGEX+"|"+MONTH_YEAR_DATE_REGEX+"|"+COMPLETE_DATE_REGEX
+
+
 
 define("port", default=8888, help="run on the given port", type=int)
 
@@ -45,6 +52,12 @@ def id_to_url(article_id):
     #url += (article_id[0] + article_id[8:12] +
     #        article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
+
+def validate_date(date):
+	match_object = re.compile(DATE_REGEX).match(rows_string)
+	if not match_object:
+        return False
+    return True
 
 
 def get_rows(rows_string):
@@ -183,10 +196,16 @@ class ApiHandler(tornado.web.RequestHandler):
 	            return
 	            
 	        query = self.get_argument("query", default=None, strip=False)
+	        dateLeq = self.get_argument("dateLeq", default=None, strip=False)
+	        dateGeq = self.get_argument("dateGeq", default=None, strip=False)
 	        rows = self.get_argument("rows", default='20', strip=True)
+	        
+	        if not validate_date(dateLeq):
+	        	pass
+	        
 	        rows = get_rows(rows)
         
-            results = get_results(query, rows)
+            results = get_results(query, rows, dateLeq, dateGeq)
             results = self.sort_results(results, order_by)
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
