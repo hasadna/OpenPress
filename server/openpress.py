@@ -15,6 +15,8 @@ import re
 
 from newspaper_codes import NewspaperCodes
 
+
+from collections import OrderedDict
 from tornado import gen
 from tornado.options import define, options, parse_command_line
           
@@ -25,8 +27,8 @@ NUMBER_REGEX = '^[0-9]{1,4}$'
 define("port", default=8888, help="run on the given port", type=int)
 
 g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
-g_api_versions = {'v1' : {'active':True}}
-g_active_api_ver = "v1"
+g_api_versions = ["v1"]
+g_api_orders = ["dateAccending", "dateDecending", "relevance"]
 
 def id_to_url(article_id):
     '''
@@ -156,34 +158,38 @@ class ApiHandler(tornado.web.RequestHandler):
 
         if apiId not in g_api_versions:
             err_msg = {'Error': 'Unsupported Version',
-                        'supported versions': g_api_versions.keys()}
+                        'supported versions': g_api_versions}
             self.write(err_msg)
             return
-            
-        elif not g_api_versions[apiId]["active"]:
-        	err_msg = {'Error': 'API version is not active',
-                        'Active version': g_active_api_ver}
-            self.write(err_msg)
-            return
-
 		
-        self.get_api_v1()
+		if apiId == "v1":
+	        self.get_api_v1()
 
 	def get_api_v1(self):
-		query = self.get_argument("query", default=None, strip=False)
-        articleId = self.get_argument("articleId", default=None, strip=False)
-        rows = self.get_argument("rows", default='20', strip=True)
-        
-        rows = get_rows(rows)
+		
+		articleId = self.get_argument("articleId", default=None, strip=False)
 
-        if query:
-            results = get_results(query, rows)
-            response = { 'count' : len(results), 'results': results}
-            self.send_json(response)
-
-        elif articleId:
+		if articleId:
             results = g_solr.search('id:%s' % articleId, rows=rows)
             results = results.docs
+            response = { 'count' : len(results), 'results': results}
+            self.send_json(response)
+        
+        elif query:
+        	order_by = self.get_argument("rows", default=None, strip=True)
+	                
+	        if order_by and not self.validate_order(order_by):
+	        	err_msg = {'Error': 'Unsupported Order Type',
+	                        'supported types': g_api_orders}
+	            self.write(err_msg)
+	            return
+	            
+	        query = self.get_argument("query", default=None, strip=False)
+	        rows = self.get_argument("rows", default='20', strip=True)
+	        rows = get_rows(rows)
+        
+            results = get_results(query, rows)
+            results = self.sort_results(results, order_by)
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
             
@@ -191,6 +197,17 @@ class ApiHandler(tornado.web.RequestHandler):
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
+            
+	def sort_results(self, results, order):
+	"issue_date"
+		if not order:
+			return
+		elif order == "dateAccending":
+			pass
+		elif order == "dateDecending":
+			pass
+		elif order == "relevance":
+			pass		
 	
 
 def create_app(app_class):
