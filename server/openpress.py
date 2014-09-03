@@ -15,8 +15,6 @@ import re
 
 from newspaper_codes import NewspaperCodes
 
-
-from collections import OrderedDict
 from tornado import gen
 from tornado.options import define, options, parse_command_line
           
@@ -176,7 +174,7 @@ class ApiHandler(tornado.web.RequestHandler):
             self.send_json(response)
         
         elif query:
-        	order_by = self.get_argument("rows", default=None, strip=True)
+        	order_by = self.get_argument("odrderBy", default=None, strip=True)
 	                
 	        if order_by and not self.validate_order(order_by):
 	        	err_msg = {'Error': 'Unsupported Order Type',
@@ -199,13 +197,18 @@ class ApiHandler(tornado.web.RequestHandler):
             self.write(welcome)
             
 	def sort_results(self, results, order):
-	"issue_date"
+		# Every item in the results is a dictionary in itself
+		from operator import itemgetter
+		
 		if not order:
 			return
+		
 		elif order == "dateAccending":
-			pass
+			return sorted(results, key=it("issue_date"))
+		
 		elif order == "dateDecending":
-			pass
+			return sorted(results, key=it("issue_date"), reverse=True)
+
 		elif order == "relevance":
 			pass		
 	
