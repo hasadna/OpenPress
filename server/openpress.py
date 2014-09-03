@@ -166,7 +166,11 @@ class ApiHandler(tornado.web.RequestHandler):
             self.write(err_msg)
             return
 
-        query = self.get_argument("query", default=None, strip=False)
+		
+        self.get_api_v1()
+
+	def get_api_v1(self):
+		query = self.get_argument("query", default=None, strip=False)
         articleId = self.get_argument("articleId", default=None, strip=False)
         rows = self.get_argument("rows", default='20', strip=True)
         
@@ -187,7 +191,7 @@ class ApiHandler(tornado.web.RequestHandler):
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
-
+	
 
 def create_app(app_class):
     app = app_class(
