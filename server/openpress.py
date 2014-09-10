@@ -99,7 +99,11 @@ def convert_result(result):
     # FIXME:
     if 'headline' not in result:
         result['headline'] = "Undefined"
-
+		
+	issue_date  = result['issue_date'].split("/")	
+    
+    
+    result['issue_date_sortable'] = '-'.join(issue_date[::-1])
     result['issue'] = '' # TODO
     result['image'] = get_image(result)
 
@@ -223,10 +227,10 @@ class ApiHandler(tornado.web.RequestHandler):
 			return
 		
 		elif order == "dateAccending":
-			return sorted(results, key=it("issue_date"))
+			return sorted(results, key=it("issue_date_sortable"))
 		
 		elif order == "dateDecending":
-			return sorted(results, key=it("issue_date"), reverse=True)
+			return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
 		elif order == "relevance":
 			pass		
