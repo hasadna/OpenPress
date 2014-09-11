@@ -95,7 +95,9 @@ def convert_result(result):
     result['url'] = id_to_url(result['id'])
     # FIXME:
     result['newspaper_full_name'] = NewspaperCodes.get_code(result['newspaper_code'])
-
+	
+	result.pop('original_project_link')
+	
     # FIXME:
     if 'headline' not in result:
         result['headline'] = "Undefined"
