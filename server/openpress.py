@@ -54,8 +54,8 @@ def id_to_url(article_id):
     return url
 
 def validate_date(date):
-	match_object = re.compile(DATE_REGEX).match(rows_string)
-	if not match_object:
+    match_object = re.compile(DATE_REGEX).match(rows_string)
+    if not match_object:
         return False
     return True
 
@@ -95,14 +95,14 @@ def convert_result(result):
     result['url'] = id_to_url(result['id'])
     # FIXME:
     result['newspaper_full_name'] = NewspaperCodes.get_code(result['newspaper_code'])
-	
-	result.pop('original_project_link')
-	
+    
+    result.pop('original_project_link')
+    
     # FIXME:
     if 'headline' not in result:
         result['headline'] = "Undefined"
-		
-	issue_date  = result['issue_date'].split("/")	
+        
+    issue_date  = result['issue_date'].split("/")   
     
     
     result['issue_date_sortable'] = '-'.join(issue_date[::-1])
@@ -178,38 +178,38 @@ class ApiHandler(tornado.web.RequestHandler):
                         'supported versions': g_api_versions}
             self.write(err_msg)
             return
-		
-		if apiId == "v1":
-	        self.get_api_v1()
+        
+        if apiId == "v1":
+            self.get_api_v1()
 
-	def get_api_v1(self):
-		
-		articleId = self.get_argument("articleId", default=None, strip=False)
+    def get_api_v1(self):
+        
+        articleId = self.get_argument("articleId", default=None, strip=False)
 
-		if articleId:
+        if articleId:
             results = g_solr.search('id:%s' % articleId, rows=rows)
             results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
         
         elif query:
-        	order_by = self.get_argument("odrderBy", default=None, strip=True)
-	                
-	        if order_by and not self.validate_order(order_by):
-	        	err_msg = {'Error': 'Unsupported Order Type',
-	                        'supported types': g_api_orders}
-	            self.write(err_msg)
-	            return
-	            
-	        query = self.get_argument("query", default=None, strip=False)
-	        dateLeq = self.get_argument("dateLeq", default=None, strip=False)
-	        dateGeq = self.get_argument("dateGeq", default=None, strip=False)
-	        rows = self.get_argument("rows", default='20', strip=True)
-	        
-	        if not validate_date(dateLeq):
-	        	pass
-	        
-	        rows = get_rows(rows)
+            order_by = self.get_argument("odrderBy", default=None, strip=True)
+                    
+            if order_by and not self.validate_order(order_by):
+                err_msg = {'Error': 'Unsupported Order Type',
+                            'supported types': g_api_orders}
+                self.write(err_msg)
+                return
+                
+            query = self.get_argument("query", default=None, strip=False)
+            dateLeq = self.get_argument("dateLeq", default=None, strip=False)
+            dateGeq = self.get_argument("dateGeq", default=None, strip=False)
+            rows = self.get_argument("rows", default='20', strip=True)
+            
+            if not validate_date(dateLeq):
+                pass
+            
+            rows = get_rows(rows)
         
             results = get_results(query, rows, dateLeq, dateGeq)
             results = self.sort_results(results, order_by)
@@ -221,22 +221,22 @@ class ApiHandler(tornado.web.RequestHandler):
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
             
-	def sort_results(self, results, order):
-		# Every item in the results is a dictionary in itself
-		from operator import itemgetter
-		
-		if not order:
-			return
-		
-		elif order == "dateAccending":
-			return sorted(results, key=it("issue_date_sortable"))
-		
-		elif order == "dateDecending":
-			return sorted(results, key=it("issue_date_sortable"), reverse=True)
+    def sort_results(self, results, order):
+        # Every item in the results is a dictionary in itself
+        from operator import itemgetter
+        
+        if not order:
+            return
+        
+        elif order == "dateAccending":
+            return sorted(results, key=it("issue_date_sortable"))
+        
+        elif order == "dateDecending":
+            return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
-		elif order == "relevance":
-			pass		
-	
+        elif order == "relevance":
+            pass
+    
 
 def create_app(app_class):
     app = app_class(
