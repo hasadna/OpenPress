@@ -239,7 +239,7 @@ class ApiHandler(tornado.web.RequestHandler):
 
     def sort_results(self, results, order):
         # Every item in the results is a dictionary in itself
-        from operator import itemgetter
+        from operator import itemgetter as it
 
         if not order:
             return
