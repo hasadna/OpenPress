@@ -33,7 +33,6 @@ define("port", default=8888, help="run on the given port", type=int)
 
 g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
 g_api_versions = ["v1"]
-g_api_orders = ["dateAccending", "dateDecending", "relevance"]
 
 def id_to_url(article_id):
     '''
@@ -140,9 +139,6 @@ def get_statistics(query, results):
 
     return stats
 
-
-
-
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         query = self.get_argument("query", default=None, strip=False)
@@ -169,7 +165,12 @@ class ApiHandler(tornado.web.RequestHandler):
     ORDER_DATE_DECENDING = "dateDecending"
     ORDER_RELEVENCE = "relevance"
 	
-
+	g_api_orders = [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
+	
+	DATE_RANGE_LEQ = "dateLeq"
+	DATE_RANGE_GEQ = "dateGeq"
+	g_api_date_range = [DATE_RANGE_LEQ, DATE_RANGE_GEQ]
+	
     def send_json(self, d):
         response_json = tornado.escape.json_encode(d)
         self.set_header("Content-Type", "application/json; charset=UTF-8")
@@ -199,8 +200,8 @@ class ApiHandler(tornado.web.RequestHandler):
         elif query:
             order_by = self.get_argument("odrderBy", default=None, strip=True)
                     
-            if order_by and not self.validate_order(order_by):
-                err_msg = {'Error': 'Unsupported Order Type',
+            if order_by and not order_by in g_api_orders:
+                err_msg = {'Error': 'Unsupported Date Order Type',
                             'supported types': g_api_orders}
                 self.write(err_msg)
                 return
@@ -210,8 +211,15 @@ class ApiHandler(tornado.web.RequestHandler):
             dateGeq = self.get_argument("dateGeq", default=None, strip=False)
             rows = self.get_argument("rows", default='20', strip=True)
             
-            if not validate_date(dateLeq):
-                pass
+            if dateLeq and not validate_date(dateLeq):
+                err_msg = {'Error': 'Invalid date inserted for range operation'}
+                self.write(err_msg)
+                return
+                
+            if dateGeq and not validate_date(dateGeq):
+                err_msg = {'Error': 'Invalid date inserted for range operation'}
+                self.write(err_msg)
+                return 
             
             rows = get_rows(rows)
         
@@ -224,12 +232,8 @@ class ApiHandler(tornado.web.RequestHandler):
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
-      
-      
-    def validate_order(self, orderStr):
-    	return orderStr in [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
+   
     	
-           
     def sort_results(self, results, order):
         # Every item in the results is a dictionary in itself
         from operator import itemgetter
