@@ -17,7 +17,7 @@ from newspaper_codes import NewspaperCodes
 
 from tornado import gen
 from tornado.options import define, options, parse_command_line
-          
+
 
 ROWS_DEFAULT=20
 NUMBER_REGEX = '^[0-9]{1,4}$'
@@ -36,18 +36,18 @@ g_api_versions = ["v1"]
 
 def id_to_url(article_id):
     '''
-    this is really hacky... 
+    this is really hacky...
     TODO: FIXME!!!
     '''
     id_info = article_id.split("_")
     url =  r"http://opa.org.il/article/"
-    
+
     id_info[2] = "0"+id_info[2] if len(id_info[2]) < 2 else id_info[2]
     id_info[3] = "0"+id_info[3] if len(id_info[3]) < 2 else id_info[3]
-    
+
     # Still very much hacky!
     url += id_info[0]+"_"+"".join(id_info[1:4])+"_"+id_info[4]
-    
+
     #url += (article_id[0] + article_id[8:12] +
     #        article_id[6:8] + article_id[4:6] + "_" + article_id[12:])
     return url
@@ -69,13 +69,13 @@ def get_image(result):
     """
     Hacky as always... (please FIXME)
     """
-    
+
     id_fields = result['id'].split('_')
     id_ = id_fields[4]                  #article_id[14:]
     href = "/".join(id_fields[0:4])     #article_id[:14]
 
     image_url = "http://www.jpress.nli.org.il/Olive/APA/NLI_heb/get/GetImage.ashx?kind=block&href=%s&id=%s&ext=.png" %(href, id_)
-    
+
     return image_url
 
 def find_start_date(results):
@@ -88,22 +88,22 @@ def find_start_date(results):
          if year < min_date:
             min_date = year
     return min_date
-        
-# link to image,url, 
+
+# link to image,url,
 def convert_result(result):
     result['url'] = id_to_url(result['id'])
     # FIXME:
     result['newspaper_full_name'] = NewspaperCodes.get_code(result['newspaper_code'])
-    
+
     result.pop('original_project_link')
-    
+
     # FIXME:
     if 'headline' not in result:
         result['headline'] = "Undefined"
-        
-    issue_date  = result['issue_date'].split("/")   
-    
-    
+
+    issue_date  = result['issue_date'].split("/")
+
+
     result['issue_date_sortable'] = '-'.join(issue_date[::-1])
     result['issue'] = '' # TODO
     result['image'] = get_image(result)
@@ -151,7 +151,7 @@ class MainHandler(tornado.web.RequestHandler):
         else:
 
             results = get_results(query, rows)
-            
+
             stats = get_statistics(query, results)
 
             start_date = find_start_date(results)  # for the timeline!!
@@ -161,16 +161,16 @@ class MainHandler(tornado.web.RequestHandler):
 
 class ApiHandler(tornado.web.RequestHandler):
 
-	ORDER_DATE_ACCENDING = "dateAccending"
+    ORDER_DATE_ACCENDING = "dateAccending"
     ORDER_DATE_DECENDING = "dateDecending"
     ORDER_RELEVENCE = "relevance"
-	
-	g_api_orders = [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
-	
-	DATE_RANGE_LEQ = "dateLeq"
-	DATE_RANGE_GEQ = "dateGeq"
-	g_api_date_range = [DATE_RANGE_LEQ, DATE_RANGE_GEQ]
-	
+
+    g_api_orders = [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
+
+    DATE_RANGE_LEQ = "dateLeq"
+    DATE_RANGE_GEQ = "dateGeq"
+    g_api_date_range = [DATE_RANGE_LEQ, DATE_RANGE_GEQ]
+
     def send_json(self, d):
         response_json = tornado.escape.json_encode(d)
         self.set_header("Content-Type", "application/json; charset=UTF-8")
@@ -183,77 +183,77 @@ class ApiHandler(tornado.web.RequestHandler):
                         'supported versions': g_api_versions}
             self.write(err_msg)
             return
-        
+
         if apiId == "v1":
             self.get_api_v1()
 
     def get_api_v1(self):
-        
+
         articleId = self.get_argument("articleId", default=None, strip=False)
 
         if articleId:
             results = g_solr.search('id:%s' % articleId, rows=rows)
-            
+
             for result in results:
-            	convert_result(result)
-            
+                convert_result(result)
+
             results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
-        
+
         elif query:
             order_by = self.get_argument("odrderBy", default=None, strip=True)
-                    
+
             if order_by and not order_by in g_api_orders:
                 err_msg = {'Error': 'Unsupported Date Order Type',
                             'supported types': g_api_orders}
                 self.write(err_msg)
                 return
-                
+
             query = self.get_argument("query", default=None, strip=False)
             dateLeq = self.get_argument("dateLeq", default=None, strip=False)
             dateGeq = self.get_argument("dateGeq", default=None, strip=False)
             rows = self.get_argument("rows", default='20', strip=True)
-            
+
             if dateLeq and not validate_date(dateLeq):
                 err_msg = {'Error': 'Invalid date inserted for range operation'}
                 self.write(err_msg)
                 return
-                
+
             if dateGeq and not validate_date(dateGeq):
                 err_msg = {'Error': 'Invalid date inserted for range operation'}
                 self.write(err_msg)
-                return 
-            
+                return
+
             rows = get_rows(rows)
-        
+
             results = get_results(query, rows, dateLeq, dateGeq)
             results = self.sort_results(results, order_by)
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
-            
+
         else:
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
-   
-    	
+
+
     def sort_results(self, results, order):
         # Every item in the results is a dictionary in itself
         from operator import itemgetter
-        
+
         if not order:
             return
-        
+
         elif order == ORDER_DATE_ACCENDING:
             return sorted(results, key=it("issue_date_sortable"))
-        
+
         elif order == ORDER_DATE_DECENDING:
             return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
         elif order == ORDER_RELEVENCE:
             pass
-    
+
 
 def create_app(app_class):
     app = app_class(
@@ -269,7 +269,7 @@ def create_app(app_class):
 def application(env, start_response):
     wsgi_app = create_app(tornado.wsgi.WSGIApplication)
     return wsgi_app(env, start_response)
-    
+
 def main():
     parse_command_line()
     app = create_app(tornado.web.Application)
