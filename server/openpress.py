@@ -190,9 +190,13 @@ class ApiHandler(tornado.web.RequestHandler):
     def get_api_v1(self):
 
         articleId = self.get_argument("articleId", default=None, strip=False)
+        query = self.get_argument("query", default=None, strip=False)
+        dateLeq = self.get_argument("dateLeq", default=None, strip=False)
+        dateGeq = self.get_argument("dateGeq", default=None, strip=False)
+        rows = self.get_argument("rows", default='20', strip=True)
 
         if articleId:
-            results = g_solr.search('id:%s' % articleId, rows=rows)
+            results = g_solr.search('id:%s' % articleId, rows = rows)
 
             for result in results:
                 convert_result(result)
@@ -204,16 +208,11 @@ class ApiHandler(tornado.web.RequestHandler):
         elif query:
             order_by = self.get_argument("odrderBy", default=None, strip=True)
 
-            if order_by and not order_by in g_api_orders:
+            if order_by and not order_by in ApiHandler.g_api_orders:
                 err_msg = {'Error': 'Unsupported Date Order Type',
-                            'supported types': g_api_orders}
+                            'supported types': ApiHandler.g_api_orders}
                 self.write(err_msg)
                 return
-
-            query = self.get_argument("query", default=None, strip=False)
-            dateLeq = self.get_argument("dateLeq", default=None, strip=False)
-            dateGeq = self.get_argument("dateGeq", default=None, strip=False)
-            rows = self.get_argument("rows", default='20', strip=True)
 
             if dateLeq and not validate_date(dateLeq):
                 err_msg = {'Error': 'Invalid date inserted for range operation'}
@@ -245,13 +244,13 @@ class ApiHandler(tornado.web.RequestHandler):
         if not order:
             return
 
-        elif order == ORDER_DATE_ACCENDING:
+        elif order == ApiHandler.ORDER_DATE_ACCENDING:
             return sorted(results, key=it("issue_date_sortable"))
 
-        elif order == ORDER_DATE_DECENDING:
+        elif order == ApiHandler.ORDER_DATE_DECENDING:
             return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
-        elif order == ORDER_RELEVENCE:
+        elif order == ApiHandler.ORDER_RELEVENCE:
             pass
 
 
