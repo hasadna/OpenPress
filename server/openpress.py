@@ -53,14 +53,14 @@ def id_to_url(article_id):
     return url
 
 def validate_date(date):
-    match_object = re.compile(DATE_REGEX).match(rows_string)
+    match_object = re.compile(DATE_REGEX).match(date)
     if not match_object:
         return False
     return True
 
 
 def get_rows(rows_string):
-    match_object = re.compile(NUMBER_REGEX).match(rows_string)
+    match_object = re.compile(NUMBER_REGEX).match(date)
     if not match_object:
         return ROWS_DEFAULT
     return int(match_object.group(0))
