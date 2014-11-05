@@ -60,7 +60,7 @@ def validate_date(date):
 
 
 def get_rows(rows_string):
-    match_object = re.compile(NUMBER_REGEX).match(date)
+    match_object = re.compile(NUMBER_REGEX).match(rows_string)
     if not match_object:
         return ROWS_DEFAULT
     return int(match_object.group(0))
@@ -226,8 +226,9 @@ class ApiHandler(tornado.web.RequestHandler):
 
             rows = get_rows(rows)
 
-            results = get_results(query, rows, dateLeq, dateGeq)
+            results = get_results(query, rows)
             results = self.sort_results(results, order_by)
+            # TODO need to filter results by dateLeq and dateGeq
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
 
