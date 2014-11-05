@@ -193,6 +193,10 @@ class ApiHandler(tornado.web.RequestHandler):
 
         if articleId:
             results = g_solr.search('id:%s' % articleId, rows=rows)
+            
+            for result in results:
+            	convert_result(result)
+            
             results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
