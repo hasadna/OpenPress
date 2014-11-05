@@ -161,10 +161,14 @@ class MainHandler(tornado.web.RequestHandler):
             start_date = find_start_date(results)  # for the timeline!!
 
             #self.render("timeline.html", results=results, query=query, start_date=start_date)
-            self.render("results.html", results=results, query=query, start_date=start_date, 
-                                        stats=stats)
+            self.render("results.html", results=results, query=query, start_date=start_date, stats=stats)
 
 class ApiHandler(tornado.web.RequestHandler):
+
+	ORDER_DATE_ACCENDING = "dateAccending"
+    ORDER_DATE_DECENDING = "dateDecending"
+    ORDER_RELEVENCE = "relevance"
+	
 
     def send_json(self, d):
         response_json = tornado.escape.json_encode(d)
@@ -220,7 +224,12 @@ class ApiHandler(tornado.web.RequestHandler):
             welcome = {'welcome_msg': ' Welcome to Open Press API',
                        'usage': ' See Docs @ openpress.readthedocs.org/en/latest/api.html '}
             self.write(welcome)
-            
+      
+      
+    def validate_order(self, orderStr):
+    	return orderStr in [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
+    	
+           
     def sort_results(self, results, order):
         # Every item in the results is a dictionary in itself
         from operator import itemgetter
@@ -228,13 +237,13 @@ class ApiHandler(tornado.web.RequestHandler):
         if not order:
             return
         
-        elif order == "dateAccending":
+        elif order == ORDER_DATE_ACCENDING:
             return sorted(results, key=it("issue_date_sortable"))
         
-        elif order == "dateDecending":
+        elif order == ORDER_DATE_DECENDING:
             return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
-        elif order == "relevance":
+        elif order == ORDER_RELEVENCE:
             pass
     
 
