@@ -243,7 +243,7 @@ class ApiHandler(tornado.web.RequestHandler):
         from operator import itemgetter as it
 
         if not order:
-            return
+            return results
 
         elif order == ApiHandler.ORDER_DATE_ACCENDING:
             return sorted(results, key=it("issue_date_sortable"))
@@ -252,7 +252,7 @@ class ApiHandler(tornado.web.RequestHandler):
             return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
         elif order == ApiHandler.ORDER_RELEVENCE:
-            pass
+            return results
 
 
 def create_app(app_class):
