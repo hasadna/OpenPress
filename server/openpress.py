@@ -109,10 +109,10 @@ def convert_result(result):
     result['image'] = get_image(result)
 
 
-def get_results(query, rows):
+def get_results(query, rows, **kwargs):
     ''' get results from solr service for a given query '''
 
-    results = g_solr.search(query, rows=rows)
+    results = g_solr.search(query, rows=rows, **kwargs)
     results = results.docs
     # Add the url to the article for every result.
     for result in results:
@@ -165,8 +165,8 @@ class ApiHandler(tornado.web.RequestHandler):
     ORDER_DATE_DESCENDING = "dateDescending"
     ORDER_RELEVANCE = "relevance"
 
-    g_api_orders = {ORDER_DATE_ASCENDING : "date asc",
-                    ORDER_DATE_DESCENDING : "date desc",
+    g_api_orders = {ORDER_DATE_ASCENDING : "issue_date asc",
+                    ORDER_DATE_DESCENDING : "issue_date desc",
                     #ORDER_RELEVANCE       : ""
                     }
 
@@ -228,8 +228,11 @@ class ApiHandler(tornado.web.RequestHandler):
                 return
 
             rows = get_rows(rows)
-
-            results = get_results(query, rows, sort=g_api_orders[order_by])
+            if order_by:
+              results = get_results(query, rows, sort=ApiHandler.g_api_orders[order_by])
+            else:
+              results = get_results(query, rows)
+              
             #results = self.sort_results(results, order_by)
             # TODO need to filter results by dateLeq and dateGeq
             response = { 'count' : len(results), 'results': results}
