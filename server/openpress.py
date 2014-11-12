@@ -161,11 +161,11 @@ class MainHandler(tornado.web.RequestHandler):
 
 class ApiHandler(tornado.web.RequestHandler):
 
-    ORDER_DATE_ACCENDING = "dateAccending"
-    ORDER_DATE_DECENDING = "dateDecending"
+    ORDER_DATE_ASCENDING = "dateAscending"
+    ORDER_DATE_DESCENDING = "dateDescending"
     ORDER_RELEVENCE = "relevance"
 
-    g_api_orders = [ORDER_DATE_ACCENDING, ORDER_DATE_DECENDING, ORDER_RELEVENCE]
+    g_api_orders = [ORDER_DATE_ASCENDING, ORDER_DATE_DESCENDING, ORDER_RELEVENCE]
 
     DATE_RANGE_LEQ = "dateLeq"
     DATE_RANGE_GEQ = "dateGeq"
@@ -206,7 +206,7 @@ class ApiHandler(tornado.web.RequestHandler):
             self.send_json(response)
 
         elif query:
-            order_by = self.get_argument("odrderBy", default=None, strip=True)
+            order_by = self.get_argument("orderBy", default=None, strip=True)
 
             if order_by and not order_by in ApiHandler.g_api_orders:
                 err_msg = {'Error': 'Unsupported Date Order Type',
@@ -245,10 +245,10 @@ class ApiHandler(tornado.web.RequestHandler):
         if not order:
             return results
 
-        elif order == ApiHandler.ORDER_DATE_ACCENDING:
+        elif order == ApiHandler.ORDER_DATE_ASCENDING:
             return sorted(results, key=it("issue_date_sortable"))
 
-        elif order == ApiHandler.ORDER_DATE_DECENDING:
+        elif order == ApiHandler.ORDER_DATE_DESCENDING:
             return sorted(results, key=it("issue_date_sortable"), reverse=True)
 
         elif order == ApiHandler.ORDER_RELEVENCE:
