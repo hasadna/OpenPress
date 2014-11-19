@@ -26,3 +26,4 @@ Table of contents
    :maxdepth: 0
 
    guide/server
+   guide/api

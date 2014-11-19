@@ -3,6 +3,10 @@ Server
 
 The server is written in Python using **Tornado** (http://www.tornadoweb.org/en/stable/).
 
+Installing Pip
+~~~~~~~~~~~~~~~
+Simply go here: http://pip.readthedocs.org/en/latest/installing.html
+
 
 Installing Solr
 ~~~~~~~~~~~~~~~
