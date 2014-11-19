@@ -13,4 +13,9 @@ There are 2 types of available queries:
 1. articleId=<ID> - This queries for a specific article with the ID of <ID>
 
 2. query=<search_term> - This searches the historical DB and provides with
-articles in which the <search_term> appears.
+articles in which the <search_term> appears. There are several parameters available:
+
+    a. rows (int) - The amount of results you would like to get.
+    b. orderBy (string) - Possible options are "issue_date_asc" (accending order) or
+    "issue_date_desc" (descending order).
+    
