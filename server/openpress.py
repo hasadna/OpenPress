@@ -165,8 +165,8 @@ class ApiHandler(tornado.web.RequestHandler):
     ORDER_DATE_DESCENDING = "dateDescending"
     ORDER_RELEVANCE = "relevance"
 
-    g_api_orders = {ORDER_DATE_ASCENDING : "issue_date asc",
-                    ORDER_DATE_DESCENDING : "issue_date desc",
+    g_api_orders = {ORDER_DATE_ASCENDING : "issue_date_asc",
+                    ORDER_DATE_DESCENDING : "issue_date_desc",
                     #ORDER_RELEVANCE       : ""
                     }
 
@@ -232,7 +232,7 @@ class ApiHandler(tornado.web.RequestHandler):
               results = get_results(query, rows, sort=ApiHandler.g_api_orders[order_by])
             else:
               results = get_results(query, rows)
-              
+
             #results = self.sort_results(results, order_by)
             # TODO need to filter results by dateLeq and dateGeq
             response = { 'count' : len(results), 'results': results}
