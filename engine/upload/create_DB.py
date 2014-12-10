@@ -7,20 +7,20 @@ import os
 
 
 FIELDS = {
-           'id': fields.TEXT,
-           'box': fields.TEXT,
-           'headline': fields.TEXT,
-           'issue_date': fields.DATETIME,
-           'publication_day': fields.NUMERIC,
-           'publication_month': fields.NUMERIC,
-           'publication_year': fields.NUMERIC,
-           'newspaper_code':  fields.TEXT,
-           'original_project_link': fields.TEXT,
-           'location_in_page': fields.TEXT,
-           'language': fields.TEXT,
-           'page_in_paper': fields.NUMERIC,
-           'original_project_ID': fields.TEXT,
-           'content': fields.TEXT,
+           'id': fields.TEXT(stored=True),
+           'box': fields.TEXT(stored=True),
+           'headline': fields.TEXT(stored=True),
+           'issue_date': fields.DATETIME(stored=True),
+           'publication_day': fields.NUMERIC(stored=True),
+           'publication_month': fields.NUMERIC(stored=True),
+           'publication_year': fields.NUMERIC(stored=True),
+           'newspaper_code':  fields.TEXT(stored=True),
+           'original_project_link': fields.TEXT(stored=True),
+           'location_in_page': fields.TEXT(stored=True),
+           'language': fields.TEXT(stored=True),
+           'page_in_paper': fields.NUMERIC(stored=True),
+           'original_project_ID': fields.TEXT(stored=True),
+           'content': fields.TEXT(stored=True),
          }
 
 class DemoSolr(object):
@@ -38,7 +38,7 @@ class DemoSolr(object):
                     article[key] = unicode(item, "UTF-8")
 
             article['issue_date'] = datetime.strptime(article['issue_date'], "%d/%m/%Y")
-            print str(article)
+            #print str(article)
             self.writer.add_document(**article)
 
     def close(self):
