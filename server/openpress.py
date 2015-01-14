@@ -9,9 +9,11 @@ import tornado.web
 import tornado.wsgi
 import os.path
 import uuid
-import pysolr
+#import pysolr
 import json
 import re
+
+from whoosh.index import open_dir
 
 from newspaper_codes import NewspaperCodes
 
@@ -27,11 +29,13 @@ YEAR_DATE_REGEX = "^(19[0-9]{2})$|^(20[0-9]{2})$"
 
 DATE_REGEX = YEAR_DATE_REGEX+"|"+MONTH_YEAR_DATE_REGEX+"|"+COMPLETE_DATE_REGEX
 
-
+WHOOSH_INDEX_DIR = "/Volumes/mybook/indexdir" #"/srv/whoosh/indexdir"
 
 define("port", default=8888, help="run on the given port", type=int)
 
-g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
+#g_solr = pysolr.Solr('http://localhost:8983/solr/', timeout=10)
+g_whoosh_index = open_dir(WHOOSH_INDEX_DIR)
+g_whoosh_searcher = g_whoosh_index.searcher()
 g_api_versions = ["v1"]
 
 def id_to_url(article_id):
@@ -109,11 +113,14 @@ def convert_result(result):
     result['image'] = get_image(result)
 
 
-def get_results(query, rows, **kwargs):
+def get_results(query, rows):
     ''' get results from solr service for a given query '''
+    import pdb
+    pdb.set_trace()
+    results = g_whoosh_searcher.find("*", query, limit=rows) #g_solr.search(query, rows=rows, **kwargs)
 
-    results = g_solr.search(query, rows=rows, **kwargs)
-    results = results.docs
+    results = [ r for r in results ]
+    #results = results.docs
     # Add the url to the article for every result.
     for result in results:
         convert_result(result)
@@ -199,12 +206,13 @@ class ApiHandler(tornado.web.RequestHandler):
         rows = self.get_argument("rows", default='20', strip=True)
 
         if articleId:
-            results = g_solr.search('id:%s' % articleId, rows = rows)
+            results = g_whoosh_searcher.find("id", articleId, limit=rows) # g_solr.search('id:%s' % articleId, rows = rows)
+            results = [ r for r in results ]
 
             for result in results:
                 convert_result(result)
 
-            results = results.docs
+            #results = results.docs
             response = { 'count' : len(results), 'results': results}
             self.send_json(response)
 
